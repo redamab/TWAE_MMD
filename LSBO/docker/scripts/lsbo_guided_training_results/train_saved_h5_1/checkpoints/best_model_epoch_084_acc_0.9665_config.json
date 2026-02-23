@@ -1,0 +1,7 @@
+{
+  "model_type": "high_accuracy",
+  "latent_dim": 128,
+  "max_length": 37,
+  "vocab_size": 25,
+  "use_lsbo_sampling": true
+}

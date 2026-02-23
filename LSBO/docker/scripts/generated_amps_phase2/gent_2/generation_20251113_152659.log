@@ -1,0 +1,111 @@
+2025-11-13 15:26:59,385 - INFO - 
+================================================================================
+2025-11-13 15:26:59,385 - INFO - 🔄 LOADING MODEL FROM H5 FORMAT
+2025-11-13 15:26:59,385 - INFO - ================================================================================
+
+2025-11-13 15:26:59,385 - INFO - 📁 Weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_100.h5
+2025-11-13 15:26:59,385 - INFO - 📁 LSBO Sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_100_lsbo_sampler.pkl
+2025-11-13 15:26:59,385 - INFO - 📁 Config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_100_config.json
+
+2025-11-13 15:26:59,385 - INFO - 🔧 Step 1: Loading model config...
+2025-11-13 15:26:59,385 - INFO - ✅ Config loaded: high_accuracy
+
+2025-11-13 15:26:59,385 - INFO - 🔧 Step 2: Creating model architecture...
+2025-11-13 15:26:59,987 - INFO - ✅ Model architecture created
+
+2025-11-13 15:26:59,987 - INFO - 🔧 Step 3: Building model graph...
+2025-11-13 15:27:00,043 - INFO - ✅ Model graph built
+
+2025-11-13 15:27:00,044 - INFO - 🔧 Step 4: Loading weights from .h5 file...
+2025-11-13 15:27:00,047 - WARNING - ⚠️  Layer mismatch detected: Layer count mismatch when loading weights from file. Model expected 4 layers, found 3 saved layers....
+2025-11-13 15:27:00,047 - INFO -    Trying flexible loading (by_name=True, skip_mismatch=True)...
+2025-11-13 15:27:00,083 - INFO - ✅ Weights loaded successfully (flexible matching)!
+
+2025-11-13 15:27:00,083 - INFO - 🔧 Step 5: Loading LSBO sampler with HQ regions...
+2025-11-13 15:27:00,085 - INFO - ✅ LSBO sampler loaded with 1000 HQ regions!
+
+2025-11-13 15:27:00,085 - INFO - Setting up tokenizer...
+2025-11-13 15:27:00,085 - INFO - ✅ Tokenizer ready
+2025-11-13 15:27:00,085 - INFO - Setting up enhanced membrane-reactivity scorer...
+2025-11-13 15:27:00,085 - INFO - ✅ Enhanced scorer ready (membrane-reactive focus)
+2025-11-13 15:27:00,085 - INFO - ================================================================================
+2025-11-13 15:27:00,085 - INFO - 🔍 VERIFICATION: High-Quality Regions from Training
+2025-11-13 15:27:00,085 - INFO - ================================================================================
+
+2025-11-13 15:27:00,085 - INFO - 📊 Total HQ Regions: 1000
+2025-11-13 15:27:00,086 - INFO - 
+🎯 Quality Score Statistics:
+2025-11-13 15:27:00,086 - INFO -    Mean:     0.8982
+2025-11-13 15:27:00,086 - INFO -    Median:   0.8975
+2025-11-13 15:27:00,086 - INFO -    Std Dev:  0.0069
+2025-11-13 15:27:00,086 - INFO -    Min:      0.8900
+2025-11-13 15:27:00,086 - INFO -    Max:      0.9150
+2025-11-13 15:27:00,086 - INFO - 
+📈 Quality Distribution:
+2025-11-13 15:27:00,086 - INFO -    Excellent (≥0.85): 1000 (100.0%)
+2025-11-13 15:27:00,086 - INFO -    Good (0.75-0.85):  0 (0.0%)
+2025-11-13 15:27:00,086 - INFO -    Acceptable (<0.75): 0 (0.0%)
+2025-11-13 15:27:00,086 - INFO - 
+================================================================================
+
+2025-11-13 15:27:00,086 - INFO - ================================================================================
+2025-11-13 15:27:00,086 - INFO - 🧬 GENERATING MEMBRANE-REACTIVE AMPs
+2025-11-13 15:27:00,086 - INFO - ================================================================================
+
+2025-11-13 15:27:00,086 - INFO - 🎯 Target: 1000 AMPs
+2025-11-13 15:27:00,086 - INFO - 🌡  Temperature: 0.8
+2025-11-13 15:27:00,086 - INFO - 📊 Min Overall Score: 0.7
+2025-11-13 15:27:00,086 - INFO - 📊 Min Membrane Score: 0.7
+
+2025-11-13 15:27:00,086 - INFO - ✅ Using 1000 LSBO high-quality regions for sampling
+
+2025-11-13 15:27:00,253 - WARNING - 
+⚠️  No K or R (attempt 1): SMSCDYHSHSSSSCHSHSSSSSHHQSSHSWHHTSN
+2025-11-13 15:27:00,321 - WARNING - 
+⚠️  No K or R (attempt 2): SSAHNHHDSSSSHSSYHHHHHSSHSSHCSSSSHHS
+2025-11-13 15:27:00,388 - WARNING - 
+⚠️  Low overall score (attempt 3):
+2025-11-13 15:27:00,388 - WARNING -    Sequence: DSDMHMMESMMSSSSSSSHYSKSHSSSHSDSSK
+2025-11-13 15:27:00,388 - WARNING -    Overall: 0.6155 < 0.7
+2025-11-13 15:27:00,525 - WARNING - 
+⚠️  No K or R (attempt 5): SHHHHSSSSSSSHHHSSSHHHTSHQSSSSSHCHSHT
+2025-11-13 15:27:00,594 - WARNING - 
+⚠️  Low overall score (attempt 6):
+2025-11-13 15:27:00,594 - WARNING -    Sequence: KMHSMRHFSSSSQHSHSSHTHSSHHSHSSSSSSDS
+2025-11-13 15:27:00,595 - WARNING -    Overall: 0.5245 < 0.7
+2025-11-13 15:27:00,664 - WARNING - 
+⚠️  Low overall score (attempt 7):
+2025-11-13 15:27:00,664 - WARNING -    Sequence: KMKMSHDGDMHSSS
+2025-11-13 15:27:00,664 - WARNING -    Overall: 0.6980 < 0.7
+2025-11-13 15:27:00,732 - WARNING - 
+⚠️  No K or R (attempt 8): SNNSCSHSEHSSSHHHHSHHSQHSQNHHHHHCSS
+2025-11-13 15:27:00,799 - WARNING - 
+⚠️  Low overall score (attempt 9):
+2025-11-13 15:27:00,799 - WARNING -    Sequence: DMTMTMMKSNFSMSSMDSSSSMSHHHHCPSHSSMHS
+2025-11-13 15:27:00,799 - WARNING -    Overall: 0.6672 < 0.7
+2025-11-13 15:27:00,867 - WARNING - 
+⚠️  Low overall score (attempt 10):
+2025-11-13 15:27:00,867 - WARNING -    Sequence: MMKDTMSFSSMSSSSSSPDSHSVMHSSHSGSHSHP
+2025-11-13 15:27:00,867 - WARNING -    Overall: 0.6598 < 0.7
+2025-11-13 16:22:59,267 - INFO - 
+================================================================================
+2025-11-13 16:22:59,267 - INFO - 📊 GENERATION STATISTICS
+2025-11-13 16:22:59,267 - INFO - ================================================================================
+
+2025-11-13 16:22:59,267 - INFO - ✅ Generated: 506 unique AMPs
+2025-11-13 16:22:59,268 - INFO - 📝 Total attempts: 50000
+2025-11-13 16:22:59,268 - INFO - ✨ Success rate: 1.0%
+
+2025-11-13 16:22:59,268 - INFO - 🎯 Quality Scores:
+2025-11-13 16:22:59,268 - INFO -    Overall:    0.7360 ± 0.0315
+2025-11-13 16:22:59,268 - INFO -    Membrane:   0.7306 ± 0.0254
+
+2025-11-13 16:22:59,268 - INFO - 📏 Sequence Properties:
+2025-11-13 16:22:59,269 - INFO -    Length:     25.4 ± 9.3
+2025-11-13 16:22:59,269 - INFO -    Charge:     4.1 ± 1.3
+2025-11-13 16:22:59,269 - INFO -    Hydrophob:  0.371 ± 0.052
+
+2025-11-13 16:22:59,273 - INFO - 💾 Saved CSV: generated_amps_phase2/generated_amps_20251113_162259.csv
+2025-11-13 16:22:59,291 - INFO - 💾 Saved FASTA: generated_amps_phase2/generated_amps_20251113_162259.fasta
+2025-11-13 16:22:59,292 - INFO - 💾 Saved Summary: generated_amps_phase2/generation_summary_20251113_162259.txt
+

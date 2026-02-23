@@ -1,0 +1,65 @@
+2025-11-18 07:58:46,749 - INFO - 
+================================================================================
+2025-11-18 07:58:46,749 - INFO - 🔄 LOADING MODEL FROM H5 FORMAT
+2025-11-18 07:58:46,750 - INFO - ================================================================================
+
+2025-11-18 07:58:46,750 - INFO - 📁 Weights: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670.h5
+2025-11-18 07:58:46,750 - INFO - 📁 LSBO Sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670_lsbo_sampler.pkl
+2025-11-18 07:58:46,750 - INFO - 📁 Config: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670_config.json
+
+2025-11-18 07:58:46,750 - INFO - 🔧 Step 1: Loading model config...
+2025-11-18 07:58:46,750 - INFO - ✅ Config loaded: high_accuracy
+
+2025-11-18 07:58:46,750 - INFO - 🔧 Step 2: Creating model architecture...
+2025-11-18 07:58:47,290 - INFO - ✅ Model architecture created
+
+2025-11-18 07:58:47,290 - INFO - 🔧 Step 3: Building model graph...
+2025-11-18 07:58:47,344 - INFO - ✅ Model graph built
+
+2025-11-18 07:58:47,344 - INFO - 🔧 Step 4: Loading weights from .h5 file...
+2025-11-18 07:58:47,347 - WARNING - ⚠️  Layer mismatch detected: Layer count mismatch when loading weights from file. Model expected 4 layers, found 3 saved layers....
+2025-11-18 07:58:47,347 - INFO -    Trying flexible loading (by_name=True, skip_mismatch=True)...
+2025-11-18 07:58:47,383 - INFO - ✅ Weights loaded successfully (flexible matching)!
+
+2025-11-18 07:58:47,383 - INFO - 🔧 Step 5: Loading LSBO sampler with HQ regions...
+2025-11-18 07:58:47,384 - INFO - ✅ LSBO sampler loaded with 1000 HQ regions!
+
+2025-11-18 07:58:47,385 - INFO - Setting up tokenizer...
+2025-11-18 07:58:47,385 - INFO - ✅ Tokenizer ready
+2025-11-18 07:58:47,385 - INFO - Setting up NEURAL ImprovedAMPScorer (same as training)...
+2025-11-18 07:58:47,385 - INFO - ✅ Neural scorer ready
+2025-11-18 07:58:47,385 - INFO - ✅ Constraints ready
+2025-11-18 07:58:47,385 - INFO - ================================================================================
+2025-11-18 07:58:47,385 - INFO - 🧬 GENERATING AMPs WITH NEURAL SCORER
+2025-11-18 07:58:47,385 - INFO - ================================================================================
+
+2025-11-18 07:58:47,385 - INFO - 🎯 Target: 1000 AMPs
+2025-11-18 07:58:47,385 - INFO - 🌡  Temperature: 0.8
+2025-11-18 07:58:47,385 - INFO - 📊 Min Overall Score: 0.8 (sAMPpred-GAT threshold)
+2025-11-18 07:58:47,385 - INFO - 📊 Min Membrane Score: 0.8
+
+2025-11-18 07:58:47,385 - INFO - ✅ Using 1000 LSBO high-quality regions for sampling
+2025-11-18 07:58:47,385 - INFO -    LSBO mean score: 0.8965 (training quality)
+
+2025-11-18 08:35:31,249 - INFO - 
+================================================================================
+2025-11-18 08:35:31,249 - INFO - 📊 GENERATION STATISTICS
+2025-11-18 08:35:31,249 - INFO - ================================================================================
+
+2025-11-18 08:35:31,249 - INFO - ✅ Generated: 1000 unique AMPs
+2025-11-18 08:35:31,249 - INFO - 📝 Total attempts: 33110
+2025-11-18 08:35:31,249 - INFO - ✨ Success rate: 3.0%
+
+2025-11-18 08:35:31,249 - INFO - 🎯 Quality Scores (Neural Scorer):
+2025-11-18 08:35:31,250 - INFO -    Overall:    0.8276 ± 0.0219
+2025-11-18 08:35:31,250 - INFO -    Membrane:   0.8276 ± 0.0219
+
+2025-11-18 08:35:31,250 - INFO - 📏 Sequence Properties:
+2025-11-18 08:35:31,250 - INFO -    Length:     23.2 ± 7.1
+2025-11-18 08:35:31,250 - INFO -    Charge:     2.7 ± 2.5
+2025-11-18 08:35:31,251 - INFO -    Hydrophob:  0.476 ± 0.116
+
+2025-11-18 08:35:31,255 - INFO - 💾 Saved CSV: generated_amps_neural_scorer/generated_amps_20251118_083531.csv
+2025-11-18 08:35:31,291 - INFO - 💾 Saved FASTA: generated_amps_neural_scorer/generated_amps_20251118_083531.fasta
+2025-11-18 08:35:31,292 - INFO - 💾 Saved Summary: generated_amps_neural_scorer/generation_summary_20251118_083531.txt
+

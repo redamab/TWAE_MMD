@@ -1,0 +1,26 @@
+================================================================================
+AMP GENERATION SUMMARY
+================================================================================
+
+Generated: 506 unique AMPs
+
+Quality Scores:
+  Overall:    0.7360 ± 0.0315
+  Membrane:   0.7306 ± 0.0254
+
+Sequence Properties:
+  Length:     25.4 ± 9.3
+  Charge:     4.1 ± 1.3
+  Hydrophob:  0.371 ± 0.052
+
+Top 10 AMPs:
+  1. MKMTMMKFKRRS (score=0.8369)
+  2. KMSPTGHFKH (score=0.8308)
+  3. FSMGKSFHHHKTFSHEP (score=0.8292)
+  4. KMPHSHKMSM (score=0.8242)
+  5. KKARFKFGSK (score=0.8242)
+  6. DMMKKMSKMHFHHFH (score=0.8239)
+  7. TKWGSAHPKKWS (score=0.8203)
+  8. DKKMMKSMSSKFRFA (score=0.8178)
+  9. QGMMSMHHKMH (score=0.8169)
+  10. KGDMKSMMHH (score=0.8142)

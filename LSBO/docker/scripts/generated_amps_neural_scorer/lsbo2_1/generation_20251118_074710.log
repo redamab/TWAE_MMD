@@ -1,0 +1,146 @@
+2025-11-18 07:47:10,655 - INFO - 
+================================================================================
+2025-11-18 07:47:10,655 - INFO - 🔄 LOADING MODEL FROM H5 FORMAT
+2025-11-18 07:47:10,655 - INFO - ================================================================================
+
+2025-11-18 07:47:10,655 - INFO - 📁 Weights: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670.h5
+2025-11-18 07:47:10,655 - INFO - 📁 LSBO Sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670_lsbo_sampler.pkl
+2025-11-18 07:47:10,655 - INFO - 📁 Config: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670_config.json
+
+2025-11-18 07:47:10,655 - INFO - 🔧 Step 1: Loading model config...
+2025-11-18 07:47:10,655 - INFO - ✅ Config loaded: high_accuracy
+
+2025-11-18 07:47:10,655 - INFO - 🔧 Step 2: Creating model architecture...
+2025-11-18 07:47:11,254 - INFO - ✅ Model architecture created
+
+2025-11-18 07:47:11,255 - INFO - 🔧 Step 3: Building model graph...
+2025-11-18 07:47:11,311 - INFO - ✅ Model graph built
+
+2025-11-18 07:47:11,311 - INFO - 🔧 Step 4: Loading weights from .h5 file...
+2025-11-18 07:47:11,315 - WARNING - ⚠️  Layer mismatch detected: Layer count mismatch when loading weights from file. Model expected 4 layers, found 3 saved layers....
+2025-11-18 07:47:11,315 - INFO -    Trying flexible loading (by_name=True, skip_mismatch=True)...
+2025-11-18 07:47:11,354 - INFO - ✅ Weights loaded successfully (flexible matching)!
+
+2025-11-18 07:47:11,354 - INFO - 🔧 Step 5: Loading LSBO sampler with HQ regions...
+2025-11-18 07:47:11,355 - INFO - ✅ LSBO sampler loaded with 1000 HQ regions!
+
+2025-11-18 07:47:11,356 - INFO - Setting up tokenizer...
+2025-11-18 07:47:11,356 - INFO - ✅ Tokenizer ready
+2025-11-18 07:47:11,356 - INFO - Setting up NEURAL ImprovedAMPScorer (same as training)...
+2025-11-18 07:47:11,356 - INFO - ✅ Neural scorer ready
+2025-11-18 07:47:11,356 - INFO - ✅ Constraints ready
+2025-11-18 07:47:11,356 - INFO - ================================================================================
+2025-11-18 07:47:11,356 - INFO - 🧬 GENERATING AMPs WITH NEURAL SCORER
+2025-11-18 07:47:11,356 - INFO - ================================================================================
+
+2025-11-18 07:47:11,356 - INFO - 🎯 Target: 1000 AMPs
+2025-11-18 07:47:11,356 - INFO - 🌡  Temperature: 0.8
+2025-11-18 07:47:11,356 - INFO - 📊 Min Overall Score: 0.8 (sAMPpred-GAT threshold)
+2025-11-18 07:47:11,356 - INFO - 📊 Min Membrane Score: 0.8
+
+2025-11-18 07:47:11,356 - INFO - ✅ Using 1000 LSBO high-quality regions for sampling
+2025-11-18 07:47:11,356 - INFO -    LSBO mean score: 0.8965 (training quality)
+
+2025-11-18 07:47:11,947 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:12,165 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:12,977 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:13,045 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:13,182 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:13,588 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:13,987 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:15,182 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:15,316 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:16,246 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:16,450 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:16,517 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:17,525 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:17,660 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:17,997 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:19,003 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:19,138 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:19,949 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:20,427 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:22,385 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:22,791 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:23,134 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:23,269 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:24,136 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:24,340 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:24,548 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:24,949 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:25,091 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:25,698 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:26,307 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:26,782 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:28,246 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:28,981 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:29,589 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:29,724 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:29,991 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:30,193 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:31,388 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:31,458 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:31,947 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:32,836 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:33,038 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:34,673 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:34,877 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:35,013 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:35,493 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:37,534 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:37,944 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:38,284 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:38,759 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:39,715 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:39,783 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:40,121 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:40,531 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:41,427 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:41,494 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:41,772 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:42,727 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:42,998 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:43,613 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:44,158 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:44,579 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:45,773 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:45,848 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:46,592 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:47,471 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:48,287 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:48,492 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:48,771 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:49,271 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:49,559 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:50,709 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:51,357 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:52,190 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:52,396 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:52,685 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:53,176 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:53,245 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:53,804 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:54,082 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:55,988 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:56,127 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:56,329 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:56,755 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:57,117 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:58,254 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:47:59,955 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:00,312 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:00,531 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:01,029 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:01,373 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:01,517 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:02,092 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:03,209 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:03,885 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:04,602 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:05,521 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:05,593 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:06,031 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:07,034 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:07,777 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:08,927 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'
+2025-11-18 07:48:09,139 - ERROR - Error in neural scoring: __call__() got an unexpected keyword argument 'training'

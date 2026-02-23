@@ -1,0 +1,102 @@
+2025-11-10 09:13:07,381 - INFO - Setting up GPU configuration...
+2025-11-10 09:13:07,492 - INFO - GPU memory growth: True
+2025-11-10 09:13:07,492 - INFO - Using float32
+2025-11-10 09:13:07,492 - INFO - GPU configuration complete
+2025-11-10 09:13:07,492 - INFO - 🚀 Initializing LSBO-guided components...
+2025-11-10 09:13:07,492 - INFO - ✅ LSBO components initialized
+2025-11-10 09:13:07,492 - INFO - Setting up data pipeline...
+2025-11-10 09:13:07,492 - INFO - Using provided tokenizer
+2025-11-10 09:13:07,492 - INFO - Using provided preprocessor
+2025-11-10 09:13:07,492 - INFO - Creating training datasets...
+2025-11-10 09:13:07,492 - INFO - Training data: /workspace/TWAE_AMP_Generation/data/raw/final_3_36_train.csv
+2025-11-10 09:13:07,492 - INFO - Validation data: /workspace/TWAE_AMP_Generation/data/raw/final_3_36_validation.csv
+2025-11-10 09:13:07,492 - INFO - Loading dataset from: /workspace/TWAE_AMP_Generation/data/raw/final_3_36_train.csv
+2025-11-10 09:13:07,495 - INFO - CSV format validation passed for /workspace/TWAE_AMP_Generation/data/raw/final_3_36_train.csv
+2025-11-10 09:13:07,511 - INFO - Loaded 63117 sequences from /workspace/TWAE_AMP_Generation/data/raw/final_3_36_train.csv
+2025-11-10 09:13:07,511 - INFO - Validating and cleaning dataset...
+2025-11-10 09:13:07,511 - INFO - Starting preprocessing of 63117 sequences...
+2025-11-10 09:13:07,511 - INFO - Cleaning sequences...
+2025-11-10 09:13:07,548 - INFO - Validating sequences...
+2025-11-10 09:13:07,592 - INFO - Removing duplicate sequences...
+2025-11-10 09:13:07,596 - INFO - Computing sequence properties...
+2025-11-10 09:13:07,735 - INFO - Preprocessing complete. 38367 sequences remaining.
+2025-11-10 09:13:07,737 - WARNING - Removed 24750 invalid sequences (39.2%)
+2025-11-10 09:13:07,738 - INFO - Creating TensorFlow dataset with 38367 sequences
+2025-11-10 09:13:07,738 - INFO - Pre-tokenizing all sequences...
+2025-11-10 09:13:07,984 - INFO - Creating dataset from pre-tokenized data...
+2025-11-10 09:13:08,152 - INFO - Creating batched dataset...
+2025-11-10 09:13:08,213 - INFO - Dataset created successfully with batch size 64
+2025-11-10 09:13:08,214 - INFO - Loading dataset from: /workspace/TWAE_AMP_Generation/data/raw/final_3_36_validation.csv
+2025-11-10 09:13:08,215 - INFO - CSV format validation passed for /workspace/TWAE_AMP_Generation/data/raw/final_3_36_validation.csv
+2025-11-10 09:13:08,219 - INFO - Loaded 11124 sequences from /workspace/TWAE_AMP_Generation/data/raw/final_3_36_validation.csv
+2025-11-10 09:13:08,219 - INFO - Validating and cleaning dataset...
+2025-11-10 09:13:08,219 - INFO - Starting preprocessing of 11124 sequences...
+2025-11-10 09:13:08,219 - INFO - Cleaning sequences...
+2025-11-10 09:13:08,226 - INFO - Validating sequences...
+2025-11-10 09:13:08,235 - INFO - Removing duplicate sequences...
+2025-11-10 09:13:08,236 - INFO - Computing sequence properties...
+2025-11-10 09:13:08,276 - INFO - Preprocessing complete. 11124 sequences remaining.
+2025-11-10 09:13:08,277 - INFO - Creating TensorFlow dataset with 11124 sequences
+2025-11-10 09:13:08,277 - INFO - Pre-tokenizing all sequences...
+2025-11-10 09:13:08,346 - INFO - Creating dataset from pre-tokenized data...
+2025-11-10 09:13:08,348 - INFO - Creating batched dataset...
+2025-11-10 09:13:08,365 - INFO - Dataset created successfully with batch size 128
+2025-11-10 09:13:08,365 - INFO - Data pipeline setup complete
+2025-11-10 09:13:08,365 - INFO - Setting up TWAE-MMD model with LSBO-guided sampling...
+2025-11-10 09:13:08,731 - INFO - TWAE-MMD model setup complete
+2025-11-10 09:13:08,733 - INFO - Model parameters: ~4,127,137
+2025-11-10 09:13:08,733 - INFO - ✅ LSBO-guided sampling enabled in latent manager
+2025-11-10 09:13:08,738 - INFO - ✅ LSBO-Guided TWAE-MMD Trainer initialized successfully
+2025-11-10 09:13:08,738 - INFO - 🎯 KEY INNOVATION: No random Gaussian sampling!
+2025-11-10 09:13:08,738 - INFO - 🎯 All latent samples target high-quality AMP regions
+2025-11-10 09:13:08,738 - INFO - ================================================================================
+2025-11-10 09:13:08,738 - INFO - 🚀 Starting LSBO-Guided Training
+2025-11-10 09:13:08,738 - INFO - ================================================================================
+2025-11-10 09:13:08,738 - INFO - ✨ KEY INNOVATION: No random Gaussian sampling!
+2025-11-10 09:13:08,738 - INFO -    All latent samples target high-quality AMP regions
+2025-11-10 09:13:08,738 - INFO - ================================================================================
+2025-11-10 09:13:08,738 - INFO - 
+================================================================================
+2025-11-10 09:13:08,739 - INFO - Epoch 1/100
+2025-11-10 09:13:08,739 - INFO - ================================================================================
+2025-11-10 09:16:30,592 - INFO - 
+Epoch 1 Summary:
+2025-11-10 09:16:30,593 - INFO -   Train Loss: 1.6524
+2025-11-10 09:16:30,593 - INFO -   Train Accuracy: 0.9371
+2025-11-10 09:16:30,594 - INFO -   Val Loss: 3.1363
+2025-11-10 09:16:30,595 - INFO -   Val Accuracy: 0.9494
+2025-11-10 09:16:30,595 - INFO -   High-Quality Regions: 1000
+2025-11-10 09:16:30,596 - INFO -   Average Latent Score: 0.8397
+2025-11-10 09:16:30,596 - INFO -   Epoch Time: 201.85s
+2025-11-10 09:16:30,755 - INFO -   ✅ Saved best model: lsbo_guided_training_results/checkpoints/best_model_epoch_001_acc_0.9494.keras
+2025-11-10 09:16:30,755 - INFO - 
+================================================================================
+2025-11-10 09:16:30,755 - INFO - Epoch 2/100
+2025-11-10 09:16:30,755 - INFO - ================================================================================
+2025-11-10 09:19:46,815 - INFO - 
+Epoch 2 Summary:
+2025-11-10 09:19:46,816 - INFO -   Train Loss: 1.3936
+2025-11-10 09:19:46,816 - INFO -   Train Accuracy: 0.9591
+2025-11-10 09:19:46,816 - INFO -   Val Loss: 2.8397
+2025-11-10 09:19:46,817 - INFO -   Val Accuracy: 0.9514
+2025-11-10 09:19:46,817 - INFO -   High-Quality Regions: 1000
+2025-11-10 09:19:46,817 - INFO -   Average Latent Score: 0.8552
+2025-11-10 09:19:46,817 - INFO -   Epoch Time: 196.06s
+2025-11-10 09:19:46,953 - INFO -   ✅ Saved best model: lsbo_guided_training_results/checkpoints/best_model_epoch_002_acc_0.9514.keras
+2025-11-10 09:19:46,954 - INFO - 
+================================================================================
+2025-11-10 09:19:46,954 - INFO - Epoch 3/100
+2025-11-10 09:19:46,954 - INFO - ================================================================================
+2025-11-10 09:23:10,981 - INFO - 
+Epoch 3 Summary:
+2025-11-10 09:23:10,981 - INFO -   Train Loss: 1.3325
+2025-11-10 09:23:10,982 - INFO -   Train Accuracy: 0.9646
+2025-11-10 09:23:10,982 - INFO -   Val Loss: 1.9829
+2025-11-10 09:23:10,982 - INFO -   Val Accuracy: 0.9447
+2025-11-10 09:23:10,982 - INFO -   High-Quality Regions: 1000
+2025-11-10 09:23:10,982 - INFO -   Average Latent Score: 0.8624
+2025-11-10 09:23:10,982 - INFO -   Epoch Time: 204.03s
+2025-11-10 09:23:10,983 - INFO - 
+================================================================================
+2025-11-10 09:23:10,983 - INFO - Epoch 4/100
+2025-11-10 09:23:10,983 - INFO - ================================================================================

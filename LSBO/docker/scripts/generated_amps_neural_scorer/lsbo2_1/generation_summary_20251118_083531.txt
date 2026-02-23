@@ -1,0 +1,26 @@
+================================================================================
+AMP GENERATION SUMMARY (NEURAL SCORER)
+================================================================================
+
+Generated: 1000 unique AMPs
+
+Quality Scores (Neural Scorer):
+  Overall:    0.8276 ± 0.0219
+  Membrane:   0.8276 ± 0.0219
+
+Sequence Properties:
+  Length:     23.2 ± 7.1
+  Charge:     2.7 ± 2.5
+  Hydrophob:  0.476 ± 0.116
+
+Top 10 AMPs:
+  1. HSYQHHVWVWVWWRWVSDHDWHNVI (score=0.9075)
+  2. HIVKEVIWWYSWNHPVWHWSWHW (score=0.9000)
+  3. HPVVVWYWGIKSWMKSKKHE (score=0.8975)
+  4. IWGWVSSHIVCWVHHHVRVVHVWYHRDHDAEDCVW (score=0.8975)
+  5. RWGEVSWLYVEWSEWWPMKVVVVVKINHVVVSVVV (score=0.8925)
+  6. HHYVSHVWYWIYWVSLWVIMLNVMYDWHVVRVEV (score=0.8900)
+  7. LPSSYRHCIWCWLHVHHSHKWMSWEV (score=0.8900)
+  8. IKLYEASSPWHVSVWWWVSVVWHVVDHVWWH (score=0.8900)
+  9. WGVEWVWWIYHVHEWYRWWWVWDVDWVWVHV (score=0.8900)
+  10. LCRHYSIHSVWSMHRWV (score=0.8900)

@@ -1,0 +1,80 @@
+2025-11-18 07:53:13,381 - INFO - 
+================================================================================
+2025-11-18 07:53:13,381 - INFO - 🔄 LOADING MODEL FROM H5 FORMAT
+2025-11-18 07:53:13,381 - INFO - ================================================================================
+
+2025-11-18 07:53:13,381 - INFO - 📁 Weights: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670.h5
+2025-11-18 07:53:13,381 - INFO - 📁 LSBO Sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670_lsbo_sampler.pkl
+2025-11-18 07:53:13,381 - INFO - 📁 Config: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670_config.json
+
+2025-11-18 07:53:13,381 - INFO - 🔧 Step 1: Loading model config...
+2025-11-18 07:53:13,381 - INFO - ✅ Config loaded: high_accuracy
+
+2025-11-18 07:53:13,381 - INFO - 🔧 Step 2: Creating model architecture...
+2025-11-18 07:53:13,924 - INFO - ✅ Model architecture created
+
+2025-11-18 07:53:13,924 - INFO - 🔧 Step 3: Building model graph...
+2025-11-18 07:53:13,978 - INFO - ✅ Model graph built
+
+2025-11-18 07:53:13,978 - INFO - 🔧 Step 4: Loading weights from .h5 file...
+2025-11-18 07:53:13,981 - WARNING - ⚠️  Layer mismatch detected: Layer count mismatch when loading weights from file. Model expected 4 layers, found 3 saved layers....
+2025-11-18 07:53:13,981 - INFO -    Trying flexible loading (by_name=True, skip_mismatch=True)...
+2025-11-18 07:53:14,018 - INFO - ✅ Weights loaded successfully (flexible matching)!
+
+2025-11-18 07:53:14,018 - INFO - 🔧 Step 5: Loading LSBO sampler with HQ regions...
+2025-11-18 07:53:14,020 - INFO - ✅ LSBO sampler loaded with 1000 HQ regions!
+
+2025-11-18 07:53:14,020 - INFO - Setting up tokenizer...
+2025-11-18 07:53:14,020 - INFO - ✅ Tokenizer ready
+2025-11-18 07:53:14,020 - INFO - Setting up NEURAL ImprovedAMPScorer (same as training)...
+2025-11-18 07:53:14,020 - INFO - ✅ Neural scorer ready
+2025-11-18 07:53:14,020 - INFO - ✅ Constraints ready
+2025-11-18 07:53:14,020 - INFO - ================================================================================
+2025-11-18 07:53:14,020 - INFO - 🧬 GENERATING AMPs WITH NEURAL SCORER
+2025-11-18 07:53:14,020 - INFO - ================================================================================
+
+2025-11-18 07:53:14,020 - INFO - 🎯 Target: 1000 AMPs
+2025-11-18 07:53:14,020 - INFO - 🌡  Temperature: 0.8
+2025-11-18 07:53:14,020 - INFO - 📊 Min Overall Score: 0.8 (sAMPpred-GAT threshold)
+2025-11-18 07:53:14,020 - INFO - 📊 Min Membrane Score: 0.8
+
+2025-11-18 07:53:14,020 - INFO - ✅ Using 1000 LSBO high-quality regions for sampling
+2025-11-18 07:53:14,020 - INFO -    LSBO mean score: 0.8965 (training quality)
+
+2025-11-18 07:53:14,187 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:14,256 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:14,326 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:14,464 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:14,534 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:14,604 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:14,673 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:14,810 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:14,878 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:14,947 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,017 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,086 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,154 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,289 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,356 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,423 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,490 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,558 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,625 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,760 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,827 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,895 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:15,962 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,030 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,098 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,165 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,232 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,300 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,367 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,435 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,503 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,571 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,706 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,773 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,841 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,909 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()
+2025-11-18 07:53:16,976 - ERROR - Error in neural scoring: The truth value of an array with more than one element is ambiguous. Use a.any() or a.all()

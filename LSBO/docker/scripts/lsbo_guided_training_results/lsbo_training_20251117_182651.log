@@ -1,0 +1,2341 @@
+2025-11-17 18:26:51,857 - INFO - Setting up GPU configuration...
+2025-11-17 18:26:51,968 - INFO - GPU memory growth: True
+2025-11-17 18:26:51,968 - INFO - Using float32
+2025-11-17 18:26:51,968 - INFO - GPU configuration complete
+2025-11-17 18:26:51,968 - INFO - 🚀 Initializing LSBO-guided components...
+2025-11-17 18:26:51,968 - INFO - ✅ LSBO components initialized
+2025-11-17 18:26:51,968 - INFO - Setting up data pipeline...
+2025-11-17 18:26:51,968 - INFO - Using provided tokenizer
+2025-11-17 18:26:51,968 - INFO - Using provided preprocessor
+2025-11-17 18:26:51,968 - INFO - Creating training datasets...
+2025-11-17 18:26:51,968 - INFO - Training data: /workspace/TWAE_AMP_Generation/data/raw/final_3_36_train.csv
+2025-11-17 18:26:51,968 - INFO - Validation data: /workspace/TWAE_AMP_Generation/data/raw/final_3_36_validation.csv
+2025-11-17 18:26:51,969 - INFO - Loading dataset from: /workspace/TWAE_AMP_Generation/data/raw/final_3_36_train.csv
+2025-11-17 18:26:51,972 - INFO - CSV format validation passed for /workspace/TWAE_AMP_Generation/data/raw/final_3_36_train.csv
+2025-11-17 18:26:51,987 - INFO - Loaded 63117 sequences from /workspace/TWAE_AMP_Generation/data/raw/final_3_36_train.csv
+2025-11-17 18:26:51,987 - INFO - Validating and cleaning dataset...
+2025-11-17 18:26:51,987 - INFO - Starting preprocessing of 63117 sequences...
+2025-11-17 18:26:51,988 - INFO - Cleaning sequences...
+2025-11-17 18:26:52,025 - INFO - Validating sequences...
+2025-11-17 18:26:52,074 - INFO - Removing duplicate sequences...
+2025-11-17 18:26:52,078 - INFO - Computing sequence properties...
+2025-11-17 18:26:52,224 - INFO - Preprocessing complete. 38367 sequences remaining.
+2025-11-17 18:26:52,226 - WARNING - Removed 24750 invalid sequences (39.2%)
+2025-11-17 18:26:52,227 - INFO - Creating TensorFlow dataset with 38367 sequences
+2025-11-17 18:26:52,227 - INFO - Pre-tokenizing all sequences...
+2025-11-17 18:26:52,474 - INFO - Creating dataset from pre-tokenized data...
+2025-11-17 18:26:52,661 - INFO - Creating batched dataset...
+2025-11-17 18:26:52,724 - INFO - Dataset created successfully with batch size 64
+2025-11-17 18:26:52,725 - INFO - Loading dataset from: /workspace/TWAE_AMP_Generation/data/raw/final_3_36_validation.csv
+2025-11-17 18:26:52,727 - INFO - CSV format validation passed for /workspace/TWAE_AMP_Generation/data/raw/final_3_36_validation.csv
+2025-11-17 18:26:52,730 - INFO - Loaded 11124 sequences from /workspace/TWAE_AMP_Generation/data/raw/final_3_36_validation.csv
+2025-11-17 18:26:52,730 - INFO - Validating and cleaning dataset...
+2025-11-17 18:26:52,730 - INFO - Starting preprocessing of 11124 sequences...
+2025-11-17 18:26:52,730 - INFO - Cleaning sequences...
+2025-11-17 18:26:52,737 - INFO - Validating sequences...
+2025-11-17 18:26:52,746 - INFO - Removing duplicate sequences...
+2025-11-17 18:26:52,747 - INFO - Computing sequence properties...
+2025-11-17 18:26:52,789 - INFO - Preprocessing complete. 11124 sequences remaining.
+2025-11-17 18:26:52,790 - INFO - Creating TensorFlow dataset with 11124 sequences
+2025-11-17 18:26:52,790 - INFO - Pre-tokenizing all sequences...
+2025-11-17 18:26:52,860 - INFO - Creating dataset from pre-tokenized data...
+2025-11-17 18:26:52,862 - INFO - Creating batched dataset...
+2025-11-17 18:26:52,879 - INFO - Dataset created successfully with batch size 128
+2025-11-17 18:26:52,879 - INFO - Data pipeline setup complete
+2025-11-17 18:26:52,879 - INFO - Setting up TWAE-MMD model with LSBO-guided sampling...
+2025-11-17 18:26:53,298 - INFO - TWAE-MMD model setup complete
+2025-11-17 18:26:53,300 - INFO - Model parameters: ~4,127,137
+2025-11-17 18:26:53,300 - INFO - ✅ LSBO-guided sampling enabled in latent manager
+2025-11-17 18:26:53,311 - INFO - ✅ LSBO-Guided TWAE-MMD Trainer initialized successfully
+2025-11-17 18:26:53,311 - INFO - 🎯 KEY INNOVATION: No random Gaussian sampling!
+2025-11-17 18:26:53,311 - INFO - 🎯 All latent samples target high-quality AMP regions
+2025-11-17 18:26:53,311 - INFO - ================================================================================
+2025-11-17 18:26:53,311 - INFO - 🚀 Starting LSBO-Guided Training
+2025-11-17 18:26:53,311 - INFO - ================================================================================
+2025-11-17 18:26:53,311 - INFO - ✨ KEY INNOVATION: No random Gaussian sampling!
+2025-11-17 18:26:53,311 - INFO -    All latent samples target high-quality AMP regions
+2025-11-17 18:26:53,311 - INFO - ================================================================================
+2025-11-17 18:26:53,311 - INFO - 
+================================================================================
+2025-11-17 18:26:53,311 - INFO - Epoch 1/100
+2025-11-17 18:26:53,311 - INFO - ================================================================================
+2025-11-17 18:30:16,964 - INFO - 
+Epoch 1 Summary:
+2025-11-17 18:30:16,965 - INFO -   Total Loss: 1.6094
+2025-11-17 18:30:16,965 - INFO -   🎯 Task Losses:
+2025-11-17 18:30:16,965 - INFO -      Classification Loss: 0.3518
+2025-11-17 18:30:16,966 - INFO -      Reconstruction Loss: 2.3971
+2025-11-17 18:30:16,966 - INFO -   🎯 Performance:
+2025-11-17 18:30:16,966 - INFO -      Train Accuracy: 0.9390
+2025-11-17 18:30:16,966 - INFO -      Val Accuracy: 0.9297
+2025-11-17 18:30:16,966 - INFO -      Val Loss: 2.7129
+2025-11-17 18:30:16,967 - INFO -   📊 Latent Space Regularization:
+2025-11-17 18:30:16,967 - INFO -      MMD Loss (LSBO-guided): 0.0380
+2025-11-17 18:30:16,967 - INFO -      Wasserstein Loss (Energy): 1.1420
+2025-11-17 18:30:16,967 - INFO -   🎯 LSBO Statistics:
+2025-11-17 18:30:16,967 - INFO -      High-Quality Regions: 1000
+2025-11-17 18:30:16,967 - INFO -      Average Latent Score: 0.8384
+2025-11-17 18:30:16,967 - INFO -   ⏱️  Epoch Time: 203.65s
+2025-11-17 18:30:17,026 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_001_acc_0.9297.h5
+2025-11-17 18:30:17,030 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_001_acc_0.9297_lsbo_sampler.pkl
+2025-11-17 18:30:17,030 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_001_acc_0.9297_config.json
+2025-11-17 18:30:17,030 - INFO -   📊 Creating visualizations...
+2025-11-17 18:30:18,728 - INFO -      ✅ Training dashboard: training_dashboard_epoch_001.png
+2025-11-17 18:30:18,728 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 18:30:22,540 - INFO -      ✅ Latent space: latent_space_epoch_001.png
+2025-11-17 18:30:23,674 - INFO -      ✅ HQ regions: hq_regions_epoch_001.png
+2025-11-17 18:30:23,674 - INFO - 
+================================================================================
+2025-11-17 18:30:23,674 - INFO - Epoch 2/100
+2025-11-17 18:30:23,674 - INFO - ================================================================================
+2025-11-17 18:33:42,689 - INFO - 
+Epoch 2 Summary:
+2025-11-17 18:33:42,690 - INFO -   Total Loss: 1.4203
+2025-11-17 18:33:42,690 - INFO -   🎯 Task Losses:
+2025-11-17 18:33:42,690 - INFO -      Classification Loss: 0.2845
+2025-11-17 18:33:42,690 - INFO -      Reconstruction Loss: 2.2556
+2025-11-17 18:33:42,691 - INFO -   🎯 Performance:
+2025-11-17 18:33:42,691 - INFO -      Train Accuracy: 0.9586
+2025-11-17 18:33:42,691 - INFO -      Val Accuracy: 0.9464
+2025-11-17 18:33:42,691 - INFO -      Val Loss: 2.2867
+2025-11-17 18:33:42,691 - INFO -   📊 Latent Space Regularization:
+2025-11-17 18:33:42,692 - INFO -      MMD Loss (LSBO-guided): 0.0203
+2025-11-17 18:33:42,692 - INFO -      Wasserstein Loss (Energy): 0.9058
+2025-11-17 18:33:42,692 - INFO -   🎯 LSBO Statistics:
+2025-11-17 18:33:42,692 - INFO -      High-Quality Regions: 1000
+2025-11-17 18:33:42,692 - INFO -      Average Latent Score: 0.8538
+2025-11-17 18:33:42,692 - INFO -   ⏱️  Epoch Time: 199.01s
+2025-11-17 18:33:42,742 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_002_acc_0.9464.h5
+2025-11-17 18:33:42,746 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_002_acc_0.9464_lsbo_sampler.pkl
+2025-11-17 18:33:42,747 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_002_acc_0.9464_config.json
+2025-11-17 18:33:42,747 - INFO - 
+================================================================================
+2025-11-17 18:33:42,747 - INFO - Epoch 3/100
+2025-11-17 18:33:42,747 - INFO - ================================================================================
+2025-11-17 18:36:57,942 - INFO - 
+Epoch 3 Summary:
+2025-11-17 18:36:57,942 - INFO -   Total Loss: 1.3806
+2025-11-17 18:36:57,942 - INFO -   🎯 Task Losses:
+2025-11-17 18:36:57,942 - INFO -      Classification Loss: 0.2748
+2025-11-17 18:36:57,943 - INFO -      Reconstruction Loss: 2.2293
+2025-11-17 18:36:57,943 - INFO -   🎯 Performance:
+2025-11-17 18:36:57,943 - INFO -      Train Accuracy: 0.9649
+2025-11-17 18:36:57,943 - INFO -      Val Accuracy: 0.9447
+2025-11-17 18:36:57,944 - INFO -      Val Loss: 1.8283
+2025-11-17 18:36:57,944 - INFO -   📊 Latent Space Regularization:
+2025-11-17 18:36:57,944 - INFO -      MMD Loss (LSBO-guided): 0.0172
+2025-11-17 18:36:57,944 - INFO -      Wasserstein Loss (Energy): 0.8317
+2025-11-17 18:36:57,944 - INFO -   🎯 LSBO Statistics:
+2025-11-17 18:36:57,944 - INFO -      High-Quality Regions: 1000
+2025-11-17 18:36:57,944 - INFO -      Average Latent Score: 0.8611
+2025-11-17 18:36:57,944 - INFO -   ⏱️  Epoch Time: 195.19s
+2025-11-17 18:36:57,945 - INFO - 
+================================================================================
+2025-11-17 18:36:57,945 - INFO - Epoch 4/100
+2025-11-17 18:36:57,945 - INFO - ================================================================================
+2025-11-17 18:40:09,383 - INFO - 
+Epoch 4 Summary:
+2025-11-17 18:40:09,383 - INFO -   Total Loss: 1.3347
+2025-11-17 18:40:09,383 - INFO -   🎯 Task Losses:
+2025-11-17 18:40:09,383 - INFO -      Classification Loss: 0.2680
+2025-11-17 18:40:09,384 - INFO -      Reconstruction Loss: 2.2092
+2025-11-17 18:40:09,384 - INFO -   🎯 Performance:
+2025-11-17 18:40:09,384 - INFO -      Train Accuracy: 0.9691
+2025-11-17 18:40:09,384 - INFO -      Val Accuracy: 0.9470
+2025-11-17 18:40:09,385 - INFO -      Val Loss: 1.7279
+2025-11-17 18:40:09,385 - INFO -   📊 Latent Space Regularization:
+2025-11-17 18:40:09,385 - INFO -      MMD Loss (LSBO-guided): 0.0141
+2025-11-17 18:40:09,385 - INFO -      Wasserstein Loss (Energy): 0.7123
+2025-11-17 18:40:09,385 - INFO -   🎯 LSBO Statistics:
+2025-11-17 18:40:09,385 - INFO -      High-Quality Regions: 1000
+2025-11-17 18:40:09,385 - INFO -      Average Latent Score: 0.8658
+2025-11-17 18:40:09,385 - INFO -   ⏱️  Epoch Time: 191.44s
+2025-11-17 18:40:09,432 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_004_acc_0.9470.h5
+2025-11-17 18:40:09,436 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_004_acc_0.9470_lsbo_sampler.pkl
+2025-11-17 18:40:09,436 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_004_acc_0.9470_config.json
+2025-11-17 18:40:09,436 - INFO - 
+================================================================================
+2025-11-17 18:40:09,436 - INFO - Epoch 5/100
+2025-11-17 18:40:09,436 - INFO - ================================================================================
+2025-11-17 18:43:21,658 - INFO - 
+Epoch 5 Summary:
+2025-11-17 18:43:21,658 - INFO -   Total Loss: 1.3012
+2025-11-17 18:43:21,658 - INFO -   🎯 Task Losses:
+2025-11-17 18:43:21,659 - INFO -      Classification Loss: 0.2616
+2025-11-17 18:43:21,659 - INFO -      Reconstruction Loss: 2.1795
+2025-11-17 18:43:21,659 - INFO -   🎯 Performance:
+2025-11-17 18:43:21,659 - INFO -      Train Accuracy: 0.9726
+2025-11-17 18:43:21,660 - INFO -      Val Accuracy: 0.9471
+2025-11-17 18:43:21,660 - INFO -      Val Loss: 1.5529
+2025-11-17 18:43:21,660 - INFO -   📊 Latent Space Regularization:
+2025-11-17 18:43:21,660 - INFO -      MMD Loss (LSBO-guided): 0.0126
+2025-11-17 18:43:21,661 - INFO -      Wasserstein Loss (Energy): 0.6539
+2025-11-17 18:43:21,661 - INFO -   🎯 LSBO Statistics:
+2025-11-17 18:43:21,661 - INFO -      High-Quality Regions: 1000
+2025-11-17 18:43:21,661 - INFO -      Average Latent Score: 0.8693
+2025-11-17 18:43:21,661 - INFO -   ⏱️  Epoch Time: 192.22s
+2025-11-17 18:43:21,709 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_005_acc_0.9471.h5
+2025-11-17 18:43:21,713 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_005_acc_0.9471_lsbo_sampler.pkl
+2025-11-17 18:43:21,713 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_005_acc_0.9471_config.json
+2025-11-17 18:43:21,713 - INFO -   📊 Creating visualizations...
+2025-11-17 18:43:23,574 - INFO -      ✅ Training dashboard: training_dashboard_epoch_005.png
+2025-11-17 18:43:23,574 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 18:43:27,134 - INFO -      ✅ Latent space: latent_space_epoch_005.png
+2025-11-17 18:43:28,234 - INFO -      ✅ HQ regions: hq_regions_epoch_005.png
+2025-11-17 18:43:28,234 - INFO - 
+================================================================================
+2025-11-17 18:43:28,234 - INFO - Epoch 6/100
+2025-11-17 18:43:28,234 - INFO - ================================================================================
+2025-11-17 18:46:42,929 - INFO - 
+Epoch 6 Summary:
+2025-11-17 18:46:42,929 - INFO -   Total Loss: 1.2568
+2025-11-17 18:46:42,929 - INFO -   🎯 Task Losses:
+2025-11-17 18:46:42,930 - INFO -      Classification Loss: 0.2577
+2025-11-17 18:46:42,930 - INFO -      Reconstruction Loss: 2.1510
+2025-11-17 18:46:42,930 - INFO -   🎯 Performance:
+2025-11-17 18:46:42,930 - INFO -      Train Accuracy: 0.9740
+2025-11-17 18:46:42,931 - INFO -      Val Accuracy: 0.9505
+2025-11-17 18:46:42,931 - INFO -      Val Loss: 1.5696
+2025-11-17 18:46:42,931 - INFO -   📊 Latent Space Regularization:
+2025-11-17 18:46:42,931 - INFO -      MMD Loss (LSBO-guided): 0.0103
+2025-11-17 18:46:42,931 - INFO -      Wasserstein Loss (Energy): 0.5403
+2025-11-17 18:46:42,931 - INFO -   🎯 LSBO Statistics:
+2025-11-17 18:46:42,932 - INFO -      High-Quality Regions: 1000
+2025-11-17 18:46:42,932 - INFO -      Average Latent Score: 0.8718
+2025-11-17 18:46:42,932 - INFO -   ⏱️  Epoch Time: 194.69s
+2025-11-17 18:46:42,982 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_006_acc_0.9505.h5
+2025-11-17 18:46:42,986 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_006_acc_0.9505_lsbo_sampler.pkl
+2025-11-17 18:46:42,986 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_006_acc_0.9505_config.json
+2025-11-17 18:46:42,986 - INFO - 
+================================================================================
+2025-11-17 18:46:42,986 - INFO - Epoch 7/100
+2025-11-17 18:46:42,986 - INFO - ================================================================================
+2025-11-17 18:49:55,461 - INFO - 
+Epoch 7 Summary:
+2025-11-17 18:49:55,470 - INFO -   Total Loss: 1.2000
+2025-11-17 18:49:55,470 - INFO -   🎯 Task Losses:
+2025-11-17 18:49:55,470 - INFO -      Classification Loss: 0.2544
+2025-11-17 18:49:55,471 - INFO -      Reconstruction Loss: 2.1289
+2025-11-17 18:49:55,471 - INFO -   🎯 Performance:
+2025-11-17 18:49:55,471 - INFO -      Train Accuracy: 0.9752
+2025-11-17 18:49:55,471 - INFO -      Val Accuracy: 0.9494
+2025-11-17 18:49:55,472 - INFO -      Val Loss: 1.5747
+2025-11-17 18:49:55,472 - INFO -   📊 Latent Space Regularization:
+2025-11-17 18:49:55,472 - INFO -      MMD Loss (LSBO-guided): 0.0070
+2025-11-17 18:49:55,473 - INFO -      Wasserstein Loss (Energy): 0.3663
+2025-11-17 18:49:55,473 - INFO -   🎯 LSBO Statistics:
+2025-11-17 18:49:55,473 - INFO -      High-Quality Regions: 1000
+2025-11-17 18:49:55,473 - INFO -      Average Latent Score: 0.8739
+2025-11-17 18:49:55,473 - INFO -   ⏱️  Epoch Time: 192.47s
+2025-11-17 18:49:55,473 - INFO - 
+================================================================================
+2025-11-17 18:49:55,473 - INFO - Epoch 8/100
+2025-11-17 18:49:55,473 - INFO - ================================================================================
+2025-11-17 18:53:07,029 - INFO - 
+Epoch 8 Summary:
+2025-11-17 18:53:07,029 - INFO -   Total Loss: 1.1687
+2025-11-17 18:53:07,029 - INFO -   🎯 Task Losses:
+2025-11-17 18:53:07,030 - INFO -      Classification Loss: 0.2509
+2025-11-17 18:53:07,030 - INFO -      Reconstruction Loss: 2.1090
+2025-11-17 18:53:07,030 - INFO -   🎯 Performance:
+2025-11-17 18:53:07,030 - INFO -      Train Accuracy: 0.9769
+2025-11-17 18:53:07,031 - INFO -      Val Accuracy: 0.9562
+2025-11-17 18:53:07,031 - INFO -      Val Loss: 1.4247
+2025-11-17 18:53:07,031 - INFO -   📊 Latent Space Regularization:
+2025-11-17 18:53:07,031 - INFO -      MMD Loss (LSBO-guided): 0.0055
+2025-11-17 18:53:07,032 - INFO -      Wasserstein Loss (Energy): 0.2889
+2025-11-17 18:53:07,032 - INFO -   🎯 LSBO Statistics:
+2025-11-17 18:53:07,032 - INFO -      High-Quality Regions: 1000
+2025-11-17 18:53:07,032 - INFO -      Average Latent Score: 0.8758
+2025-11-17 18:53:07,032 - INFO -   ⏱️  Epoch Time: 191.55s
+2025-11-17 18:53:07,078 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_008_acc_0.9562.h5
+2025-11-17 18:53:07,081 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_008_acc_0.9562_lsbo_sampler.pkl
+2025-11-17 18:53:07,082 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_008_acc_0.9562_config.json
+2025-11-17 18:53:07,082 - INFO - 
+================================================================================
+2025-11-17 18:53:07,082 - INFO - Epoch 9/100
+2025-11-17 18:53:07,082 - INFO - ================================================================================
+2025-11-17 18:56:17,019 - INFO - 
+Epoch 9 Summary:
+2025-11-17 18:56:17,020 - INFO -   Total Loss: 1.1451
+2025-11-17 18:56:17,020 - INFO -   🎯 Task Losses:
+2025-11-17 18:56:17,020 - INFO -      Classification Loss: 0.2494
+2025-11-17 18:56:17,020 - INFO -      Reconstruction Loss: 2.0900
+2025-11-17 18:56:17,020 - INFO -   🎯 Performance:
+2025-11-17 18:56:17,021 - INFO -      Train Accuracy: 0.9776
+2025-11-17 18:56:17,021 - INFO -      Val Accuracy: 0.9478
+2025-11-17 18:56:17,021 - INFO -      Val Loss: 1.4668
+2025-11-17 18:56:17,021 - INFO -   📊 Latent Space Regularization:
+2025-11-17 18:56:17,022 - INFO -      MMD Loss (LSBO-guided): 0.0046
+2025-11-17 18:56:17,022 - INFO -      Wasserstein Loss (Energy): 0.2324
+2025-11-17 18:56:17,022 - INFO -   🎯 LSBO Statistics:
+2025-11-17 18:56:17,022 - INFO -      High-Quality Regions: 1000
+2025-11-17 18:56:17,022 - INFO -      Average Latent Score: 0.8773
+2025-11-17 18:56:17,022 - INFO -   ⏱️  Epoch Time: 189.94s
+2025-11-17 18:56:17,022 - INFO - 
+================================================================================
+2025-11-17 18:56:17,022 - INFO - Epoch 10/100
+2025-11-17 18:56:17,022 - INFO - ================================================================================
+2025-11-17 18:59:27,597 - INFO - 
+Epoch 10 Summary:
+2025-11-17 18:59:27,597 - INFO -   Total Loss: 1.1232
+2025-11-17 18:59:27,597 - INFO -   🎯 Task Losses:
+2025-11-17 18:59:27,598 - INFO -      Classification Loss: 0.2472
+2025-11-17 18:59:27,598 - INFO -      Reconstruction Loss: 2.0738
+2025-11-17 18:59:27,598 - INFO -   🎯 Performance:
+2025-11-17 18:59:27,598 - INFO -      Train Accuracy: 0.9796
+2025-11-17 18:59:27,598 - INFO -      Val Accuracy: 0.9538
+2025-11-17 18:59:27,599 - INFO -      Val Loss: 1.4639
+2025-11-17 18:59:27,599 - INFO -   📊 Latent Space Regularization:
+2025-11-17 18:59:27,599 - INFO -      MMD Loss (LSBO-guided): 0.0039
+2025-11-17 18:59:27,599 - INFO -      Wasserstein Loss (Energy): 0.1805
+2025-11-17 18:59:27,599 - INFO -   🎯 LSBO Statistics:
+2025-11-17 18:59:27,599 - INFO -      High-Quality Regions: 1000
+2025-11-17 18:59:27,599 - INFO -      Average Latent Score: 0.8787
+2025-11-17 18:59:27,599 - INFO -   ⏱️  Epoch Time: 190.57s
+2025-11-17 18:59:27,600 - INFO -   📊 Creating visualizations...
+2025-11-17 18:59:29,242 - INFO -      ✅ Training dashboard: training_dashboard_epoch_010.png
+2025-11-17 18:59:29,242 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 18:59:32,870 - INFO -      ✅ Latent space: latent_space_epoch_010.png
+2025-11-17 18:59:33,937 - INFO -      ✅ HQ regions: hq_regions_epoch_010.png
+2025-11-17 18:59:33,987 - INFO -   💾 Saved weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_010.h5
+2025-11-17 18:59:33,991 - INFO -   💾 Saved LSBO sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_010_lsbo_sampler.pkl
+2025-11-17 18:59:33,991 - INFO -   💾 Saved config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_010_config.json
+2025-11-17 18:59:33,993 - INFO - 
+================================================================================
+2025-11-17 18:59:33,993 - INFO - Epoch 11/100
+2025-11-17 18:59:33,993 - INFO - ================================================================================
+2025-11-17 19:02:44,415 - INFO - 
+Epoch 11 Summary:
+2025-11-17 19:02:44,416 - INFO -   Total Loss: 1.1075
+2025-11-17 19:02:44,416 - INFO -   🎯 Task Losses:
+2025-11-17 19:02:44,416 - INFO -      Classification Loss: 0.2463
+2025-11-17 19:02:44,416 - INFO -      Reconstruction Loss: 2.0568
+2025-11-17 19:02:44,416 - INFO -   🎯 Performance:
+2025-11-17 19:02:44,417 - INFO -      Train Accuracy: 0.9799
+2025-11-17 19:02:44,417 - INFO -      Val Accuracy: 0.9564
+2025-11-17 19:02:44,417 - INFO -      Val Loss: 1.3725
+2025-11-17 19:02:44,417 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:02:44,418 - INFO -      MMD Loss (LSBO-guided): 0.0034
+2025-11-17 19:02:44,418 - INFO -      Wasserstein Loss (Energy): 0.1493
+2025-11-17 19:02:44,418 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:02:44,418 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:02:44,418 - INFO -      Average Latent Score: 0.8799
+2025-11-17 19:02:44,418 - INFO -   ⏱️  Epoch Time: 190.42s
+2025-11-17 19:02:44,464 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_011_acc_0.9564.h5
+2025-11-17 19:02:44,468 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_011_acc_0.9564_lsbo_sampler.pkl
+2025-11-17 19:02:44,468 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_011_acc_0.9564_config.json
+2025-11-17 19:02:44,469 - INFO - 
+================================================================================
+2025-11-17 19:02:44,469 - INFO - Epoch 12/100
+2025-11-17 19:02:44,469 - INFO - ================================================================================
+2025-11-17 19:05:53,809 - INFO - 
+Epoch 12 Summary:
+2025-11-17 19:05:53,809 - INFO -   Total Loss: 1.0908
+2025-11-17 19:05:53,809 - INFO -   🎯 Task Losses:
+2025-11-17 19:05:53,810 - INFO -      Classification Loss: 0.2446
+2025-11-17 19:05:53,810 - INFO -      Reconstruction Loss: 2.0425
+2025-11-17 19:05:53,810 - INFO -   🎯 Performance:
+2025-11-17 19:05:53,810 - INFO -      Train Accuracy: 0.9811
+2025-11-17 19:05:53,811 - INFO -      Val Accuracy: 0.9576
+2025-11-17 19:05:53,811 - INFO -      Val Loss: 1.3874
+2025-11-17 19:05:53,811 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:05:53,811 - INFO -      MMD Loss (LSBO-guided): 0.0028
+2025-11-17 19:05:53,811 - INFO -      Wasserstein Loss (Energy): 0.1129
+2025-11-17 19:05:53,812 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:05:53,812 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:05:53,812 - INFO -      Average Latent Score: 0.8810
+2025-11-17 19:05:53,812 - INFO -   ⏱️  Epoch Time: 189.34s
+2025-11-17 19:05:53,858 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_012_acc_0.9576.h5
+2025-11-17 19:05:53,862 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_012_acc_0.9576_lsbo_sampler.pkl
+2025-11-17 19:05:53,862 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_012_acc_0.9576_config.json
+2025-11-17 19:05:53,862 - INFO - 
+================================================================================
+2025-11-17 19:05:53,862 - INFO - Epoch 13/100
+2025-11-17 19:05:53,862 - INFO - ================================================================================
+2025-11-17 19:09:05,102 - INFO - 
+Epoch 13 Summary:
+2025-11-17 19:09:05,103 - INFO -   Total Loss: 1.0794
+2025-11-17 19:09:05,103 - INFO -   🎯 Task Losses:
+2025-11-17 19:09:05,103 - INFO -      Classification Loss: 0.2425
+2025-11-17 19:09:05,103 - INFO -      Reconstruction Loss: 2.0294
+2025-11-17 19:09:05,103 - INFO -   🎯 Performance:
+2025-11-17 19:09:05,104 - INFO -      Train Accuracy: 0.9812
+2025-11-17 19:09:05,104 - INFO -      Val Accuracy: 0.9568
+2025-11-17 19:09:05,104 - INFO -      Val Loss: 1.3856
+2025-11-17 19:09:05,104 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:09:05,105 - INFO -      MMD Loss (LSBO-guided): 0.0024
+2025-11-17 19:09:05,105 - INFO -      Wasserstein Loss (Energy): 0.0973
+2025-11-17 19:09:05,105 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:09:05,105 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:09:05,105 - INFO -      Average Latent Score: 0.8820
+2025-11-17 19:09:05,105 - INFO -   ⏱️  Epoch Time: 191.24s
+2025-11-17 19:09:05,105 - INFO - 
+================================================================================
+2025-11-17 19:09:05,105 - INFO - Epoch 14/100
+2025-11-17 19:09:05,106 - INFO - ================================================================================
+2025-11-17 19:12:13,455 - INFO - 
+Epoch 14 Summary:
+2025-11-17 19:12:13,455 - INFO -   Total Loss: 1.0689
+2025-11-17 19:12:13,455 - INFO -   🎯 Task Losses:
+2025-11-17 19:12:13,456 - INFO -      Classification Loss: 0.2410
+2025-11-17 19:12:13,456 - INFO -      Reconstruction Loss: 2.0131
+2025-11-17 19:12:13,456 - INFO -   🎯 Performance:
+2025-11-17 19:12:13,456 - INFO -      Train Accuracy: 0.9824
+2025-11-17 19:12:13,457 - INFO -      Val Accuracy: 0.9515
+2025-11-17 19:12:13,457 - INFO -      Val Loss: 1.3773
+2025-11-17 19:12:13,457 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:12:13,457 - INFO -      MMD Loss (LSBO-guided): 0.0023
+2025-11-17 19:12:13,458 - INFO -      Wasserstein Loss (Energy): 0.0874
+2025-11-17 19:12:13,458 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:12:13,458 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:12:13,458 - INFO -      Average Latent Score: 0.8829
+2025-11-17 19:12:13,458 - INFO -   ⏱️  Epoch Time: 188.35s
+2025-11-17 19:12:13,458 - INFO - 
+================================================================================
+2025-11-17 19:12:13,458 - INFO - Epoch 15/100
+2025-11-17 19:12:13,458 - INFO - ================================================================================
+2025-11-17 19:15:21,216 - INFO - 
+Epoch 15 Summary:
+2025-11-17 19:15:21,216 - INFO -   Total Loss: 1.0622
+2025-11-17 19:15:21,216 - INFO -   🎯 Task Losses:
+2025-11-17 19:15:21,216 - INFO -      Classification Loss: 0.2406
+2025-11-17 19:15:21,217 - INFO -      Reconstruction Loss: 2.0024
+2025-11-17 19:15:21,217 - INFO -   🎯 Performance:
+2025-11-17 19:15:21,217 - INFO -      Train Accuracy: 0.9831
+2025-11-17 19:15:21,217 - INFO -      Val Accuracy: 0.9605
+2025-11-17 19:15:21,218 - INFO -      Val Loss: 1.3900
+2025-11-17 19:15:21,218 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:15:21,218 - INFO -      MMD Loss (LSBO-guided): 0.0022
+2025-11-17 19:15:21,218 - INFO -      Wasserstein Loss (Energy): 0.0795
+2025-11-17 19:15:21,218 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:15:21,218 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:15:21,218 - INFO -      Average Latent Score: 0.8836
+2025-11-17 19:15:21,218 - INFO -   ⏱️  Epoch Time: 187.76s
+2025-11-17 19:15:21,264 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_015_acc_0.9605.h5
+2025-11-17 19:15:21,268 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_015_acc_0.9605_lsbo_sampler.pkl
+2025-11-17 19:15:21,268 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_015_acc_0.9605_config.json
+2025-11-17 19:15:21,268 - INFO -   📊 Creating visualizations...
+2025-11-17 19:15:23,060 - INFO -      ✅ Training dashboard: training_dashboard_epoch_015.png
+2025-11-17 19:15:23,060 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 19:15:26,547 - INFO -      ✅ Latent space: latent_space_epoch_015.png
+2025-11-17 19:15:27,620 - INFO -      ✅ HQ regions: hq_regions_epoch_015.png
+2025-11-17 19:15:27,620 - INFO - 
+================================================================================
+2025-11-17 19:15:27,620 - INFO - Epoch 16/100
+2025-11-17 19:15:27,620 - INFO - ================================================================================
+2025-11-17 19:18:36,023 - INFO - 
+Epoch 16 Summary:
+2025-11-17 19:18:36,023 - INFO -   Total Loss: 1.0528
+2025-11-17 19:18:36,023 - INFO -   🎯 Task Losses:
+2025-11-17 19:18:36,024 - INFO -      Classification Loss: 0.2388
+2025-11-17 19:18:36,024 - INFO -      Reconstruction Loss: 1.9901
+2025-11-17 19:18:36,024 - INFO -   🎯 Performance:
+2025-11-17 19:18:36,024 - INFO -      Train Accuracy: 0.9835
+2025-11-17 19:18:36,025 - INFO -      Val Accuracy: 0.9546
+2025-11-17 19:18:36,025 - INFO -      Val Loss: 1.3481
+2025-11-17 19:18:36,025 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:18:36,025 - INFO -      MMD Loss (LSBO-guided): 0.0021
+2025-11-17 19:18:36,026 - INFO -      Wasserstein Loss (Energy): 0.0692
+2025-11-17 19:18:36,026 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:18:36,026 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:18:36,026 - INFO -      Average Latent Score: 0.8843
+2025-11-17 19:18:36,026 - INFO -   ⏱️  Epoch Time: 188.40s
+2025-11-17 19:18:36,026 - INFO - 
+================================================================================
+2025-11-17 19:18:36,026 - INFO - Epoch 17/100
+2025-11-17 19:18:36,026 - INFO - ================================================================================
+2025-11-17 19:21:44,369 - INFO - 
+Epoch 17 Summary:
+2025-11-17 19:21:44,369 - INFO -   Total Loss: 1.0445
+2025-11-17 19:21:44,369 - INFO -   🎯 Task Losses:
+2025-11-17 19:21:44,369 - INFO -      Classification Loss: 0.2381
+2025-11-17 19:21:44,370 - INFO -      Reconstruction Loss: 1.9772
+2025-11-17 19:21:44,370 - INFO -   🎯 Performance:
+2025-11-17 19:21:44,370 - INFO -      Train Accuracy: 0.9841
+2025-11-17 19:21:44,370 - INFO -      Val Accuracy: 0.9594
+2025-11-17 19:21:44,370 - INFO -      Val Loss: 1.3272
+2025-11-17 19:21:44,371 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:21:44,371 - INFO -      MMD Loss (LSBO-guided): 0.0019
+2025-11-17 19:21:44,371 - INFO -      Wasserstein Loss (Energy): 0.0597
+2025-11-17 19:21:44,371 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:21:44,371 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:21:44,371 - INFO -      Average Latent Score: 0.8851
+2025-11-17 19:21:44,371 - INFO -   ⏱️  Epoch Time: 188.34s
+2025-11-17 19:21:44,372 - INFO - 
+================================================================================
+2025-11-17 19:21:44,372 - INFO - Epoch 18/100
+2025-11-17 19:21:44,372 - INFO - ================================================================================
+2025-11-17 19:24:52,599 - INFO - 
+Epoch 18 Summary:
+2025-11-17 19:24:52,599 - INFO -   Total Loss: 1.0355
+2025-11-17 19:24:52,599 - INFO -   🎯 Task Losses:
+2025-11-17 19:24:52,600 - INFO -      Classification Loss: 0.2369
+2025-11-17 19:24:52,600 - INFO -      Reconstruction Loss: 1.9619
+2025-11-17 19:24:52,600 - INFO -   🎯 Performance:
+2025-11-17 19:24:52,600 - INFO -      Train Accuracy: 0.9840
+2025-11-17 19:24:52,601 - INFO -      Val Accuracy: 0.9575
+2025-11-17 19:24:52,601 - INFO -      Val Loss: 1.2896
+2025-11-17 19:24:52,601 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:24:52,601 - INFO -      MMD Loss (LSBO-guided): 0.0017
+2025-11-17 19:24:52,602 - INFO -      Wasserstein Loss (Energy): 0.0531
+2025-11-17 19:24:52,602 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:24:52,602 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:24:52,602 - INFO -      Average Latent Score: 0.8858
+2025-11-17 19:24:52,602 - INFO -   ⏱️  Epoch Time: 188.23s
+2025-11-17 19:24:52,602 - INFO - 
+================================================================================
+2025-11-17 19:24:52,602 - INFO - Epoch 19/100
+2025-11-17 19:24:52,602 - INFO - ================================================================================
+2025-11-17 19:28:02,113 - INFO - 
+Epoch 19 Summary:
+2025-11-17 19:28:02,113 - INFO -   Total Loss: 1.0310
+2025-11-17 19:28:02,113 - INFO -   🎯 Task Losses:
+2025-11-17 19:28:02,114 - INFO -      Classification Loss: 0.2367
+2025-11-17 19:28:02,114 - INFO -      Reconstruction Loss: 1.9509
+2025-11-17 19:28:02,114 - INFO -   🎯 Performance:
+2025-11-17 19:28:02,114 - INFO -      Train Accuracy: 0.9849
+2025-11-17 19:28:02,115 - INFO -      Val Accuracy: 0.9582
+2025-11-17 19:28:02,115 - INFO -      Val Loss: 1.3043
+2025-11-17 19:28:02,115 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:28:02,115 - INFO -      MMD Loss (LSBO-guided): 0.0017
+2025-11-17 19:28:02,115 - INFO -      Wasserstein Loss (Energy): 0.0532
+2025-11-17 19:28:02,116 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:28:02,116 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:28:02,116 - INFO -      Average Latent Score: 0.8864
+2025-11-17 19:28:02,116 - INFO -   ⏱️  Epoch Time: 189.51s
+2025-11-17 19:28:02,116 - INFO - 
+================================================================================
+2025-11-17 19:28:02,116 - INFO - Epoch 20/100
+2025-11-17 19:28:02,116 - INFO - ================================================================================
+2025-11-17 19:31:09,652 - INFO - 
+Epoch 20 Summary:
+2025-11-17 19:31:09,652 - INFO -   Total Loss: 1.0231
+2025-11-17 19:31:09,652 - INFO -   🎯 Task Losses:
+2025-11-17 19:31:09,652 - INFO -      Classification Loss: 0.2357
+2025-11-17 19:31:09,653 - INFO -      Reconstruction Loss: 1.9396
+2025-11-17 19:31:09,653 - INFO -   🎯 Performance:
+2025-11-17 19:31:09,653 - INFO -      Train Accuracy: 0.9857
+2025-11-17 19:31:09,653 - INFO -      Val Accuracy: 0.9554
+2025-11-17 19:31:09,653 - INFO -      Val Loss: 1.2579
+2025-11-17 19:31:09,654 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:31:09,654 - INFO -      MMD Loss (LSBO-guided): 0.0015
+2025-11-17 19:31:09,654 - INFO -      Wasserstein Loss (Energy): 0.0441
+2025-11-17 19:31:09,654 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:31:09,654 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:31:09,654 - INFO -      Average Latent Score: 0.8870
+2025-11-17 19:31:09,654 - INFO -   ⏱️  Epoch Time: 187.53s
+2025-11-17 19:31:09,655 - INFO -   📊 Creating visualizations...
+2025-11-17 19:31:11,483 - INFO -      ✅ Training dashboard: training_dashboard_epoch_020.png
+2025-11-17 19:31:11,483 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 19:31:15,103 - INFO -      ✅ Latent space: latent_space_epoch_020.png
+2025-11-17 19:31:16,184 - INFO -      ✅ HQ regions: hq_regions_epoch_020.png
+2025-11-17 19:31:16,232 - INFO -   💾 Saved weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_020.h5
+2025-11-17 19:31:16,236 - INFO -   💾 Saved LSBO sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_020_lsbo_sampler.pkl
+2025-11-17 19:31:16,236 - INFO -   💾 Saved config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_020_config.json
+2025-11-17 19:31:16,237 - INFO - 
+================================================================================
+2025-11-17 19:31:16,238 - INFO - Epoch 21/100
+2025-11-17 19:31:16,238 - INFO - ================================================================================
+2025-11-17 19:34:25,333 - INFO - 
+Epoch 21 Summary:
+2025-11-17 19:34:25,333 - INFO -   Total Loss: 1.0185
+2025-11-17 19:34:25,334 - INFO -   🎯 Task Losses:
+2025-11-17 19:34:25,334 - INFO -      Classification Loss: 0.2352
+2025-11-17 19:34:25,334 - INFO -      Reconstruction Loss: 1.9296
+2025-11-17 19:34:25,334 - INFO -   🎯 Performance:
+2025-11-17 19:34:25,334 - INFO -      Train Accuracy: 0.9857
+2025-11-17 19:34:25,335 - INFO -      Val Accuracy: 0.9587
+2025-11-17 19:34:25,335 - INFO -      Val Loss: 1.2775
+2025-11-17 19:34:25,335 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:34:25,335 - INFO -      MMD Loss (LSBO-guided): 0.0015
+2025-11-17 19:34:25,336 - INFO -      Wasserstein Loss (Energy): 0.0438
+2025-11-17 19:34:25,336 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:34:25,336 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:34:25,336 - INFO -      Average Latent Score: 0.8877
+2025-11-17 19:34:25,336 - INFO -   ⏱️  Epoch Time: 189.09s
+2025-11-17 19:34:25,336 - INFO - 
+================================================================================
+2025-11-17 19:34:25,336 - INFO - Epoch 22/100
+2025-11-17 19:34:25,336 - INFO - ================================================================================
+2025-11-17 19:37:33,683 - INFO - 
+Epoch 22 Summary:
+2025-11-17 19:37:33,683 - INFO -   Total Loss: 1.0109
+2025-11-17 19:37:33,684 - INFO -   🎯 Task Losses:
+2025-11-17 19:37:33,684 - INFO -      Classification Loss: 0.2334
+2025-11-17 19:37:33,684 - INFO -      Reconstruction Loss: 1.9185
+2025-11-17 19:37:33,684 - INFO -   🎯 Performance:
+2025-11-17 19:37:33,684 - INFO -      Train Accuracy: 0.9871
+2025-11-17 19:37:33,685 - INFO -      Val Accuracy: 0.9596
+2025-11-17 19:37:33,685 - INFO -      Val Loss: 1.2485
+2025-11-17 19:37:33,685 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:37:33,685 - INFO -      MMD Loss (LSBO-guided): 0.0014
+2025-11-17 19:37:33,686 - INFO -      Wasserstein Loss (Energy): 0.0383
+2025-11-17 19:37:33,686 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:37:33,686 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:37:33,686 - INFO -      Average Latent Score: 0.8882
+2025-11-17 19:37:33,686 - INFO -   ⏱️  Epoch Time: 188.35s
+2025-11-17 19:37:33,686 - INFO - 
+================================================================================
+2025-11-17 19:37:33,686 - INFO - Epoch 23/100
+2025-11-17 19:37:33,686 - INFO - ================================================================================
+2025-11-17 19:40:42,098 - INFO - 
+Epoch 23 Summary:
+2025-11-17 19:40:42,099 - INFO -   Total Loss: 1.0058
+2025-11-17 19:40:42,099 - INFO -   🎯 Task Losses:
+2025-11-17 19:40:42,099 - INFO -      Classification Loss: 0.2328
+2025-11-17 19:40:42,099 - INFO -      Reconstruction Loss: 1.9094
+2025-11-17 19:40:42,099 - INFO -   🎯 Performance:
+2025-11-17 19:40:42,100 - INFO -      Train Accuracy: 0.9868
+2025-11-17 19:40:42,100 - INFO -      Val Accuracy: 0.9621
+2025-11-17 19:40:42,100 - INFO -      Val Loss: 1.2309
+2025-11-17 19:40:42,100 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:40:42,100 - INFO -      MMD Loss (LSBO-guided): 0.0013
+2025-11-17 19:40:42,101 - INFO -      Wasserstein Loss (Energy): 0.0351
+2025-11-17 19:40:42,101 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:40:42,101 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:40:42,101 - INFO -      Average Latent Score: 0.8887
+2025-11-17 19:40:42,101 - INFO -   ⏱️  Epoch Time: 188.41s
+2025-11-17 19:40:42,146 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_023_acc_0.9621.h5
+2025-11-17 19:40:42,150 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_023_acc_0.9621_lsbo_sampler.pkl
+2025-11-17 19:40:42,150 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_023_acc_0.9621_config.json
+2025-11-17 19:40:42,150 - INFO - 
+================================================================================
+2025-11-17 19:40:42,150 - INFO - Epoch 24/100
+2025-11-17 19:40:42,150 - INFO - ================================================================================
+2025-11-17 19:43:50,656 - INFO - 
+Epoch 24 Summary:
+2025-11-17 19:43:50,656 - INFO -   Total Loss: 1.0046
+2025-11-17 19:43:50,656 - INFO -   🎯 Task Losses:
+2025-11-17 19:43:50,656 - INFO -      Classification Loss: 0.2331
+2025-11-17 19:43:50,657 - INFO -      Reconstruction Loss: 1.9033
+2025-11-17 19:43:50,657 - INFO -   🎯 Performance:
+2025-11-17 19:43:50,657 - INFO -      Train Accuracy: 0.9868
+2025-11-17 19:43:50,657 - INFO -      Val Accuracy: 0.9623
+2025-11-17 19:43:50,658 - INFO -      Val Loss: 1.2317
+2025-11-17 19:43:50,658 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:43:50,658 - INFO -      MMD Loss (LSBO-guided): 0.0015
+2025-11-17 19:43:50,658 - INFO -      Wasserstein Loss (Energy): 0.0385
+2025-11-17 19:43:50,658 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:43:50,658 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:43:50,658 - INFO -      Average Latent Score: 0.8892
+2025-11-17 19:43:50,658 - INFO -   ⏱️  Epoch Time: 188.50s
+2025-11-17 19:43:50,703 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_024_acc_0.9623.h5
+2025-11-17 19:43:50,707 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_024_acc_0.9623_lsbo_sampler.pkl
+2025-11-17 19:43:50,707 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_024_acc_0.9623_config.json
+2025-11-17 19:43:50,707 - INFO - 
+================================================================================
+2025-11-17 19:43:50,707 - INFO - Epoch 25/100
+2025-11-17 19:43:50,707 - INFO - ================================================================================
+2025-11-17 19:46:58,599 - INFO - 
+Epoch 25 Summary:
+2025-11-17 19:46:58,600 - INFO -   Total Loss: 0.9979
+2025-11-17 19:46:58,600 - INFO -   🎯 Task Losses:
+2025-11-17 19:46:58,600 - INFO -      Classification Loss: 0.2314
+2025-11-17 19:46:58,600 - INFO -      Reconstruction Loss: 1.8929
+2025-11-17 19:46:58,600 - INFO -   🎯 Performance:
+2025-11-17 19:46:58,601 - INFO -      Train Accuracy: 0.9872
+2025-11-17 19:46:58,601 - INFO -      Val Accuracy: 0.9653
+2025-11-17 19:46:58,601 - INFO -      Val Loss: 1.2381
+2025-11-17 19:46:58,601 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:46:58,602 - INFO -      MMD Loss (LSBO-guided): 0.0014
+2025-11-17 19:46:58,602 - INFO -      Wasserstein Loss (Energy): 0.0354
+2025-11-17 19:46:58,602 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:46:58,602 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:46:58,602 - INFO -      Average Latent Score: 0.8896
+2025-11-17 19:46:58,602 - INFO -   ⏱️  Epoch Time: 187.89s
+2025-11-17 19:46:58,646 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_025_acc_0.9653.h5
+2025-11-17 19:46:58,650 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_025_acc_0.9653_lsbo_sampler.pkl
+2025-11-17 19:46:58,650 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_025_acc_0.9653_config.json
+2025-11-17 19:46:58,650 - INFO -   📊 Creating visualizations...
+2025-11-17 19:47:00,376 - INFO -      ✅ Training dashboard: training_dashboard_epoch_025.png
+2025-11-17 19:47:00,376 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 19:47:03,893 - INFO -      ✅ Latent space: latent_space_epoch_025.png
+2025-11-17 19:47:04,991 - INFO -      ✅ HQ regions: hq_regions_epoch_025.png
+2025-11-17 19:47:04,991 - INFO - 
+================================================================================
+2025-11-17 19:47:04,991 - INFO - Epoch 26/100
+2025-11-17 19:47:04,991 - INFO - ================================================================================
+2025-11-17 19:50:12,849 - INFO - 
+Epoch 26 Summary:
+2025-11-17 19:50:12,850 - INFO -   Total Loss: 0.9920
+2025-11-17 19:50:12,850 - INFO -   🎯 Task Losses:
+2025-11-17 19:50:12,850 - INFO -      Classification Loss: 0.2297
+2025-11-17 19:50:12,850 - INFO -      Reconstruction Loss: 1.8843
+2025-11-17 19:50:12,850 - INFO -   🎯 Performance:
+2025-11-17 19:50:12,851 - INFO -      Train Accuracy: 0.9886
+2025-11-17 19:50:12,851 - INFO -      Val Accuracy: 0.9636
+2025-11-17 19:50:12,851 - INFO -      Val Loss: 1.2167
+2025-11-17 19:50:12,851 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:50:12,852 - INFO -      MMD Loss (LSBO-guided): 0.0013
+2025-11-17 19:50:12,852 - INFO -      Wasserstein Loss (Energy): 0.0326
+2025-11-17 19:50:12,852 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:50:12,852 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:50:12,852 - INFO -      Average Latent Score: 0.8899
+2025-11-17 19:50:12,852 - INFO -   ⏱️  Epoch Time: 187.86s
+2025-11-17 19:50:12,852 - INFO - 
+================================================================================
+2025-11-17 19:50:12,852 - INFO - Epoch 27/100
+2025-11-17 19:50:12,852 - INFO - ================================================================================
+2025-11-17 19:53:21,032 - INFO - 
+Epoch 27 Summary:
+2025-11-17 19:53:21,032 - INFO -   Total Loss: 0.9894
+2025-11-17 19:53:21,032 - INFO -   🎯 Task Losses:
+2025-11-17 19:53:21,033 - INFO -      Classification Loss: 0.2294
+2025-11-17 19:53:21,033 - INFO -      Reconstruction Loss: 1.8784
+2025-11-17 19:53:21,033 - INFO -   🎯 Performance:
+2025-11-17 19:53:21,033 - INFO -      Train Accuracy: 0.9891
+2025-11-17 19:53:21,034 - INFO -      Val Accuracy: 0.9605
+2025-11-17 19:53:21,034 - INFO -      Val Loss: 1.2397
+2025-11-17 19:53:21,034 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:53:21,034 - INFO -      MMD Loss (LSBO-guided): 0.0013
+2025-11-17 19:53:21,035 - INFO -      Wasserstein Loss (Energy): 0.0327
+2025-11-17 19:53:21,035 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:53:21,035 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:53:21,035 - INFO -      Average Latent Score: 0.8903
+2025-11-17 19:53:21,035 - INFO -   ⏱️  Epoch Time: 188.18s
+2025-11-17 19:53:21,035 - INFO - 
+================================================================================
+2025-11-17 19:53:21,035 - INFO - Epoch 28/100
+2025-11-17 19:53:21,035 - INFO - ================================================================================
+2025-11-17 19:56:29,501 - INFO - 
+Epoch 28 Summary:
+2025-11-17 19:56:29,501 - INFO -   Total Loss: 0.9845
+2025-11-17 19:56:29,501 - INFO -   🎯 Task Losses:
+2025-11-17 19:56:29,501 - INFO -      Classification Loss: 0.2286
+2025-11-17 19:56:29,502 - INFO -      Reconstruction Loss: 1.8702
+2025-11-17 19:56:29,502 - INFO -   🎯 Performance:
+2025-11-17 19:56:29,502 - INFO -      Train Accuracy: 0.9897
+2025-11-17 19:56:29,502 - INFO -      Val Accuracy: 0.9612
+2025-11-17 19:56:29,502 - INFO -      Val Loss: 1.2371
+2025-11-17 19:56:29,502 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:56:29,503 - INFO -      MMD Loss (LSBO-guided): 0.0013
+2025-11-17 19:56:29,503 - INFO -      Wasserstein Loss (Energy): 0.0295
+2025-11-17 19:56:29,503 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:56:29,503 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:56:29,503 - INFO -      Average Latent Score: 0.8906
+2025-11-17 19:56:29,503 - INFO -   ⏱️  Epoch Time: 188.46s
+2025-11-17 19:56:29,503 - INFO - 
+================================================================================
+2025-11-17 19:56:29,504 - INFO - Epoch 29/100
+2025-11-17 19:56:29,504 - INFO - ================================================================================
+2025-11-17 19:59:37,562 - INFO - 
+Epoch 29 Summary:
+2025-11-17 19:59:37,563 - INFO -   Total Loss: 0.9817
+2025-11-17 19:59:37,563 - INFO -   🎯 Task Losses:
+2025-11-17 19:59:37,563 - INFO -      Classification Loss: 0.2282
+2025-11-17 19:59:37,563 - INFO -      Reconstruction Loss: 1.8638
+2025-11-17 19:59:37,563 - INFO -   🎯 Performance:
+2025-11-17 19:59:37,564 - INFO -      Train Accuracy: 0.9898
+2025-11-17 19:59:37,564 - INFO -      Val Accuracy: 0.9632
+2025-11-17 19:59:37,564 - INFO -      Val Loss: 1.2330
+2025-11-17 19:59:37,564 - INFO -   📊 Latent Space Regularization:
+2025-11-17 19:59:37,565 - INFO -      MMD Loss (LSBO-guided): 0.0013
+2025-11-17 19:59:37,565 - INFO -      Wasserstein Loss (Energy): 0.0300
+2025-11-17 19:59:37,565 - INFO -   🎯 LSBO Statistics:
+2025-11-17 19:59:37,565 - INFO -      High-Quality Regions: 1000
+2025-11-17 19:59:37,565 - INFO -      Average Latent Score: 0.8909
+2025-11-17 19:59:37,565 - INFO -   ⏱️  Epoch Time: 188.06s
+2025-11-17 19:59:37,565 - INFO - 
+================================================================================
+2025-11-17 19:59:37,565 - INFO - Epoch 30/100
+2025-11-17 19:59:37,565 - INFO - ================================================================================
+2025-11-17 20:02:45,535 - INFO - 
+Epoch 30 Summary:
+2025-11-17 20:02:45,535 - INFO -   Total Loss: 0.9788
+2025-11-17 20:02:45,535 - INFO -   🎯 Task Losses:
+2025-11-17 20:02:45,536 - INFO -      Classification Loss: 0.2272
+2025-11-17 20:02:45,536 - INFO -      Reconstruction Loss: 1.8594
+2025-11-17 20:02:45,536 - INFO -   🎯 Performance:
+2025-11-17 20:02:45,536 - INFO -      Train Accuracy: 0.9906
+2025-11-17 20:02:45,537 - INFO -      Val Accuracy: 0.9599
+2025-11-17 20:02:45,537 - INFO -      Val Loss: 1.2167
+2025-11-17 20:02:45,537 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:02:45,537 - INFO -      MMD Loss (LSBO-guided): 0.0013
+2025-11-17 20:02:45,538 - INFO -      Wasserstein Loss (Energy): 0.0295
+2025-11-17 20:02:45,538 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:02:45,538 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:02:45,538 - INFO -      Average Latent Score: 0.8912
+2025-11-17 20:02:45,538 - INFO -   ⏱️  Epoch Time: 187.97s
+2025-11-17 20:02:45,538 - INFO -   📊 Creating visualizations...
+2025-11-17 20:02:47,228 - INFO -      ✅ Training dashboard: training_dashboard_epoch_030.png
+2025-11-17 20:02:47,228 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 20:02:50,633 - INFO -      ✅ Latent space: latent_space_epoch_030.png
+2025-11-17 20:02:51,699 - INFO -      ✅ HQ regions: hq_regions_epoch_030.png
+2025-11-17 20:02:51,747 - INFO -   💾 Saved weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_030.h5
+2025-11-17 20:02:51,751 - INFO -   💾 Saved LSBO sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_030_lsbo_sampler.pkl
+2025-11-17 20:02:51,751 - INFO -   💾 Saved config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_030_config.json
+2025-11-17 20:02:51,753 - INFO - 
+================================================================================
+2025-11-17 20:02:51,753 - INFO - Epoch 31/100
+2025-11-17 20:02:51,753 - INFO - ================================================================================
+2025-11-17 20:05:59,912 - INFO - 
+Epoch 31 Summary:
+2025-11-17 20:05:59,912 - INFO -   Total Loss: 0.9748
+2025-11-17 20:05:59,912 - INFO -   🎯 Task Losses:
+2025-11-17 20:05:59,912 - INFO -      Classification Loss: 0.2275
+2025-11-17 20:05:59,913 - INFO -      Reconstruction Loss: 1.8515
+2025-11-17 20:05:59,913 - INFO -   🎯 Performance:
+2025-11-17 20:05:59,913 - INFO -      Train Accuracy: 0.9905
+2025-11-17 20:05:59,913 - INFO -      Val Accuracy: 0.9613
+2025-11-17 20:05:59,914 - INFO -      Val Loss: 1.2105
+2025-11-17 20:05:59,914 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:05:59,914 - INFO -      MMD Loss (LSBO-guided): 0.0011
+2025-11-17 20:05:59,914 - INFO -      Wasserstein Loss (Energy): 0.0254
+2025-11-17 20:05:59,914 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:05:59,914 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:05:59,914 - INFO -      Average Latent Score: 0.8915
+2025-11-17 20:05:59,914 - INFO -   ⏱️  Epoch Time: 188.16s
+2025-11-17 20:05:59,915 - INFO - 
+================================================================================
+2025-11-17 20:05:59,915 - INFO - Epoch 32/100
+2025-11-17 20:05:59,915 - INFO - ================================================================================
+2025-11-17 20:09:08,135 - INFO - 
+Epoch 32 Summary:
+2025-11-17 20:09:08,135 - INFO -   Total Loss: 0.9722
+2025-11-17 20:09:08,135 - INFO -   🎯 Task Losses:
+2025-11-17 20:09:08,136 - INFO -      Classification Loss: 0.2271
+2025-11-17 20:09:08,136 - INFO -      Reconstruction Loss: 1.8459
+2025-11-17 20:09:08,136 - INFO -   🎯 Performance:
+2025-11-17 20:09:08,136 - INFO -      Train Accuracy: 0.9903
+2025-11-17 20:09:08,137 - INFO -      Val Accuracy: 0.9632
+2025-11-17 20:09:08,137 - INFO -      Val Loss: 1.2096
+2025-11-17 20:09:08,137 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:09:08,137 - INFO -      MMD Loss (LSBO-guided): 0.0011
+2025-11-17 20:09:08,138 - INFO -      Wasserstein Loss (Energy): 0.0255
+2025-11-17 20:09:08,138 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:09:08,138 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:09:08,138 - INFO -      Average Latent Score: 0.8918
+2025-11-17 20:09:08,138 - INFO -   ⏱️  Epoch Time: 188.22s
+2025-11-17 20:09:08,138 - INFO - 
+================================================================================
+2025-11-17 20:09:08,138 - INFO - Epoch 33/100
+2025-11-17 20:09:08,138 - INFO - ================================================================================
+2025-11-17 20:12:15,982 - INFO - 
+Epoch 33 Summary:
+2025-11-17 20:12:15,982 - INFO -   Total Loss: 0.9686
+2025-11-17 20:12:15,982 - INFO -   🎯 Task Losses:
+2025-11-17 20:12:15,982 - INFO -      Classification Loss: 0.2253
+2025-11-17 20:12:15,983 - INFO -      Reconstruction Loss: 1.8402
+2025-11-17 20:12:15,983 - INFO -   🎯 Performance:
+2025-11-17 20:12:15,983 - INFO -      Train Accuracy: 0.9916
+2025-11-17 20:12:15,983 - INFO -      Val Accuracy: 0.9622
+2025-11-17 20:12:15,983 - INFO -      Val Loss: 1.2196
+2025-11-17 20:12:15,984 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:12:15,984 - INFO -      MMD Loss (LSBO-guided): 0.0012
+2025-11-17 20:12:15,984 - INFO -      Wasserstein Loss (Energy): 0.0271
+2025-11-17 20:12:15,984 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:12:15,984 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:12:15,984 - INFO -      Average Latent Score: 0.8921
+2025-11-17 20:12:15,984 - INFO -   ⏱️  Epoch Time: 187.84s
+2025-11-17 20:12:15,984 - INFO - 
+================================================================================
+2025-11-17 20:12:15,985 - INFO - Epoch 34/100
+2025-11-17 20:12:15,985 - INFO - ================================================================================
+2025-11-17 20:15:24,387 - INFO - 
+Epoch 34 Summary:
+2025-11-17 20:15:24,387 - INFO -   Total Loss: 0.9671
+2025-11-17 20:15:24,387 - INFO -   🎯 Task Losses:
+2025-11-17 20:15:24,387 - INFO -      Classification Loss: 0.2267
+2025-11-17 20:15:24,388 - INFO -      Reconstruction Loss: 1.8350
+2025-11-17 20:15:24,388 - INFO -   🎯 Performance:
+2025-11-17 20:15:24,388 - INFO -      Train Accuracy: 0.9910
+2025-11-17 20:15:24,388 - INFO -      Val Accuracy: 0.9599
+2025-11-17 20:15:24,389 - INFO -      Val Loss: 1.2103
+2025-11-17 20:15:24,389 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:15:24,389 - INFO -      MMD Loss (LSBO-guided): 0.0011
+2025-11-17 20:15:24,389 - INFO -      Wasserstein Loss (Energy): 0.0238
+2025-11-17 20:15:24,389 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:15:24,389 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:15:24,389 - INFO -      Average Latent Score: 0.8924
+2025-11-17 20:15:24,389 - INFO -   ⏱️  Epoch Time: 188.40s
+2025-11-17 20:15:24,390 - INFO - 
+================================================================================
+2025-11-17 20:15:24,390 - INFO - Epoch 35/100
+2025-11-17 20:15:24,390 - INFO - ================================================================================
+2025-11-17 20:18:32,865 - INFO - 
+Epoch 35 Summary:
+2025-11-17 20:18:32,866 - INFO -   Total Loss: 0.9656
+2025-11-17 20:18:32,866 - INFO -   🎯 Task Losses:
+2025-11-17 20:18:32,866 - INFO -      Classification Loss: 0.2266
+2025-11-17 20:18:32,866 - INFO -      Reconstruction Loss: 1.8307
+2025-11-17 20:18:32,866 - INFO -   🎯 Performance:
+2025-11-17 20:18:32,867 - INFO -      Train Accuracy: 0.9912
+2025-11-17 20:18:32,867 - INFO -      Val Accuracy: 0.9644
+2025-11-17 20:18:32,867 - INFO -      Val Loss: 1.2057
+2025-11-17 20:18:32,867 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:18:32,868 - INFO -      MMD Loss (LSBO-guided): 0.0012
+2025-11-17 20:18:32,868 - INFO -      Wasserstein Loss (Energy): 0.0250
+2025-11-17 20:18:32,868 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:18:32,868 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:18:32,868 - INFO -      Average Latent Score: 0.8927
+2025-11-17 20:18:32,868 - INFO -   ⏱️  Epoch Time: 188.47s
+2025-11-17 20:18:32,868 - INFO -   📊 Creating visualizations...
+2025-11-17 20:18:34,583 - INFO -      ✅ Training dashboard: training_dashboard_epoch_035.png
+2025-11-17 20:18:34,583 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 20:18:38,006 - INFO -      ✅ Latent space: latent_space_epoch_035.png
+2025-11-17 20:18:39,112 - INFO -      ✅ HQ regions: hq_regions_epoch_035.png
+2025-11-17 20:18:39,112 - INFO - 
+================================================================================
+2025-11-17 20:18:39,112 - INFO - Epoch 36/100
+2025-11-17 20:18:39,112 - INFO - ================================================================================
+2025-11-17 20:21:47,667 - INFO - 
+Epoch 36 Summary:
+2025-11-17 20:21:47,667 - INFO -   Total Loss: 0.9636
+2025-11-17 20:21:47,667 - INFO -   🎯 Task Losses:
+2025-11-17 20:21:47,668 - INFO -      Classification Loss: 0.2260
+2025-11-17 20:21:47,668 - INFO -      Reconstruction Loss: 1.8271
+2025-11-17 20:21:47,668 - INFO -   🎯 Performance:
+2025-11-17 20:21:47,668 - INFO -      Train Accuracy: 0.9917
+2025-11-17 20:21:47,669 - INFO -      Val Accuracy: 0.9619
+2025-11-17 20:21:47,669 - INFO -      Val Loss: 1.1843
+2025-11-17 20:21:47,669 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:21:47,669 - INFO -      MMD Loss (LSBO-guided): 0.0011
+2025-11-17 20:21:47,669 - INFO -      Wasserstein Loss (Energy): 0.0255
+2025-11-17 20:21:47,670 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:21:47,670 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:21:47,670 - INFO -      Average Latent Score: 0.8929
+2025-11-17 20:21:47,670 - INFO -   ⏱️  Epoch Time: 188.55s
+2025-11-17 20:21:47,670 - INFO - 
+================================================================================
+2025-11-17 20:21:47,670 - INFO - Epoch 37/100
+2025-11-17 20:21:47,670 - INFO - ================================================================================
+2025-11-17 20:24:55,659 - INFO - 
+Epoch 37 Summary:
+2025-11-17 20:24:55,659 - INFO -   Total Loss: 0.9611
+2025-11-17 20:24:55,659 - INFO -   🎯 Task Losses:
+2025-11-17 20:24:55,659 - INFO -      Classification Loss: 0.2256
+2025-11-17 20:24:55,660 - INFO -      Reconstruction Loss: 1.8230
+2025-11-17 20:24:55,660 - INFO -   🎯 Performance:
+2025-11-17 20:24:55,660 - INFO -      Train Accuracy: 0.9922
+2025-11-17 20:24:55,660 - INFO -      Val Accuracy: 0.9645
+2025-11-17 20:24:55,661 - INFO -      Val Loss: 1.1777
+2025-11-17 20:24:55,661 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:24:55,661 - INFO -      MMD Loss (LSBO-guided): 0.0011
+2025-11-17 20:24:55,661 - INFO -      Wasserstein Loss (Energy): 0.0239
+2025-11-17 20:24:55,661 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:24:55,661 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:24:55,661 - INFO -      Average Latent Score: 0.8932
+2025-11-17 20:24:55,661 - INFO -   ⏱️  Epoch Time: 187.99s
+2025-11-17 20:24:55,662 - INFO - 
+================================================================================
+2025-11-17 20:24:55,662 - INFO - Epoch 38/100
+2025-11-17 20:24:55,662 - INFO - ================================================================================
+2025-11-17 20:28:03,538 - INFO - 
+Epoch 38 Summary:
+2025-11-17 20:28:03,538 - INFO -   Total Loss: 0.9594
+2025-11-17 20:28:03,538 - INFO -   🎯 Task Losses:
+2025-11-17 20:28:03,539 - INFO -      Classification Loss: 0.2258
+2025-11-17 20:28:03,539 - INFO -      Reconstruction Loss: 1.8186
+2025-11-17 20:28:03,539 - INFO -   🎯 Performance:
+2025-11-17 20:28:03,539 - INFO -      Train Accuracy: 0.9920
+2025-11-17 20:28:03,540 - INFO -      Val Accuracy: 0.9635
+2025-11-17 20:28:03,540 - INFO -      Val Loss: 1.1847
+2025-11-17 20:28:03,540 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:28:03,540 - INFO -      MMD Loss (LSBO-guided): 0.0010
+2025-11-17 20:28:03,540 - INFO -      Wasserstein Loss (Energy): 0.0229
+2025-11-17 20:28:03,541 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:28:03,541 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:28:03,541 - INFO -      Average Latent Score: 0.8935
+2025-11-17 20:28:03,541 - INFO -   ⏱️  Epoch Time: 187.87s
+2025-11-17 20:28:03,541 - INFO - 
+================================================================================
+2025-11-17 20:28:03,541 - INFO - Epoch 39/100
+2025-11-17 20:28:03,541 - INFO - ================================================================================
+2025-11-17 20:31:11,844 - INFO - 
+Epoch 39 Summary:
+2025-11-17 20:31:11,844 - INFO -   Total Loss: 0.9574
+2025-11-17 20:31:11,844 - INFO -   🎯 Task Losses:
+2025-11-17 20:31:11,845 - INFO -      Classification Loss: 0.2250
+2025-11-17 20:31:11,845 - INFO -      Reconstruction Loss: 1.8152
+2025-11-17 20:31:11,845 - INFO -   🎯 Performance:
+2025-11-17 20:31:11,845 - INFO -      Train Accuracy: 0.9927
+2025-11-17 20:31:11,846 - INFO -      Val Accuracy: 0.9634
+2025-11-17 20:31:11,846 - INFO -      Val Loss: 1.1953
+2025-11-17 20:31:11,846 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:31:11,846 - INFO -      MMD Loss (LSBO-guided): 0.0010
+2025-11-17 20:31:11,847 - INFO -      Wasserstein Loss (Energy): 0.0241
+2025-11-17 20:31:11,847 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:31:11,847 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:31:11,847 - INFO -      Average Latent Score: 0.8938
+2025-11-17 20:31:11,847 - INFO -   ⏱️  Epoch Time: 188.30s
+2025-11-17 20:31:11,847 - INFO - 
+================================================================================
+2025-11-17 20:31:11,847 - INFO - Epoch 40/100
+2025-11-17 20:31:11,847 - INFO - ================================================================================
+2025-11-17 20:34:20,151 - INFO - 
+Epoch 40 Summary:
+2025-11-17 20:34:20,151 - INFO -   Total Loss: 0.9564
+2025-11-17 20:34:20,151 - INFO -   🎯 Task Losses:
+2025-11-17 20:34:20,151 - INFO -      Classification Loss: 0.2255
+2025-11-17 20:34:20,152 - INFO -      Reconstruction Loss: 1.8120
+2025-11-17 20:34:20,152 - INFO -   🎯 Performance:
+2025-11-17 20:34:20,152 - INFO -      Train Accuracy: 0.9929
+2025-11-17 20:34:20,152 - INFO -      Val Accuracy: 0.9614
+2025-11-17 20:34:20,153 - INFO -      Val Loss: 1.1785
+2025-11-17 20:34:20,153 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:34:20,153 - INFO -      MMD Loss (LSBO-guided): 0.0010
+2025-11-17 20:34:20,153 - INFO -      Wasserstein Loss (Energy): 0.0229
+2025-11-17 20:34:20,153 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:34:20,153 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:34:20,153 - INFO -      Average Latent Score: 0.8940
+2025-11-17 20:34:20,153 - INFO -   ⏱️  Epoch Time: 188.30s
+2025-11-17 20:34:20,154 - INFO -   📊 Creating visualizations...
+2025-11-17 20:34:21,914 - INFO -      ✅ Training dashboard: training_dashboard_epoch_040.png
+2025-11-17 20:34:21,914 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 20:34:25,509 - INFO -      ✅ Latent space: latent_space_epoch_040.png
+2025-11-17 20:34:26,573 - INFO -      ✅ HQ regions: hq_regions_epoch_040.png
+2025-11-17 20:34:26,621 - INFO -   💾 Saved weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_040.h5
+2025-11-17 20:34:26,625 - INFO -   💾 Saved LSBO sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_040_lsbo_sampler.pkl
+2025-11-17 20:34:26,625 - INFO -   💾 Saved config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_040_config.json
+2025-11-17 20:34:26,627 - INFO - 
+================================================================================
+2025-11-17 20:34:26,627 - INFO - Epoch 41/100
+2025-11-17 20:34:26,627 - INFO - ================================================================================
+2025-11-17 20:37:34,698 - INFO - 
+Epoch 41 Summary:
+2025-11-17 20:37:34,698 - INFO -   Total Loss: 0.9559
+2025-11-17 20:37:34,699 - INFO -   🎯 Task Losses:
+2025-11-17 20:37:34,699 - INFO -      Classification Loss: 0.2255
+2025-11-17 20:37:34,699 - INFO -      Reconstruction Loss: 1.8093
+2025-11-17 20:37:34,699 - INFO -   🎯 Performance:
+2025-11-17 20:37:34,699 - INFO -      Train Accuracy: 0.9926
+2025-11-17 20:37:34,700 - INFO -      Val Accuracy: 0.9617
+2025-11-17 20:37:34,700 - INFO -      Val Loss: 1.1809
+2025-11-17 20:37:34,700 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:37:34,700 - INFO -      MMD Loss (LSBO-guided): 0.0011
+2025-11-17 20:37:34,701 - INFO -      Wasserstein Loss (Energy): 0.0252
+2025-11-17 20:37:34,701 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:37:34,701 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:37:34,701 - INFO -      Average Latent Score: 0.8942
+2025-11-17 20:37:34,701 - INFO -   ⏱️  Epoch Time: 188.07s
+2025-11-17 20:37:34,701 - INFO - 
+================================================================================
+2025-11-17 20:37:34,701 - INFO - Epoch 42/100
+2025-11-17 20:37:34,701 - INFO - ================================================================================
+2025-11-17 20:40:42,820 - INFO - 
+Epoch 42 Summary:
+2025-11-17 20:40:42,820 - INFO -   Total Loss: 0.9545
+2025-11-17 20:40:42,820 - INFO -   🎯 Task Losses:
+2025-11-17 20:40:42,820 - INFO -      Classification Loss: 0.2261
+2025-11-17 20:40:42,821 - INFO -      Reconstruction Loss: 1.8059
+2025-11-17 20:40:42,821 - INFO -   🎯 Performance:
+2025-11-17 20:40:42,821 - INFO -      Train Accuracy: 0.9926
+2025-11-17 20:40:42,821 - INFO -      Val Accuracy: 0.9631
+2025-11-17 20:40:42,822 - INFO -      Val Loss: 1.1790
+2025-11-17 20:40:42,822 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:40:42,822 - INFO -      MMD Loss (LSBO-guided): 0.0010
+2025-11-17 20:40:42,822 - INFO -      Wasserstein Loss (Energy): 0.0228
+2025-11-17 20:40:42,822 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:40:42,822 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:40:42,823 - INFO -      Average Latent Score: 0.8945
+2025-11-17 20:40:42,823 - INFO -   ⏱️  Epoch Time: 188.12s
+2025-11-17 20:40:42,823 - INFO - 
+================================================================================
+2025-11-17 20:40:42,823 - INFO - Epoch 43/100
+2025-11-17 20:40:42,823 - INFO - ================================================================================
+2025-11-17 20:43:51,080 - INFO - 
+Epoch 43 Summary:
+2025-11-17 20:43:51,081 - INFO -   Total Loss: 0.9530
+2025-11-17 20:43:51,081 - INFO -   🎯 Task Losses:
+2025-11-17 20:43:51,081 - INFO -      Classification Loss: 0.2254
+2025-11-17 20:43:51,081 - INFO -      Reconstruction Loss: 1.8033
+2025-11-17 20:43:51,081 - INFO -   🎯 Performance:
+2025-11-17 20:43:51,082 - INFO -      Train Accuracy: 0.9932
+2025-11-17 20:43:51,082 - INFO -      Val Accuracy: 0.9649
+2025-11-17 20:43:51,082 - INFO -      Val Loss: 1.1797
+2025-11-17 20:43:51,082 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:43:51,083 - INFO -      MMD Loss (LSBO-guided): 0.0010
+2025-11-17 20:43:51,083 - INFO -      Wasserstein Loss (Energy): 0.0236
+2025-11-17 20:43:51,083 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:43:51,083 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:43:51,083 - INFO -      Average Latent Score: 0.8947
+2025-11-17 20:43:51,083 - INFO -   ⏱️  Epoch Time: 188.26s
+2025-11-17 20:43:51,083 - INFO - 
+================================================================================
+2025-11-17 20:43:51,083 - INFO - Epoch 44/100
+2025-11-17 20:43:51,083 - INFO - ================================================================================
+2025-11-17 20:46:59,038 - INFO - 
+Epoch 44 Summary:
+2025-11-17 20:46:59,039 - INFO -   Total Loss: 0.9509
+2025-11-17 20:46:59,039 - INFO -   🎯 Task Losses:
+2025-11-17 20:46:59,039 - INFO -      Classification Loss: 0.2248
+2025-11-17 20:46:59,039 - INFO -      Reconstruction Loss: 1.8016
+2025-11-17 20:46:59,039 - INFO -   🎯 Performance:
+2025-11-17 20:46:59,039 - INFO -      Train Accuracy: 0.9935
+2025-11-17 20:46:59,040 - INFO -      Val Accuracy: 0.9649
+2025-11-17 20:46:59,040 - INFO -      Val Loss: 1.1770
+2025-11-17 20:46:59,040 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:46:59,040 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 20:46:59,041 - INFO -      Wasserstein Loss (Energy): 0.0206
+2025-11-17 20:46:59,041 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:46:59,041 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:46:59,041 - INFO -      Average Latent Score: 0.8949
+2025-11-17 20:46:59,041 - INFO -   ⏱️  Epoch Time: 187.95s
+2025-11-17 20:46:59,041 - INFO - 
+================================================================================
+2025-11-17 20:46:59,041 - INFO - Epoch 45/100
+2025-11-17 20:46:59,041 - INFO - ================================================================================
+2025-11-17 20:50:07,485 - INFO - 
+Epoch 45 Summary:
+2025-11-17 20:50:07,486 - INFO -   Total Loss: 0.9501
+2025-11-17 20:50:07,486 - INFO -   🎯 Task Losses:
+2025-11-17 20:50:07,486 - INFO -      Classification Loss: 0.2249
+2025-11-17 20:50:07,486 - INFO -      Reconstruction Loss: 1.7990
+2025-11-17 20:50:07,487 - INFO -   🎯 Performance:
+2025-11-17 20:50:07,487 - INFO -      Train Accuracy: 0.9938
+2025-11-17 20:50:07,487 - INFO -      Val Accuracy: 0.9642
+2025-11-17 20:50:07,487 - INFO -      Val Loss: 1.1732
+2025-11-17 20:50:07,487 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:50:07,488 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 20:50:07,488 - INFO -      Wasserstein Loss (Energy): 0.0209
+2025-11-17 20:50:07,488 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:50:07,488 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:50:07,488 - INFO -      Average Latent Score: 0.8951
+2025-11-17 20:50:07,488 - INFO -   ⏱️  Epoch Time: 188.44s
+2025-11-17 20:50:07,488 - INFO -   📊 Creating visualizations...
+2025-11-17 20:50:09,202 - INFO -      ✅ Training dashboard: training_dashboard_epoch_045.png
+2025-11-17 20:50:09,202 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 20:50:12,602 - INFO -      ✅ Latent space: latent_space_epoch_045.png
+2025-11-17 20:50:13,668 - INFO -      ✅ HQ regions: hq_regions_epoch_045.png
+2025-11-17 20:50:13,668 - INFO - 
+================================================================================
+2025-11-17 20:50:13,668 - INFO - Epoch 46/100
+2025-11-17 20:50:13,668 - INFO - ================================================================================
+2025-11-17 20:53:22,092 - INFO - 
+Epoch 46 Summary:
+2025-11-17 20:53:22,092 - INFO -   Total Loss: 0.9510
+2025-11-17 20:53:22,092 - INFO -   🎯 Task Losses:
+2025-11-17 20:53:22,092 - INFO -      Classification Loss: 0.2253
+2025-11-17 20:53:22,093 - INFO -      Reconstruction Loss: 1.7968
+2025-11-17 20:53:22,093 - INFO -   🎯 Performance:
+2025-11-17 20:53:22,093 - INFO -      Train Accuracy: 0.9930
+2025-11-17 20:53:22,093 - INFO -      Val Accuracy: 0.9631
+2025-11-17 20:53:22,094 - INFO -      Val Loss: 1.1688
+2025-11-17 20:53:22,094 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:53:22,094 - INFO -      MMD Loss (LSBO-guided): 0.0012
+2025-11-17 20:53:22,094 - INFO -      Wasserstein Loss (Energy): 0.0263
+2025-11-17 20:53:22,094 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:53:22,094 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:53:22,094 - INFO -      Average Latent Score: 0.8954
+2025-11-17 20:53:22,094 - INFO -   ⏱️  Epoch Time: 188.42s
+2025-11-17 20:53:22,095 - INFO - 
+================================================================================
+2025-11-17 20:53:22,095 - INFO - Epoch 47/100
+2025-11-17 20:53:22,095 - INFO - ================================================================================
+2025-11-17 20:56:30,036 - INFO - 
+Epoch 47 Summary:
+2025-11-17 20:56:30,036 - INFO -   Total Loss: 0.9498
+2025-11-17 20:56:30,036 - INFO -   🎯 Task Losses:
+2025-11-17 20:56:30,036 - INFO -      Classification Loss: 0.2256
+2025-11-17 20:56:30,037 - INFO -      Reconstruction Loss: 1.7955
+2025-11-17 20:56:30,037 - INFO -   🎯 Performance:
+2025-11-17 20:56:30,037 - INFO -      Train Accuracy: 0.9928
+2025-11-17 20:56:30,037 - INFO -      Val Accuracy: 0.9616
+2025-11-17 20:56:30,038 - INFO -      Val Loss: 1.1631
+2025-11-17 20:56:30,038 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:56:30,038 - INFO -      MMD Loss (LSBO-guided): 0.0010
+2025-11-17 20:56:30,038 - INFO -      Wasserstein Loss (Energy): 0.0228
+2025-11-17 20:56:30,038 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:56:30,038 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:56:30,038 - INFO -      Average Latent Score: 0.8956
+2025-11-17 20:56:30,038 - INFO -   ⏱️  Epoch Time: 187.94s
+2025-11-17 20:56:30,039 - INFO - 
+================================================================================
+2025-11-17 20:56:30,039 - INFO - Epoch 48/100
+2025-11-17 20:56:30,039 - INFO - ================================================================================
+2025-11-17 20:59:37,988 - INFO - 
+Epoch 48 Summary:
+2025-11-17 20:59:37,989 - INFO -   Total Loss: 0.9495
+2025-11-17 20:59:37,989 - INFO -   🎯 Task Losses:
+2025-11-17 20:59:37,989 - INFO -      Classification Loss: 0.2257
+2025-11-17 20:59:37,989 - INFO -      Reconstruction Loss: 1.7933
+2025-11-17 20:59:37,989 - INFO -   🎯 Performance:
+2025-11-17 20:59:37,990 - INFO -      Train Accuracy: 0.9932
+2025-11-17 20:59:37,990 - INFO -      Val Accuracy: 0.9615
+2025-11-17 20:59:37,990 - INFO -      Val Loss: 1.1615
+2025-11-17 20:59:37,990 - INFO -   📊 Latent Space Regularization:
+2025-11-17 20:59:37,991 - INFO -      MMD Loss (LSBO-guided): 0.0011
+2025-11-17 20:59:37,991 - INFO -      Wasserstein Loss (Energy): 0.0243
+2025-11-17 20:59:37,991 - INFO -   🎯 LSBO Statistics:
+2025-11-17 20:59:37,991 - INFO -      High-Quality Regions: 1000
+2025-11-17 20:59:37,991 - INFO -      Average Latent Score: 0.8958
+2025-11-17 20:59:37,991 - INFO -   ⏱️  Epoch Time: 187.95s
+2025-11-17 20:59:37,991 - INFO - 
+================================================================================
+2025-11-17 20:59:37,991 - INFO - Epoch 49/100
+2025-11-17 20:59:37,991 - INFO - ================================================================================
+2025-11-17 21:02:46,179 - INFO - 
+Epoch 49 Summary:
+2025-11-17 21:02:46,179 - INFO -   Total Loss: 0.9491
+2025-11-17 21:02:46,179 - INFO -   🎯 Task Losses:
+2025-11-17 21:02:46,179 - INFO -      Classification Loss: 0.2255
+2025-11-17 21:02:46,180 - INFO -      Reconstruction Loss: 1.7919
+2025-11-17 21:02:46,180 - INFO -   🎯 Performance:
+2025-11-17 21:02:46,180 - INFO -      Train Accuracy: 0.9937
+2025-11-17 21:02:46,180 - INFO -      Val Accuracy: 0.9636
+2025-11-17 21:02:46,181 - INFO -      Val Loss: 1.1648
+2025-11-17 21:02:46,181 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:02:46,181 - INFO -      MMD Loss (LSBO-guided): 0.0012
+2025-11-17 21:02:46,181 - INFO -      Wasserstein Loss (Energy): 0.0258
+2025-11-17 21:02:46,181 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:02:46,181 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:02:46,181 - INFO -      Average Latent Score: 0.8960
+2025-11-17 21:02:46,181 - INFO -   ⏱️  Epoch Time: 188.19s
+2025-11-17 21:02:46,182 - INFO - 
+================================================================================
+2025-11-17 21:02:46,182 - INFO - Epoch 50/100
+2025-11-17 21:02:46,182 - INFO - ================================================================================
+2025-11-17 21:05:54,452 - INFO - 
+Epoch 50 Summary:
+2025-11-17 21:05:54,452 - INFO -   Total Loss: 0.9478
+2025-11-17 21:05:54,452 - INFO -   🎯 Task Losses:
+2025-11-17 21:05:54,452 - INFO -      Classification Loss: 0.2250
+2025-11-17 21:05:54,453 - INFO -      Reconstruction Loss: 1.7896
+2025-11-17 21:05:54,453 - INFO -   🎯 Performance:
+2025-11-17 21:05:54,453 - INFO -      Train Accuracy: 0.9934
+2025-11-17 21:05:54,453 - INFO -      Val Accuracy: 0.9627
+2025-11-17 21:05:54,454 - INFO -      Val Loss: 1.1719
+2025-11-17 21:05:54,454 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:05:54,454 - INFO -      MMD Loss (LSBO-guided): 0.0012
+2025-11-17 21:05:54,454 - INFO -      Wasserstein Loss (Energy): 0.0262
+2025-11-17 21:05:54,454 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:05:54,454 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:05:54,454 - INFO -      Average Latent Score: 0.8963
+2025-11-17 21:05:54,454 - INFO -   ⏱️  Epoch Time: 188.27s
+2025-11-17 21:05:54,455 - INFO -   📊 Creating visualizations...
+2025-11-17 21:05:56,198 - INFO -      ✅ Training dashboard: training_dashboard_epoch_050.png
+2025-11-17 21:05:56,199 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 21:05:59,768 - INFO -      ✅ Latent space: latent_space_epoch_050.png
+2025-11-17 21:06:00,851 - INFO -      ✅ HQ regions: hq_regions_epoch_050.png
+2025-11-17 21:06:00,901 - INFO -   💾 Saved weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_050.h5
+2025-11-17 21:06:00,905 - INFO -   💾 Saved LSBO sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_050_lsbo_sampler.pkl
+2025-11-17 21:06:00,905 - INFO -   💾 Saved config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_050_config.json
+2025-11-17 21:06:00,907 - INFO - 
+================================================================================
+2025-11-17 21:06:00,907 - INFO - Epoch 51/100
+2025-11-17 21:06:00,907 - INFO - ================================================================================
+2025-11-17 21:09:08,837 - INFO - 
+Epoch 51 Summary:
+2025-11-17 21:09:08,837 - INFO -   Total Loss: 0.9538
+2025-11-17 21:09:08,837 - INFO -   🎯 Task Losses:
+2025-11-17 21:09:08,837 - INFO -      Classification Loss: 0.2230
+2025-11-17 21:09:08,838 - INFO -      Reconstruction Loss: 1.8063
+2025-11-17 21:09:08,838 - INFO -   🎯 Performance:
+2025-11-17 21:09:08,838 - INFO -      Train Accuracy: 0.9919
+2025-11-17 21:09:08,838 - INFO -      Val Accuracy: 0.9640
+2025-11-17 21:09:08,839 - INFO -      Val Loss: 1.2113
+2025-11-17 21:09:08,839 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:09:08,839 - INFO -      MMD Loss (LSBO-guided): 0.0014
+2025-11-17 21:09:08,839 - INFO -      Wasserstein Loss (Energy): 0.0311
+2025-11-17 21:09:08,839 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:09:08,839 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:09:08,839 - INFO -      Average Latent Score: 0.8965
+2025-11-17 21:09:08,839 - INFO -   ⏱️  Epoch Time: 187.93s
+2025-11-17 21:09:08,840 - INFO - 
+================================================================================
+2025-11-17 21:09:08,840 - INFO - Epoch 52/100
+2025-11-17 21:09:08,840 - INFO - ================================================================================
+2025-11-17 21:12:16,554 - INFO - 
+Epoch 52 Summary:
+2025-11-17 21:12:16,554 - INFO -   Total Loss: 0.9520
+2025-11-17 21:12:16,554 - INFO -   🎯 Task Losses:
+2025-11-17 21:12:16,554 - INFO -      Classification Loss: 0.2242
+2025-11-17 21:12:16,555 - INFO -      Reconstruction Loss: 1.7984
+2025-11-17 21:12:16,555 - INFO -   🎯 Performance:
+2025-11-17 21:12:16,555 - INFO -      Train Accuracy: 0.9912
+2025-11-17 21:12:16,555 - INFO -      Val Accuracy: 0.9588
+2025-11-17 21:12:16,555 - INFO -      Val Loss: 1.2186
+2025-11-17 21:12:16,556 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:12:16,556 - INFO -      MMD Loss (LSBO-guided): 0.0013
+2025-11-17 21:12:16,556 - INFO -      Wasserstein Loss (Energy): 0.0317
+2025-11-17 21:12:16,556 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:12:16,556 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:12:16,556 - INFO -      Average Latent Score: 0.8967
+2025-11-17 21:12:16,556 - INFO -   ⏱️  Epoch Time: 187.71s
+2025-11-17 21:12:16,557 - INFO - 
+================================================================================
+2025-11-17 21:12:16,557 - INFO - Epoch 53/100
+2025-11-17 21:12:16,557 - INFO - ================================================================================
+2025-11-17 21:15:24,555 - INFO - 
+Epoch 53 Summary:
+2025-11-17 21:15:24,555 - INFO -   Total Loss: 0.9503
+2025-11-17 21:15:24,564 - INFO -   🎯 Task Losses:
+2025-11-17 21:15:24,564 - INFO -      Classification Loss: 0.2250
+2025-11-17 21:15:24,565 - INFO -      Reconstruction Loss: 1.7942
+2025-11-17 21:15:24,565 - INFO -   🎯 Performance:
+2025-11-17 21:15:24,565 - INFO -      Train Accuracy: 0.9901
+2025-11-17 21:15:24,565 - INFO -      Val Accuracy: 0.9633
+2025-11-17 21:15:24,566 - INFO -      Val Loss: 1.2294
+2025-11-17 21:15:24,566 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:15:24,566 - INFO -      MMD Loss (LSBO-guided): 0.0012
+2025-11-17 21:15:24,566 - INFO -      Wasserstein Loss (Energy): 0.0285
+2025-11-17 21:15:24,566 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:15:24,566 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:15:24,566 - INFO -      Average Latent Score: 0.8969
+2025-11-17 21:15:24,566 - INFO -   ⏱️  Epoch Time: 188.00s
+2025-11-17 21:15:24,567 - INFO - 
+================================================================================
+2025-11-17 21:15:24,567 - INFO - Epoch 54/100
+2025-11-17 21:15:24,567 - INFO - ================================================================================
+2025-11-17 21:18:32,390 - INFO - 
+Epoch 54 Summary:
+2025-11-17 21:18:32,390 - INFO -   Total Loss: 0.9453
+2025-11-17 21:18:32,390 - INFO -   🎯 Task Losses:
+2025-11-17 21:18:32,391 - INFO -      Classification Loss: 0.2245
+2025-11-17 21:18:32,391 - INFO -      Reconstruction Loss: 1.7831
+2025-11-17 21:18:32,391 - INFO -   🎯 Performance:
+2025-11-17 21:18:32,391 - INFO -      Train Accuracy: 0.9904
+2025-11-17 21:18:32,392 - INFO -      Val Accuracy: 0.9638
+2025-11-17 21:18:32,392 - INFO -      Val Loss: 1.2179
+2025-11-17 21:18:32,392 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:18:32,392 - INFO -      MMD Loss (LSBO-guided): 0.0012
+2025-11-17 21:18:32,393 - INFO -      Wasserstein Loss (Energy): 0.0285
+2025-11-17 21:18:32,393 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:18:32,393 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:18:32,393 - INFO -      Average Latent Score: 0.8972
+2025-11-17 21:18:32,393 - INFO -   ⏱️  Epoch Time: 187.82s
+2025-11-17 21:18:32,393 - INFO - 
+================================================================================
+2025-11-17 21:18:32,393 - INFO - Epoch 55/100
+2025-11-17 21:18:32,393 - INFO - ================================================================================
+2025-11-17 21:21:40,678 - INFO - 
+Epoch 55 Summary:
+2025-11-17 21:21:40,678 - INFO -   Total Loss: 0.9393
+2025-11-17 21:21:40,678 - INFO -   🎯 Task Losses:
+2025-11-17 21:21:40,678 - INFO -      Classification Loss: 0.2235
+2025-11-17 21:21:40,679 - INFO -      Reconstruction Loss: 1.7730
+2025-11-17 21:21:40,679 - INFO -   🎯 Performance:
+2025-11-17 21:21:40,679 - INFO -      Train Accuracy: 0.9905
+2025-11-17 21:21:40,679 - INFO -      Val Accuracy: 0.9592
+2025-11-17 21:21:40,680 - INFO -      Val Loss: 1.1894
+2025-11-17 21:21:40,680 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:21:40,680 - INFO -      MMD Loss (LSBO-guided): 0.0011
+2025-11-17 21:21:40,680 - INFO -      Wasserstein Loss (Energy): 0.0248
+2025-11-17 21:21:40,680 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:21:40,680 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:21:40,680 - INFO -      Average Latent Score: 0.8974
+2025-11-17 21:21:40,680 - INFO -   ⏱️  Epoch Time: 188.28s
+2025-11-17 21:21:40,681 - INFO -   📊 Creating visualizations...
+2025-11-17 21:21:42,428 - INFO -      ✅ Training dashboard: training_dashboard_epoch_055.png
+2025-11-17 21:21:42,428 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 21:21:45,781 - INFO -      ✅ Latent space: latent_space_epoch_055.png
+2025-11-17 21:21:46,841 - INFO -      ✅ HQ regions: hq_regions_epoch_055.png
+2025-11-17 21:21:46,841 - INFO - 
+================================================================================
+2025-11-17 21:21:46,841 - INFO - Epoch 56/100
+2025-11-17 21:21:46,841 - INFO - ================================================================================
+2025-11-17 21:24:55,443 - INFO - 
+Epoch 56 Summary:
+2025-11-17 21:24:55,444 - INFO -   Total Loss: 0.9366
+2025-11-17 21:24:55,444 - INFO -   🎯 Task Losses:
+2025-11-17 21:24:55,444 - INFO -      Classification Loss: 0.2237
+2025-11-17 21:24:55,444 - INFO -      Reconstruction Loss: 1.7650
+2025-11-17 21:24:55,444 - INFO -   🎯 Performance:
+2025-11-17 21:24:55,445 - INFO -      Train Accuracy: 0.9912
+2025-11-17 21:24:55,445 - INFO -      Val Accuracy: 0.9614
+2025-11-17 21:24:55,445 - INFO -      Val Loss: 1.1847
+2025-11-17 21:24:55,445 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:24:55,446 - INFO -      MMD Loss (LSBO-guided): 0.0011
+2025-11-17 21:24:55,446 - INFO -      Wasserstein Loss (Energy): 0.0260
+2025-11-17 21:24:55,446 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:24:55,446 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:24:55,446 - INFO -      Average Latent Score: 0.8976
+2025-11-17 21:24:55,446 - INFO -   ⏱️  Epoch Time: 188.60s
+2025-11-17 21:24:55,446 - INFO - 
+================================================================================
+2025-11-17 21:24:55,446 - INFO - Epoch 57/100
+2025-11-17 21:24:55,446 - INFO - ================================================================================
+2025-11-17 21:28:03,951 - INFO - 
+Epoch 57 Summary:
+2025-11-17 21:28:03,951 - INFO -   Total Loss: 0.9293
+2025-11-17 21:28:03,951 - INFO -   🎯 Task Losses:
+2025-11-17 21:28:03,952 - INFO -      Classification Loss: 0.2223
+2025-11-17 21:28:03,952 - INFO -      Reconstruction Loss: 1.7532
+2025-11-17 21:28:03,952 - INFO -   🎯 Performance:
+2025-11-17 21:28:03,952 - INFO -      Train Accuracy: 0.9918
+2025-11-17 21:28:03,952 - INFO -      Val Accuracy: 0.9573
+2025-11-17 21:28:03,953 - INFO -      Val Loss: 1.2028
+2025-11-17 21:28:03,953 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:28:03,953 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 21:28:03,953 - INFO -      Wasserstein Loss (Energy): 0.0216
+2025-11-17 21:28:03,953 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:28:03,953 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:28:03,953 - INFO -      Average Latent Score: 0.8978
+2025-11-17 21:28:03,953 - INFO -   ⏱️  Epoch Time: 188.50s
+2025-11-17 21:28:03,954 - INFO - 
+================================================================================
+2025-11-17 21:28:03,954 - INFO - Epoch 58/100
+2025-11-17 21:28:03,954 - INFO - ================================================================================
+2025-11-17 21:31:12,657 - INFO - 
+Epoch 58 Summary:
+2025-11-17 21:31:12,657 - INFO -   Total Loss: 0.9244
+2025-11-17 21:31:12,657 - INFO -   🎯 Task Losses:
+2025-11-17 21:31:12,657 - INFO -      Classification Loss: 0.2221
+2025-11-17 21:31:12,658 - INFO -      Reconstruction Loss: 1.7420
+2025-11-17 21:31:12,658 - INFO -   🎯 Performance:
+2025-11-17 21:31:12,658 - INFO -      Train Accuracy: 0.9912
+2025-11-17 21:31:12,658 - INFO -      Val Accuracy: 0.9595
+2025-11-17 21:31:12,659 - INFO -      Val Loss: 1.1662
+2025-11-17 21:31:12,659 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:31:12,659 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 21:31:12,659 - INFO -      Wasserstein Loss (Energy): 0.0210
+2025-11-17 21:31:12,659 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:31:12,659 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:31:12,659 - INFO -      Average Latent Score: 0.8981
+2025-11-17 21:31:12,659 - INFO -   ⏱️  Epoch Time: 188.70s
+2025-11-17 21:31:12,660 - INFO - 
+================================================================================
+2025-11-17 21:31:12,660 - INFO - Epoch 59/100
+2025-11-17 21:31:12,660 - INFO - ================================================================================
+2025-11-17 21:34:21,602 - INFO - 
+Epoch 59 Summary:
+2025-11-17 21:34:21,602 - INFO -   Total Loss: 0.9220
+2025-11-17 21:34:21,602 - INFO -   🎯 Task Losses:
+2025-11-17 21:34:21,602 - INFO -      Classification Loss: 0.2225
+2025-11-17 21:34:21,603 - INFO -      Reconstruction Loss: 1.7343
+2025-11-17 21:34:21,603 - INFO -   🎯 Performance:
+2025-11-17 21:34:21,603 - INFO -      Train Accuracy: 0.9912
+2025-11-17 21:34:21,603 - INFO -      Val Accuracy: 0.9621
+2025-11-17 21:34:21,603 - INFO -      Val Loss: 1.1935
+2025-11-17 21:34:21,604 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:34:21,604 - INFO -      MMD Loss (LSBO-guided): 0.0010
+2025-11-17 21:34:21,604 - INFO -      Wasserstein Loss (Energy): 0.0219
+2025-11-17 21:34:21,604 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:34:21,604 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:34:21,604 - INFO -      Average Latent Score: 0.8983
+2025-11-17 21:34:21,604 - INFO -   ⏱️  Epoch Time: 188.94s
+2025-11-17 21:34:21,605 - INFO - 
+================================================================================
+2025-11-17 21:34:21,605 - INFO - Epoch 60/100
+2025-11-17 21:34:21,605 - INFO - ================================================================================
+2025-11-17 21:37:29,775 - INFO - 
+Epoch 60 Summary:
+2025-11-17 21:37:29,776 - INFO -   Total Loss: 0.9195
+2025-11-17 21:37:29,784 - INFO -   🎯 Task Losses:
+2025-11-17 21:37:29,785 - INFO -      Classification Loss: 0.2220
+2025-11-17 21:37:29,785 - INFO -      Reconstruction Loss: 1.7292
+2025-11-17 21:37:29,785 - INFO -   🎯 Performance:
+2025-11-17 21:37:29,786 - INFO -      Train Accuracy: 0.9912
+2025-11-17 21:37:29,786 - INFO -      Val Accuracy: 0.9652
+2025-11-17 21:37:29,786 - INFO -      Val Loss: 1.1809
+2025-11-17 21:37:29,786 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:37:29,786 - INFO -      MMD Loss (LSBO-guided): 0.0010
+2025-11-17 21:37:29,787 - INFO -      Wasserstein Loss (Energy): 0.0221
+2025-11-17 21:37:29,787 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:37:29,787 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:37:29,787 - INFO -      Average Latent Score: 0.8985
+2025-11-17 21:37:29,787 - INFO -   ⏱️  Epoch Time: 188.17s
+2025-11-17 21:37:29,787 - INFO -   📊 Creating visualizations...
+2025-11-17 21:37:31,569 - INFO -      ✅ Training dashboard: training_dashboard_epoch_060.png
+2025-11-17 21:37:31,569 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 21:37:34,863 - INFO -      ✅ Latent space: latent_space_epoch_060.png
+2025-11-17 21:37:35,912 - INFO -      ✅ HQ regions: hq_regions_epoch_060.png
+2025-11-17 21:37:35,961 - INFO -   💾 Saved weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_060.h5
+2025-11-17 21:37:35,965 - INFO -   💾 Saved LSBO sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_060_lsbo_sampler.pkl
+2025-11-17 21:37:35,965 - INFO -   💾 Saved config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_060_config.json
+2025-11-17 21:37:35,966 - INFO - 
+================================================================================
+2025-11-17 21:37:35,967 - INFO - Epoch 61/100
+2025-11-17 21:37:35,967 - INFO - ================================================================================
+2025-11-17 21:40:43,991 - INFO - 
+Epoch 61 Summary:
+2025-11-17 21:40:43,991 - INFO -   Total Loss: 0.9134
+2025-11-17 21:40:43,991 - INFO -   🎯 Task Losses:
+2025-11-17 21:40:43,992 - INFO -      Classification Loss: 0.2211
+2025-11-17 21:40:43,992 - INFO -      Reconstruction Loss: 1.7164
+2025-11-17 21:40:43,992 - INFO -   🎯 Performance:
+2025-11-17 21:40:43,992 - INFO -      Train Accuracy: 0.9923
+2025-11-17 21:40:43,992 - INFO -      Val Accuracy: 0.9622
+2025-11-17 21:40:43,993 - INFO -      Val Loss: 1.1758
+2025-11-17 21:40:43,993 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:40:43,993 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 21:40:43,993 - INFO -      Wasserstein Loss (Energy): 0.0216
+2025-11-17 21:40:43,993 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:40:43,993 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:40:43,993 - INFO -      Average Latent Score: 0.8986
+2025-11-17 21:40:43,993 - INFO -   ⏱️  Epoch Time: 188.02s
+2025-11-17 21:40:43,994 - INFO - 
+================================================================================
+2025-11-17 21:40:43,994 - INFO - Epoch 62/100
+2025-11-17 21:40:43,994 - INFO - ================================================================================
+2025-11-17 21:43:52,287 - INFO - 
+Epoch 62 Summary:
+2025-11-17 21:43:52,287 - INFO -   Total Loss: 0.9092
+2025-11-17 21:43:52,287 - INFO -   🎯 Task Losses:
+2025-11-17 21:43:52,287 - INFO -      Classification Loss: 0.2202
+2025-11-17 21:43:52,288 - INFO -      Reconstruction Loss: 1.7075
+2025-11-17 21:43:52,288 - INFO -   🎯 Performance:
+2025-11-17 21:43:52,288 - INFO -      Train Accuracy: 0.9922
+2025-11-17 21:43:52,288 - INFO -      Val Accuracy: 0.9611
+2025-11-17 21:43:52,289 - INFO -      Val Loss: 1.1846
+2025-11-17 21:43:52,289 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:43:52,289 - INFO -      MMD Loss (LSBO-guided): 0.0010
+2025-11-17 21:43:52,289 - INFO -      Wasserstein Loss (Energy): 0.0226
+2025-11-17 21:43:52,289 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:43:52,289 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:43:52,289 - INFO -      Average Latent Score: 0.8988
+2025-11-17 21:43:52,289 - INFO -   ⏱️  Epoch Time: 188.29s
+2025-11-17 21:43:52,290 - INFO - 
+================================================================================
+2025-11-17 21:43:52,290 - INFO - Epoch 63/100
+2025-11-17 21:43:52,290 - INFO - ================================================================================
+2025-11-17 21:47:00,701 - INFO - 
+Epoch 63 Summary:
+2025-11-17 21:47:00,701 - INFO -   Total Loss: 0.9056
+2025-11-17 21:47:00,701 - INFO -   🎯 Task Losses:
+2025-11-17 21:47:00,702 - INFO -      Classification Loss: 0.2207
+2025-11-17 21:47:00,702 - INFO -      Reconstruction Loss: 1.6991
+2025-11-17 21:47:00,702 - INFO -   🎯 Performance:
+2025-11-17 21:47:00,702 - INFO -      Train Accuracy: 0.9918
+2025-11-17 21:47:00,702 - INFO -      Val Accuracy: 0.9597
+2025-11-17 21:47:00,703 - INFO -      Val Loss: 1.1384
+2025-11-17 21:47:00,703 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:47:00,703 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 21:47:00,703 - INFO -      Wasserstein Loss (Energy): 0.0196
+2025-11-17 21:47:00,703 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:47:00,703 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:47:00,703 - INFO -      Average Latent Score: 0.8990
+2025-11-17 21:47:00,703 - INFO -   ⏱️  Epoch Time: 188.41s
+2025-11-17 21:47:00,704 - INFO - 
+================================================================================
+2025-11-17 21:47:00,704 - INFO - Epoch 64/100
+2025-11-17 21:47:00,704 - INFO - ================================================================================
+2025-11-17 21:50:08,697 - INFO - 
+Epoch 64 Summary:
+2025-11-17 21:50:08,697 - INFO -   Total Loss: 0.8989
+2025-11-17 21:50:08,697 - INFO -   🎯 Task Losses:
+2025-11-17 21:50:08,698 - INFO -      Classification Loss: 0.2191
+2025-11-17 21:50:08,698 - INFO -      Reconstruction Loss: 1.6879
+2025-11-17 21:50:08,698 - INFO -   🎯 Performance:
+2025-11-17 21:50:08,698 - INFO -      Train Accuracy: 0.9929
+2025-11-17 21:50:08,699 - INFO -      Val Accuracy: 0.9643
+2025-11-17 21:50:08,699 - INFO -      Val Loss: 1.1522
+2025-11-17 21:50:08,699 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:50:08,699 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 21:50:08,700 - INFO -      Wasserstein Loss (Energy): 0.0174
+2025-11-17 21:50:08,700 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:50:08,700 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:50:08,700 - INFO -      Average Latent Score: 0.8991
+2025-11-17 21:50:08,700 - INFO -   ⏱️  Epoch Time: 187.99s
+2025-11-17 21:50:08,700 - INFO - 
+================================================================================
+2025-11-17 21:50:08,700 - INFO - Epoch 65/100
+2025-11-17 21:50:08,700 - INFO - ================================================================================
+2025-11-17 21:53:17,384 - INFO - 
+Epoch 65 Summary:
+2025-11-17 21:53:17,385 - INFO -   Total Loss: 0.8971
+2025-11-17 21:53:17,385 - INFO -   🎯 Task Losses:
+2025-11-17 21:53:17,385 - INFO -      Classification Loss: 0.2203
+2025-11-17 21:53:17,385 - INFO -      Reconstruction Loss: 1.6795
+2025-11-17 21:53:17,385 - INFO -   🎯 Performance:
+2025-11-17 21:53:17,386 - INFO -      Train Accuracy: 0.9917
+2025-11-17 21:53:17,386 - INFO -      Val Accuracy: 0.9612
+2025-11-17 21:53:17,386 - INFO -      Val Loss: 1.1333
+2025-11-17 21:53:17,386 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:53:17,387 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 21:53:17,387 - INFO -      Wasserstein Loss (Energy): 0.0188
+2025-11-17 21:53:17,387 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:53:17,387 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:53:17,387 - INFO -      Average Latent Score: 0.8993
+2025-11-17 21:53:17,387 - INFO -   ⏱️  Epoch Time: 188.68s
+2025-11-17 21:53:17,387 - INFO -   📊 Creating visualizations...
+2025-11-17 21:53:19,179 - INFO -      ✅ Training dashboard: training_dashboard_epoch_065.png
+2025-11-17 21:53:19,179 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 21:53:22,659 - INFO -      ✅ Latent space: latent_space_epoch_065.png
+2025-11-17 21:53:23,708 - INFO -      ✅ HQ regions: hq_regions_epoch_065.png
+2025-11-17 21:53:23,709 - INFO - 
+================================================================================
+2025-11-17 21:53:23,709 - INFO - Epoch 66/100
+2025-11-17 21:53:23,709 - INFO - ================================================================================
+2025-11-17 21:56:32,030 - INFO - 
+Epoch 66 Summary:
+2025-11-17 21:56:32,030 - INFO -   Total Loss: 0.8932
+2025-11-17 21:56:32,030 - INFO -   🎯 Task Losses:
+2025-11-17 21:56:32,030 - INFO -      Classification Loss: 0.2196
+2025-11-17 21:56:32,031 - INFO -      Reconstruction Loss: 1.6717
+2025-11-17 21:56:32,031 - INFO -   🎯 Performance:
+2025-11-17 21:56:32,031 - INFO -      Train Accuracy: 0.9922
+2025-11-17 21:56:32,031 - INFO -      Val Accuracy: 0.9648
+2025-11-17 21:56:32,031 - INFO -      Val Loss: 1.1479
+2025-11-17 21:56:32,031 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:56:32,032 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 21:56:32,032 - INFO -      Wasserstein Loss (Energy): 0.0181
+2025-11-17 21:56:32,032 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:56:32,032 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:56:32,032 - INFO -      Average Latent Score: 0.8994
+2025-11-17 21:56:32,032 - INFO -   ⏱️  Epoch Time: 188.32s
+2025-11-17 21:56:32,032 - INFO - 
+================================================================================
+2025-11-17 21:56:32,032 - INFO - Epoch 67/100
+2025-11-17 21:56:32,033 - INFO - ================================================================================
+2025-11-17 21:59:40,331 - INFO - 
+Epoch 67 Summary:
+2025-11-17 21:59:40,332 - INFO -   Total Loss: 0.8903
+2025-11-17 21:59:40,332 - INFO -   🎯 Task Losses:
+2025-11-17 21:59:40,332 - INFO -      Classification Loss: 0.2197
+2025-11-17 21:59:40,332 - INFO -      Reconstruction Loss: 1.6635
+2025-11-17 21:59:40,332 - INFO -   🎯 Performance:
+2025-11-17 21:59:40,333 - INFO -      Train Accuracy: 0.9924
+2025-11-17 21:59:40,333 - INFO -      Val Accuracy: 0.9595
+2025-11-17 21:59:40,333 - INFO -      Val Loss: 1.1412
+2025-11-17 21:59:40,333 - INFO -   📊 Latent Space Regularization:
+2025-11-17 21:59:40,334 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 21:59:40,334 - INFO -      Wasserstein Loss (Energy): 0.0193
+2025-11-17 21:59:40,334 - INFO -   🎯 LSBO Statistics:
+2025-11-17 21:59:40,334 - INFO -      High-Quality Regions: 1000
+2025-11-17 21:59:40,334 - INFO -      Average Latent Score: 0.8995
+2025-11-17 21:59:40,334 - INFO -   ⏱️  Epoch Time: 188.30s
+2025-11-17 21:59:40,334 - INFO - 
+================================================================================
+2025-11-17 21:59:40,334 - INFO - Epoch 68/100
+2025-11-17 21:59:40,334 - INFO - ================================================================================
+2025-11-17 22:02:48,410 - INFO - 
+Epoch 68 Summary:
+2025-11-17 22:02:48,410 - INFO -   Total Loss: 0.8853
+2025-11-17 22:02:48,410 - INFO -   🎯 Task Losses:
+2025-11-17 22:02:48,411 - INFO -      Classification Loss: 0.2184
+2025-11-17 22:02:48,411 - INFO -      Reconstruction Loss: 1.6537
+2025-11-17 22:02:48,411 - INFO -   🎯 Performance:
+2025-11-17 22:02:48,411 - INFO -      Train Accuracy: 0.9930
+2025-11-17 22:02:48,412 - INFO -      Val Accuracy: 0.9608
+2025-11-17 22:02:48,412 - INFO -      Val Loss: 1.1391
+2025-11-17 22:02:48,412 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:02:48,412 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 22:02:48,413 - INFO -      Wasserstein Loss (Energy): 0.0204
+2025-11-17 22:02:48,413 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:02:48,413 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:02:48,413 - INFO -      Average Latent Score: 0.8997
+2025-11-17 22:02:48,413 - INFO -   ⏱️  Epoch Time: 188.07s
+2025-11-17 22:02:48,413 - INFO - 
+================================================================================
+2025-11-17 22:02:48,413 - INFO - Epoch 69/100
+2025-11-17 22:02:48,413 - INFO - ================================================================================
+2025-11-17 22:05:57,021 - INFO - 
+Epoch 69 Summary:
+2025-11-17 22:05:57,021 - INFO -   Total Loss: 0.8814
+2025-11-17 22:05:57,021 - INFO -   🎯 Task Losses:
+2025-11-17 22:05:57,021 - INFO -      Classification Loss: 0.2176
+2025-11-17 22:05:57,022 - INFO -      Reconstruction Loss: 1.6464
+2025-11-17 22:05:57,022 - INFO -   🎯 Performance:
+2025-11-17 22:05:57,022 - INFO -      Train Accuracy: 0.9939
+2025-11-17 22:05:57,022 - INFO -      Val Accuracy: 0.9616
+2025-11-17 22:05:57,022 - INFO -      Val Loss: 1.1316
+2025-11-17 22:05:57,023 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:05:57,023 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 22:05:57,023 - INFO -      Wasserstein Loss (Energy): 0.0197
+2025-11-17 22:05:57,023 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:05:57,023 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:05:57,023 - INFO -      Average Latent Score: 0.8998
+2025-11-17 22:05:57,023 - INFO -   ⏱️  Epoch Time: 188.61s
+2025-11-17 22:05:57,024 - INFO - 
+================================================================================
+2025-11-17 22:05:57,024 - INFO - Epoch 70/100
+2025-11-17 22:05:57,024 - INFO - ================================================================================
+2025-11-17 22:09:05,224 - INFO - 
+Epoch 70 Summary:
+2025-11-17 22:09:05,224 - INFO -   Total Loss: 0.8780
+2025-11-17 22:09:05,224 - INFO -   🎯 Task Losses:
+2025-11-17 22:09:05,225 - INFO -      Classification Loss: 0.2185
+2025-11-17 22:09:05,225 - INFO -      Reconstruction Loss: 1.6372
+2025-11-17 22:09:05,225 - INFO -   🎯 Performance:
+2025-11-17 22:09:05,225 - INFO -      Train Accuracy: 0.9931
+2025-11-17 22:09:05,226 - INFO -      Val Accuracy: 0.9641
+2025-11-17 22:09:05,226 - INFO -      Val Loss: 1.1400
+2025-11-17 22:09:05,226 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:09:05,226 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 22:09:05,227 - INFO -      Wasserstein Loss (Energy): 0.0172
+2025-11-17 22:09:05,227 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:09:05,227 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:09:05,227 - INFO -      Average Latent Score: 0.9000
+2025-11-17 22:09:05,227 - INFO -   ⏱️  Epoch Time: 188.20s
+2025-11-17 22:09:05,227 - INFO -   📊 Creating visualizations...
+2025-11-17 22:09:06,959 - INFO -      ✅ Training dashboard: training_dashboard_epoch_070.png
+2025-11-17 22:09:06,959 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 22:09:10,353 - INFO -      ✅ Latent space: latent_space_epoch_070.png
+2025-11-17 22:09:11,433 - INFO -      ✅ HQ regions: hq_regions_epoch_070.png
+2025-11-17 22:09:11,482 - INFO -   💾 Saved weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_070.h5
+2025-11-17 22:09:11,486 - INFO -   💾 Saved LSBO sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_070_lsbo_sampler.pkl
+2025-11-17 22:09:11,486 - INFO -   💾 Saved config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_070_config.json
+2025-11-17 22:09:11,488 - INFO - 
+================================================================================
+2025-11-17 22:09:11,488 - INFO - Epoch 71/100
+2025-11-17 22:09:11,488 - INFO - ================================================================================
+2025-11-17 22:12:20,267 - INFO - 
+Epoch 71 Summary:
+2025-11-17 22:12:20,267 - INFO -   Total Loss: 0.8740
+2025-11-17 22:12:20,267 - INFO -   🎯 Task Losses:
+2025-11-17 22:12:20,268 - INFO -      Classification Loss: 0.2174
+2025-11-17 22:12:20,268 - INFO -      Reconstruction Loss: 1.6290
+2025-11-17 22:12:20,268 - INFO -   🎯 Performance:
+2025-11-17 22:12:20,268 - INFO -      Train Accuracy: 0.9931
+2025-11-17 22:12:20,269 - INFO -      Val Accuracy: 0.9604
+2025-11-17 22:12:20,269 - INFO -      Val Loss: 1.1172
+2025-11-17 22:12:20,269 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:12:20,269 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 22:12:20,270 - INFO -      Wasserstein Loss (Energy): 0.0186
+2025-11-17 22:12:20,270 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:12:20,270 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:12:20,270 - INFO -      Average Latent Score: 0.9001
+2025-11-17 22:12:20,270 - INFO -   ⏱️  Epoch Time: 188.78s
+2025-11-17 22:12:20,270 - INFO - 
+================================================================================
+2025-11-17 22:12:20,270 - INFO - Epoch 72/100
+2025-11-17 22:12:20,270 - INFO - ================================================================================
+2025-11-17 22:15:28,542 - INFO - 
+Epoch 72 Summary:
+2025-11-17 22:15:28,542 - INFO -   Total Loss: 0.8708
+2025-11-17 22:15:28,542 - INFO -   🎯 Task Losses:
+2025-11-17 22:15:28,542 - INFO -      Classification Loss: 0.2173
+2025-11-17 22:15:28,543 - INFO -      Reconstruction Loss: 1.6230
+2025-11-17 22:15:28,543 - INFO -   🎯 Performance:
+2025-11-17 22:15:28,543 - INFO -      Train Accuracy: 0.9940
+2025-11-17 22:15:28,543 - INFO -      Val Accuracy: 0.9628
+2025-11-17 22:15:28,544 - INFO -      Val Loss: 1.1547
+2025-11-17 22:15:28,544 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:15:28,544 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 22:15:28,544 - INFO -      Wasserstein Loss (Energy): 0.0164
+2025-11-17 22:15:28,544 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:15:28,544 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:15:28,544 - INFO -      Average Latent Score: 0.9003
+2025-11-17 22:15:28,544 - INFO -   ⏱️  Epoch Time: 188.27s
+2025-11-17 22:15:28,545 - INFO - 
+================================================================================
+2025-11-17 22:15:28,545 - INFO - Epoch 73/100
+2025-11-17 22:15:28,545 - INFO - ================================================================================
+2025-11-17 22:18:37,184 - INFO - 
+Epoch 73 Summary:
+2025-11-17 22:18:37,184 - INFO -   Total Loss: 0.8673
+2025-11-17 22:18:37,184 - INFO -   🎯 Task Losses:
+2025-11-17 22:18:37,185 - INFO -      Classification Loss: 0.2181
+2025-11-17 22:18:37,185 - INFO -      Reconstruction Loss: 1.6143
+2025-11-17 22:18:37,185 - INFO -   🎯 Performance:
+2025-11-17 22:18:37,185 - INFO -      Train Accuracy: 0.9932
+2025-11-17 22:18:37,186 - INFO -      Val Accuracy: 0.9601
+2025-11-17 22:18:37,186 - INFO -      Val Loss: 1.1180
+2025-11-17 22:18:37,186 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:18:37,186 - INFO -      MMD Loss (LSBO-guided): 0.0007
+2025-11-17 22:18:37,187 - INFO -      Wasserstein Loss (Energy): 0.0131
+2025-11-17 22:18:37,187 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:18:37,187 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:18:37,187 - INFO -      Average Latent Score: 0.9004
+2025-11-17 22:18:37,187 - INFO -   ⏱️  Epoch Time: 188.64s
+2025-11-17 22:18:37,187 - INFO - 
+================================================================================
+2025-11-17 22:18:37,187 - INFO - Epoch 74/100
+2025-11-17 22:18:37,187 - INFO - ================================================================================
+2025-11-17 22:21:45,691 - INFO - 
+Epoch 74 Summary:
+2025-11-17 22:21:45,691 - INFO -   Total Loss: 0.8637
+2025-11-17 22:21:45,691 - INFO -   🎯 Task Losses:
+2025-11-17 22:21:45,692 - INFO -      Classification Loss: 0.2171
+2025-11-17 22:21:45,692 - INFO -      Reconstruction Loss: 1.6053
+2025-11-17 22:21:45,692 - INFO -   🎯 Performance:
+2025-11-17 22:21:45,692 - INFO -      Train Accuracy: 0.9938
+2025-11-17 22:21:45,693 - INFO -      Val Accuracy: 0.9616
+2025-11-17 22:21:45,693 - INFO -      Val Loss: 1.1215
+2025-11-17 22:21:45,693 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:21:45,693 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 22:21:45,694 - INFO -      Wasserstein Loss (Energy): 0.0167
+2025-11-17 22:21:45,694 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:21:45,694 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:21:45,694 - INFO -      Average Latent Score: 0.9005
+2025-11-17 22:21:45,694 - INFO -   ⏱️  Epoch Time: 188.50s
+2025-11-17 22:21:45,694 - INFO - 
+================================================================================
+2025-11-17 22:21:45,694 - INFO - Epoch 75/100
+2025-11-17 22:21:45,694 - INFO - ================================================================================
+2025-11-17 22:24:54,005 - INFO - 
+Epoch 75 Summary:
+2025-11-17 22:24:54,006 - INFO -   Total Loss: 0.8602
+2025-11-17 22:24:54,006 - INFO -   🎯 Task Losses:
+2025-11-17 22:24:54,006 - INFO -      Classification Loss: 0.2165
+2025-11-17 22:24:54,006 - INFO -      Reconstruction Loss: 1.5963
+2025-11-17 22:24:54,006 - INFO -   🎯 Performance:
+2025-11-17 22:24:54,007 - INFO -      Train Accuracy: 0.9941
+2025-11-17 22:24:54,007 - INFO -      Val Accuracy: 0.9639
+2025-11-17 22:24:54,007 - INFO -      Val Loss: 1.1176
+2025-11-17 22:24:54,007 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:24:54,007 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 22:24:54,008 - INFO -      Wasserstein Loss (Energy): 0.0193
+2025-11-17 22:24:54,008 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:24:54,008 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:24:54,008 - INFO -      Average Latent Score: 0.9007
+2025-11-17 22:24:54,008 - INFO -   ⏱️  Epoch Time: 188.31s
+2025-11-17 22:24:54,008 - INFO -   📊 Creating visualizations...
+2025-11-17 22:24:55,735 - INFO -      ✅ Training dashboard: training_dashboard_epoch_075.png
+2025-11-17 22:24:55,735 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 22:24:59,151 - INFO -      ✅ Latent space: latent_space_epoch_075.png
+2025-11-17 22:25:00,209 - INFO -      ✅ HQ regions: hq_regions_epoch_075.png
+2025-11-17 22:25:00,209 - INFO - 
+================================================================================
+2025-11-17 22:25:00,209 - INFO - Epoch 76/100
+2025-11-17 22:25:00,209 - INFO - ================================================================================
+2025-11-17 22:28:08,533 - INFO - 
+Epoch 76 Summary:
+2025-11-17 22:28:08,533 - INFO -   Total Loss: 0.8568
+2025-11-17 22:28:08,533 - INFO -   🎯 Task Losses:
+2025-11-17 22:28:08,533 - INFO -      Classification Loss: 0.2160
+2025-11-17 22:28:08,534 - INFO -      Reconstruction Loss: 1.5892
+2025-11-17 22:28:08,534 - INFO -   🎯 Performance:
+2025-11-17 22:28:08,534 - INFO -      Train Accuracy: 0.9940
+2025-11-17 22:28:08,534 - INFO -      Val Accuracy: 0.9611
+2025-11-17 22:28:08,534 - INFO -      Val Loss: 1.1068
+2025-11-17 22:28:08,534 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:28:08,535 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 22:28:08,535 - INFO -      Wasserstein Loss (Energy): 0.0193
+2025-11-17 22:28:08,535 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:28:08,535 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:28:08,535 - INFO -      Average Latent Score: 0.9008
+2025-11-17 22:28:08,535 - INFO -   ⏱️  Epoch Time: 188.32s
+2025-11-17 22:28:08,535 - INFO - 
+================================================================================
+2025-11-17 22:28:08,536 - INFO - Epoch 77/100
+2025-11-17 22:28:08,536 - INFO - ================================================================================
+2025-11-17 22:31:16,316 - INFO - 
+Epoch 77 Summary:
+2025-11-17 22:31:16,317 - INFO -   Total Loss: 0.8536
+2025-11-17 22:31:16,317 - INFO -   🎯 Task Losses:
+2025-11-17 22:31:16,317 - INFO -      Classification Loss: 0.2157
+2025-11-17 22:31:16,317 - INFO -      Reconstruction Loss: 1.5831
+2025-11-17 22:31:16,317 - INFO -   🎯 Performance:
+2025-11-17 22:31:16,318 - INFO -      Train Accuracy: 0.9946
+2025-11-17 22:31:16,318 - INFO -      Val Accuracy: 0.9636
+2025-11-17 22:31:16,318 - INFO -      Val Loss: 1.0990
+2025-11-17 22:31:16,318 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:31:16,319 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 22:31:16,319 - INFO -      Wasserstein Loss (Energy): 0.0175
+2025-11-17 22:31:16,319 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:31:16,319 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:31:16,319 - INFO -      Average Latent Score: 0.9010
+2025-11-17 22:31:16,319 - INFO -   ⏱️  Epoch Time: 187.78s
+2025-11-17 22:31:16,319 - INFO - 
+================================================================================
+2025-11-17 22:31:16,319 - INFO - Epoch 78/100
+2025-11-17 22:31:16,319 - INFO - ================================================================================
+2025-11-17 22:34:24,591 - INFO - 
+Epoch 78 Summary:
+2025-11-17 22:34:24,591 - INFO -   Total Loss: 0.8508
+2025-11-17 22:34:24,591 - INFO -   🎯 Task Losses:
+2025-11-17 22:34:24,591 - INFO -      Classification Loss: 0.2158
+2025-11-17 22:34:24,592 - INFO -      Reconstruction Loss: 1.5750
+2025-11-17 22:34:24,592 - INFO -   🎯 Performance:
+2025-11-17 22:34:24,592 - INFO -      Train Accuracy: 0.9944
+2025-11-17 22:34:24,592 - INFO -      Val Accuracy: 0.9633
+2025-11-17 22:34:24,592 - INFO -      Val Loss: 1.1130
+2025-11-17 22:34:24,593 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:34:24,593 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 22:34:24,593 - INFO -      Wasserstein Loss (Energy): 0.0190
+2025-11-17 22:34:24,593 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:34:24,593 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:34:24,593 - INFO -      Average Latent Score: 0.9011
+2025-11-17 22:34:24,593 - INFO -   ⏱️  Epoch Time: 188.27s
+2025-11-17 22:34:24,594 - INFO - 
+================================================================================
+2025-11-17 22:34:24,594 - INFO - Epoch 79/100
+2025-11-17 22:34:24,594 - INFO - ================================================================================
+2025-11-17 22:37:32,103 - INFO - 
+Epoch 79 Summary:
+2025-11-17 22:37:32,104 - INFO -   Total Loss: 0.8480
+2025-11-17 22:37:32,104 - INFO -   🎯 Task Losses:
+2025-11-17 22:37:32,104 - INFO -      Classification Loss: 0.2156
+2025-11-17 22:37:32,105 - INFO -      Reconstruction Loss: 1.5695
+2025-11-17 22:37:32,105 - INFO -   🎯 Performance:
+2025-11-17 22:37:32,105 - INFO -      Train Accuracy: 0.9942
+2025-11-17 22:37:32,105 - INFO -      Val Accuracy: 0.9621
+2025-11-17 22:37:32,106 - INFO -      Val Loss: 1.0966
+2025-11-17 22:37:32,106 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:37:32,106 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 22:37:32,106 - INFO -      Wasserstein Loss (Energy): 0.0174
+2025-11-17 22:37:32,106 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:37:32,106 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:37:32,106 - INFO -      Average Latent Score: 0.9013
+2025-11-17 22:37:32,106 - INFO -   ⏱️  Epoch Time: 187.51s
+2025-11-17 22:37:32,107 - INFO - 
+================================================================================
+2025-11-17 22:37:32,107 - INFO - Epoch 80/100
+2025-11-17 22:37:32,107 - INFO - ================================================================================
+2025-11-17 22:40:39,094 - INFO - 
+Epoch 80 Summary:
+2025-11-17 22:40:39,094 - INFO -   Total Loss: 0.8464
+2025-11-17 22:40:39,094 - INFO -   🎯 Task Losses:
+2025-11-17 22:40:39,095 - INFO -      Classification Loss: 0.2167
+2025-11-17 22:40:39,095 - INFO -      Reconstruction Loss: 1.5624
+2025-11-17 22:40:39,095 - INFO -   🎯 Performance:
+2025-11-17 22:40:39,095 - INFO -      Train Accuracy: 0.9936
+2025-11-17 22:40:39,095 - INFO -      Val Accuracy: 0.9653
+2025-11-17 22:40:39,096 - INFO -      Val Loss: 1.1018
+2025-11-17 22:40:39,096 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:40:39,096 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 22:40:39,096 - INFO -      Wasserstein Loss (Energy): 0.0178
+2025-11-17 22:40:39,096 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:40:39,096 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:40:39,096 - INFO -      Average Latent Score: 0.9014
+2025-11-17 22:40:39,096 - INFO -   ⏱️  Epoch Time: 186.98s
+2025-11-17 22:40:39,097 - INFO -   📊 Creating visualizations...
+2025-11-17 22:40:40,976 - INFO -      ✅ Training dashboard: training_dashboard_epoch_080.png
+2025-11-17 22:40:40,976 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 22:40:44,468 - INFO -      ✅ Latent space: latent_space_epoch_080.png
+2025-11-17 22:40:45,538 - INFO -      ✅ HQ regions: hq_regions_epoch_080.png
+2025-11-17 22:40:45,596 - INFO -   💾 Saved weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_080.h5
+2025-11-17 22:40:45,600 - INFO -   💾 Saved LSBO sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_080_lsbo_sampler.pkl
+2025-11-17 22:40:45,601 - INFO -   💾 Saved config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_080_config.json
+2025-11-17 22:40:45,602 - INFO - 
+================================================================================
+2025-11-17 22:40:45,602 - INFO - Epoch 81/100
+2025-11-17 22:40:45,602 - INFO - ================================================================================
+2025-11-17 22:43:53,464 - INFO - 
+Epoch 81 Summary:
+2025-11-17 22:43:53,464 - INFO -   Total Loss: 0.8407
+2025-11-17 22:43:53,464 - INFO -   🎯 Task Losses:
+2025-11-17 22:43:53,465 - INFO -      Classification Loss: 0.2148
+2025-11-17 22:43:53,465 - INFO -      Reconstruction Loss: 1.5534
+2025-11-17 22:43:53,465 - INFO -   🎯 Performance:
+2025-11-17 22:43:53,465 - INFO -      Train Accuracy: 0.9952
+2025-11-17 22:43:53,466 - INFO -      Val Accuracy: 0.9657
+2025-11-17 22:43:53,466 - INFO -      Val Loss: 1.0820
+2025-11-17 22:43:53,466 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:43:53,466 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 22:43:53,467 - INFO -      Wasserstein Loss (Energy): 0.0170
+2025-11-17 22:43:53,467 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:43:53,467 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:43:53,467 - INFO -      Average Latent Score: 0.9015
+2025-11-17 22:43:53,467 - INFO -   ⏱️  Epoch Time: 187.86s
+2025-11-17 22:43:53,512 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_081_acc_0.9657.h5
+2025-11-17 22:43:53,516 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_081_acc_0.9657_lsbo_sampler.pkl
+2025-11-17 22:43:53,516 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_081_acc_0.9657_config.json
+2025-11-17 22:43:53,516 - INFO - 
+================================================================================
+2025-11-17 22:43:53,516 - INFO - Epoch 82/100
+2025-11-17 22:43:53,516 - INFO - ================================================================================
+2025-11-17 22:47:00,930 - INFO - 
+Epoch 82 Summary:
+2025-11-17 22:47:00,931 - INFO -   Total Loss: 0.8379
+2025-11-17 22:47:00,931 - INFO -   🎯 Task Losses:
+2025-11-17 22:47:00,931 - INFO -      Classification Loss: 0.2145
+2025-11-17 22:47:00,931 - INFO -      Reconstruction Loss: 1.5449
+2025-11-17 22:47:00,931 - INFO -   🎯 Performance:
+2025-11-17 22:47:00,932 - INFO -      Train Accuracy: 0.9951
+2025-11-17 22:47:00,932 - INFO -      Val Accuracy: 0.9635
+2025-11-17 22:47:00,932 - INFO -      Val Loss: 1.1026
+2025-11-17 22:47:00,932 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:47:00,933 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 22:47:00,933 - INFO -      Wasserstein Loss (Energy): 0.0206
+2025-11-17 22:47:00,933 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:47:00,933 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:47:00,933 - INFO -      Average Latent Score: 0.9017
+2025-11-17 22:47:00,933 - INFO -   ⏱️  Epoch Time: 187.41s
+2025-11-17 22:47:00,933 - INFO - 
+================================================================================
+2025-11-17 22:47:00,933 - INFO - Epoch 83/100
+2025-11-17 22:47:00,933 - INFO - ================================================================================
+2025-11-17 22:50:08,607 - INFO - 
+Epoch 83 Summary:
+2025-11-17 22:50:08,617 - INFO -   Total Loss: 0.8354
+2025-11-17 22:50:08,617 - INFO -   🎯 Task Losses:
+2025-11-17 22:50:08,617 - INFO -      Classification Loss: 0.2143
+2025-11-17 22:50:08,617 - INFO -      Reconstruction Loss: 1.5400
+2025-11-17 22:50:08,618 - INFO -   🎯 Performance:
+2025-11-17 22:50:08,618 - INFO -      Train Accuracy: 0.9954
+2025-11-17 22:50:08,618 - INFO -      Val Accuracy: 0.9648
+2025-11-17 22:50:08,618 - INFO -      Val Loss: 1.0881
+2025-11-17 22:50:08,618 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:50:08,619 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 22:50:08,619 - INFO -      Wasserstein Loss (Energy): 0.0193
+2025-11-17 22:50:08,619 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:50:08,619 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:50:08,619 - INFO -      Average Latent Score: 0.9018
+2025-11-17 22:50:08,619 - INFO -   ⏱️  Epoch Time: 187.67s
+2025-11-17 22:50:08,619 - INFO - 
+================================================================================
+2025-11-17 22:50:08,620 - INFO - Epoch 84/100
+2025-11-17 22:50:08,620 - INFO - ================================================================================
+2025-11-17 22:53:15,994 - INFO - 
+Epoch 84 Summary:
+2025-11-17 22:53:15,994 - INFO -   Total Loss: 0.8326
+2025-11-17 22:53:15,995 - INFO -   🎯 Task Losses:
+2025-11-17 22:53:15,995 - INFO -      Classification Loss: 0.2150
+2025-11-17 22:53:15,995 - INFO -      Reconstruction Loss: 1.5322
+2025-11-17 22:53:15,995 - INFO -   🎯 Performance:
+2025-11-17 22:53:15,996 - INFO -      Train Accuracy: 0.9944
+2025-11-17 22:53:15,996 - INFO -      Val Accuracy: 0.9632
+2025-11-17 22:53:15,996 - INFO -      Val Loss: 1.0855
+2025-11-17 22:53:15,996 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:53:15,996 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 22:53:15,997 - INFO -      Wasserstein Loss (Energy): 0.0178
+2025-11-17 22:53:15,997 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:53:15,997 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:53:15,997 - INFO -      Average Latent Score: 0.9019
+2025-11-17 22:53:15,997 - INFO -   ⏱️  Epoch Time: 187.37s
+2025-11-17 22:53:15,997 - INFO - 
+================================================================================
+2025-11-17 22:53:15,997 - INFO - Epoch 85/100
+2025-11-17 22:53:15,997 - INFO - ================================================================================
+2025-11-17 22:56:23,455 - INFO - 
+Epoch 85 Summary:
+2025-11-17 22:56:23,464 - INFO -   Total Loss: 0.8306
+2025-11-17 22:56:23,464 - INFO -   🎯 Task Losses:
+2025-11-17 22:56:23,465 - INFO -      Classification Loss: 0.2147
+2025-11-17 22:56:23,465 - INFO -      Reconstruction Loss: 1.5261
+2025-11-17 22:56:23,465 - INFO -   🎯 Performance:
+2025-11-17 22:56:23,465 - INFO -      Train Accuracy: 0.9950
+2025-11-17 22:56:23,466 - INFO -      Val Accuracy: 0.9629
+2025-11-17 22:56:23,466 - INFO -      Val Loss: 1.0900
+2025-11-17 22:56:23,466 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:56:23,466 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 22:56:23,467 - INFO -      Wasserstein Loss (Energy): 0.0209
+2025-11-17 22:56:23,467 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:56:23,467 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:56:23,467 - INFO -      Average Latent Score: 0.9021
+2025-11-17 22:56:23,467 - INFO -   ⏱️  Epoch Time: 187.46s
+2025-11-17 22:56:23,467 - INFO -   📊 Creating visualizations...
+2025-11-17 22:56:25,130 - INFO -      ✅ Training dashboard: training_dashboard_epoch_085.png
+2025-11-17 22:56:25,130 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 22:56:28,787 - INFO -      ✅ Latent space: latent_space_epoch_085.png
+2025-11-17 22:56:29,911 - INFO -      ✅ HQ regions: hq_regions_epoch_085.png
+2025-11-17 22:56:29,911 - INFO - 
+================================================================================
+2025-11-17 22:56:29,911 - INFO - Epoch 86/100
+2025-11-17 22:56:29,911 - INFO - ================================================================================
+2025-11-17 22:59:37,543 - INFO - 
+Epoch 86 Summary:
+2025-11-17 22:59:37,544 - INFO -   Total Loss: 0.8263
+2025-11-17 22:59:37,544 - INFO -   🎯 Task Losses:
+2025-11-17 22:59:37,544 - INFO -      Classification Loss: 0.2141
+2025-11-17 22:59:37,545 - INFO -      Reconstruction Loss: 1.5183
+2025-11-17 22:59:37,545 - INFO -   🎯 Performance:
+2025-11-17 22:59:37,545 - INFO -      Train Accuracy: 0.9951
+2025-11-17 22:59:37,545 - INFO -      Val Accuracy: 0.9649
+2025-11-17 22:59:37,545 - INFO -      Val Loss: 1.0797
+2025-11-17 22:59:37,545 - INFO -   📊 Latent Space Regularization:
+2025-11-17 22:59:37,546 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 22:59:37,546 - INFO -      Wasserstein Loss (Energy): 0.0184
+2025-11-17 22:59:37,546 - INFO -   🎯 LSBO Statistics:
+2025-11-17 22:59:37,546 - INFO -      High-Quality Regions: 1000
+2025-11-17 22:59:37,546 - INFO -      Average Latent Score: 0.9022
+2025-11-17 22:59:37,546 - INFO -   ⏱️  Epoch Time: 187.63s
+2025-11-17 22:59:37,546 - INFO - 
+================================================================================
+2025-11-17 22:59:37,547 - INFO - Epoch 87/100
+2025-11-17 22:59:37,547 - INFO - ================================================================================
+2025-11-17 23:02:45,616 - INFO - 
+Epoch 87 Summary:
+2025-11-17 23:02:45,625 - INFO -   Total Loss: 0.8223
+2025-11-17 23:02:45,625 - INFO -   🎯 Task Losses:
+2025-11-17 23:02:45,626 - INFO -      Classification Loss: 0.2137
+2025-11-17 23:02:45,626 - INFO -      Reconstruction Loss: 1.5111
+2025-11-17 23:02:45,626 - INFO -   🎯 Performance:
+2025-11-17 23:02:45,626 - INFO -      Train Accuracy: 0.9958
+2025-11-17 23:02:45,627 - INFO -      Val Accuracy: 0.9637
+2025-11-17 23:02:45,627 - INFO -      Val Loss: 1.0884
+2025-11-17 23:02:45,627 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:02:45,627 - INFO -      MMD Loss (LSBO-guided): 0.0007
+2025-11-17 23:02:45,628 - INFO -      Wasserstein Loss (Energy): 0.0157
+2025-11-17 23:02:45,628 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:02:45,628 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:02:45,628 - INFO -      Average Latent Score: 0.9023
+2025-11-17 23:02:45,628 - INFO -   ⏱️  Epoch Time: 188.07s
+2025-11-17 23:02:45,628 - INFO - 
+================================================================================
+2025-11-17 23:02:45,628 - INFO - Epoch 88/100
+2025-11-17 23:02:45,628 - INFO - ================================================================================
+2025-11-17 23:05:53,400 - INFO - 
+Epoch 88 Summary:
+2025-11-17 23:05:53,410 - INFO -   Total Loss: 0.8215
+2025-11-17 23:05:53,410 - INFO -   🎯 Task Losses:
+2025-11-17 23:05:53,410 - INFO -      Classification Loss: 0.2141
+2025-11-17 23:05:53,411 - INFO -      Reconstruction Loss: 1.5050
+2025-11-17 23:05:53,411 - INFO -   🎯 Performance:
+2025-11-17 23:05:53,411 - INFO -      Train Accuracy: 0.9958
+2025-11-17 23:05:53,411 - INFO -      Val Accuracy: 0.9653
+2025-11-17 23:05:53,411 - INFO -      Val Loss: 1.0848
+2025-11-17 23:05:53,411 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:05:53,412 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 23:05:53,412 - INFO -      Wasserstein Loss (Energy): 0.0201
+2025-11-17 23:05:53,412 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:05:53,412 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:05:53,412 - INFO -      Average Latent Score: 0.9024
+2025-11-17 23:05:53,412 - INFO -   ⏱️  Epoch Time: 187.77s
+2025-11-17 23:05:53,412 - INFO - 
+================================================================================
+2025-11-17 23:05:53,413 - INFO - Epoch 89/100
+2025-11-17 23:05:53,413 - INFO - ================================================================================
+2025-11-17 23:09:01,436 - INFO - 
+Epoch 89 Summary:
+2025-11-17 23:09:01,436 - INFO -   Total Loss: 0.8194
+2025-11-17 23:09:01,436 - INFO -   🎯 Task Losses:
+2025-11-17 23:09:01,436 - INFO -      Classification Loss: 0.2139
+2025-11-17 23:09:01,437 - INFO -      Reconstruction Loss: 1.4992
+2025-11-17 23:09:01,437 - INFO -   🎯 Performance:
+2025-11-17 23:09:01,437 - INFO -      Train Accuracy: 0.9956
+2025-11-17 23:09:01,437 - INFO -      Val Accuracy: 0.9635
+2025-11-17 23:09:01,438 - INFO -      Val Loss: 1.0819
+2025-11-17 23:09:01,438 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:09:01,438 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 23:09:01,438 - INFO -      Wasserstein Loss (Energy): 0.0219
+2025-11-17 23:09:01,438 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:09:01,438 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:09:01,438 - INFO -      Average Latent Score: 0.9025
+2025-11-17 23:09:01,438 - INFO -   ⏱️  Epoch Time: 188.02s
+2025-11-17 23:09:01,439 - INFO - 
+================================================================================
+2025-11-17 23:09:01,439 - INFO - Epoch 90/100
+2025-11-17 23:09:01,439 - INFO - ================================================================================
+2025-11-17 23:12:09,577 - INFO - 
+Epoch 90 Summary:
+2025-11-17 23:12:09,586 - INFO -   Total Loss: 0.8152
+2025-11-17 23:12:09,586 - INFO -   🎯 Task Losses:
+2025-11-17 23:12:09,587 - INFO -      Classification Loss: 0.2132
+2025-11-17 23:12:09,587 - INFO -      Reconstruction Loss: 1.4922
+2025-11-17 23:12:09,587 - INFO -   🎯 Performance:
+2025-11-17 23:12:09,587 - INFO -      Train Accuracy: 0.9962
+2025-11-17 23:12:09,588 - INFO -      Val Accuracy: 0.9625
+2025-11-17 23:12:09,588 - INFO -      Val Loss: 1.0716
+2025-11-17 23:12:09,588 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:12:09,588 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 23:12:09,589 - INFO -      Wasserstein Loss (Energy): 0.0195
+2025-11-17 23:12:09,589 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:12:09,589 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:12:09,589 - INFO -      Average Latent Score: 0.9026
+2025-11-17 23:12:09,589 - INFO -   ⏱️  Epoch Time: 188.14s
+2025-11-17 23:12:09,589 - INFO -   📊 Creating visualizations...
+2025-11-17 23:12:11,282 - INFO -      ✅ Training dashboard: training_dashboard_epoch_090.png
+2025-11-17 23:12:11,282 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 23:12:14,562 - INFO -      ✅ Latent space: latent_space_epoch_090.png
+2025-11-17 23:12:15,646 - INFO -      ✅ HQ regions: hq_regions_epoch_090.png
+2025-11-17 23:12:15,705 - INFO -   💾 Saved weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_090.h5
+2025-11-17 23:12:15,709 - INFO -   💾 Saved LSBO sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_090_lsbo_sampler.pkl
+2025-11-17 23:12:15,710 - INFO -   💾 Saved config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_090_config.json
+2025-11-17 23:12:15,712 - INFO - 
+================================================================================
+2025-11-17 23:12:15,712 - INFO - Epoch 91/100
+2025-11-17 23:12:15,712 - INFO - ================================================================================
+2025-11-17 23:15:23,307 - INFO - 
+Epoch 91 Summary:
+2025-11-17 23:15:23,307 - INFO -   Total Loss: 0.8121
+2025-11-17 23:15:23,307 - INFO -   🎯 Task Losses:
+2025-11-17 23:15:23,307 - INFO -      Classification Loss: 0.2130
+2025-11-17 23:15:23,308 - INFO -      Reconstruction Loss: 1.4849
+2025-11-17 23:15:23,308 - INFO -   🎯 Performance:
+2025-11-17 23:15:23,308 - INFO -      Train Accuracy: 0.9962
+2025-11-17 23:15:23,308 - INFO -      Val Accuracy: 0.9641
+2025-11-17 23:15:23,308 - INFO -      Val Loss: 1.0814
+2025-11-17 23:15:23,308 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:15:23,309 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 23:15:23,309 - INFO -      Wasserstein Loss (Energy): 0.0193
+2025-11-17 23:15:23,309 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:15:23,309 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:15:23,309 - INFO -      Average Latent Score: 0.9027
+2025-11-17 23:15:23,309 - INFO -   ⏱️  Epoch Time: 187.59s
+2025-11-17 23:15:23,309 - INFO - 
+================================================================================
+2025-11-17 23:15:23,309 - INFO - Epoch 92/100
+2025-11-17 23:15:23,309 - INFO - ================================================================================
+2025-11-17 23:18:31,207 - INFO - 
+Epoch 92 Summary:
+2025-11-17 23:18:31,216 - INFO -   Total Loss: 0.8101
+2025-11-17 23:18:31,217 - INFO -   🎯 Task Losses:
+2025-11-17 23:18:31,217 - INFO -      Classification Loss: 0.2130
+2025-11-17 23:18:31,217 - INFO -      Reconstruction Loss: 1.4795
+2025-11-17 23:18:31,217 - INFO -   🎯 Performance:
+2025-11-17 23:18:31,218 - INFO -      Train Accuracy: 0.9965
+2025-11-17 23:18:31,218 - INFO -      Val Accuracy: 0.9649
+2025-11-17 23:18:31,218 - INFO -      Val Loss: 1.0809
+2025-11-17 23:18:31,218 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:18:31,219 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 23:18:31,219 - INFO -      Wasserstein Loss (Energy): 0.0202
+2025-11-17 23:18:31,219 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:18:31,219 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:18:31,219 - INFO -      Average Latent Score: 0.9028
+2025-11-17 23:18:31,219 - INFO -   ⏱️  Epoch Time: 187.90s
+2025-11-17 23:18:31,219 - INFO - 
+================================================================================
+2025-11-17 23:18:31,219 - INFO - Epoch 93/100
+2025-11-17 23:18:31,219 - INFO - ================================================================================
+2025-11-17 23:21:39,266 - INFO - 
+Epoch 93 Summary:
+2025-11-17 23:21:39,275 - INFO -   Total Loss: 0.8062
+2025-11-17 23:21:39,276 - INFO -   🎯 Task Losses:
+2025-11-17 23:21:39,276 - INFO -      Classification Loss: 0.2122
+2025-11-17 23:21:39,276 - INFO -      Reconstruction Loss: 1.4730
+2025-11-17 23:21:39,277 - INFO -   🎯 Performance:
+2025-11-17 23:21:39,277 - INFO -      Train Accuracy: 0.9968
+2025-11-17 23:21:39,277 - INFO -      Val Accuracy: 0.9582
+2025-11-17 23:21:39,277 - INFO -      Val Loss: 1.0628
+2025-11-17 23:21:39,278 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:21:39,278 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 23:21:39,278 - INFO -      Wasserstein Loss (Energy): 0.0178
+2025-11-17 23:21:39,278 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:21:39,278 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:21:39,278 - INFO -      Average Latent Score: 0.9029
+2025-11-17 23:21:39,278 - INFO -   ⏱️  Epoch Time: 188.04s
+2025-11-17 23:21:39,279 - INFO - 
+================================================================================
+2025-11-17 23:21:39,279 - INFO - Epoch 94/100
+2025-11-17 23:21:39,279 - INFO - ================================================================================
+2025-11-17 23:24:47,123 - INFO - 
+Epoch 94 Summary:
+2025-11-17 23:24:47,133 - INFO -   Total Loss: 0.8032
+2025-11-17 23:24:47,133 - INFO -   🎯 Task Losses:
+2025-11-17 23:24:47,133 - INFO -      Classification Loss: 0.2123
+2025-11-17 23:24:47,133 - INFO -      Reconstruction Loss: 1.4665
+2025-11-17 23:24:47,133 - INFO -   🎯 Performance:
+2025-11-17 23:24:47,134 - INFO -      Train Accuracy: 0.9967
+2025-11-17 23:24:47,134 - INFO -      Val Accuracy: 0.9627
+2025-11-17 23:24:47,134 - INFO -      Val Loss: 1.0698
+2025-11-17 23:24:47,134 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:24:47,135 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 23:24:47,135 - INFO -      Wasserstein Loss (Energy): 0.0161
+2025-11-17 23:24:47,135 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:24:47,135 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:24:47,135 - INFO -      Average Latent Score: 0.9030
+2025-11-17 23:24:47,135 - INFO -   ⏱️  Epoch Time: 187.84s
+2025-11-17 23:24:47,135 - INFO - 
+================================================================================
+2025-11-17 23:24:47,135 - INFO - Epoch 95/100
+2025-11-17 23:24:47,135 - INFO - ================================================================================
+2025-11-17 23:27:54,963 - INFO - 
+Epoch 95 Summary:
+2025-11-17 23:27:54,972 - INFO -   Total Loss: 0.8022
+2025-11-17 23:27:54,972 - INFO -   🎯 Task Losses:
+2025-11-17 23:27:54,972 - INFO -      Classification Loss: 0.2129
+2025-11-17 23:27:54,973 - INFO -      Reconstruction Loss: 1.4608
+2025-11-17 23:27:54,973 - INFO -   🎯 Performance:
+2025-11-17 23:27:54,973 - INFO -      Train Accuracy: 0.9962
+2025-11-17 23:27:54,973 - INFO -      Val Accuracy: 0.9622
+2025-11-17 23:27:54,974 - INFO -      Val Loss: 1.0755
+2025-11-17 23:27:54,974 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:27:54,974 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 23:27:54,974 - INFO -      Wasserstein Loss (Energy): 0.0189
+2025-11-17 23:27:54,974 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:27:54,974 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:27:54,974 - INFO -      Average Latent Score: 0.9031
+2025-11-17 23:27:54,975 - INFO -   ⏱️  Epoch Time: 187.83s
+2025-11-17 23:27:54,975 - INFO -   📊 Creating visualizations...
+2025-11-17 23:27:56,580 - INFO -      ✅ Training dashboard: training_dashboard_epoch_095.png
+2025-11-17 23:27:56,580 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 23:28:00,040 - INFO -      ✅ Latent space: latent_space_epoch_095.png
+2025-11-17 23:28:01,181 - INFO -      ✅ HQ regions: hq_regions_epoch_095.png
+2025-11-17 23:28:01,181 - INFO - 
+================================================================================
+2025-11-17 23:28:01,181 - INFO - Epoch 96/100
+2025-11-17 23:28:01,181 - INFO - ================================================================================
+2025-11-17 23:31:08,731 - INFO - 
+Epoch 96 Summary:
+2025-11-17 23:31:08,731 - INFO -   Total Loss: 0.8003
+2025-11-17 23:31:08,731 - INFO -   🎯 Task Losses:
+2025-11-17 23:31:08,731 - INFO -      Classification Loss: 0.2132
+2025-11-17 23:31:08,732 - INFO -      Reconstruction Loss: 1.4565
+2025-11-17 23:31:08,732 - INFO -   🎯 Performance:
+2025-11-17 23:31:08,732 - INFO -      Train Accuracy: 0.9962
+2025-11-17 23:31:08,732 - INFO -      Val Accuracy: 0.9670
+2025-11-17 23:31:08,733 - INFO -      Val Loss: 1.0542
+2025-11-17 23:31:08,733 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:31:08,733 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 23:31:08,733 - INFO -      Wasserstein Loss (Energy): 0.0173
+2025-11-17 23:31:08,733 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:31:08,733 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:31:08,733 - INFO -      Average Latent Score: 0.9032
+2025-11-17 23:31:08,733 - INFO -   ⏱️  Epoch Time: 187.55s
+2025-11-17 23:31:08,790 - INFO -   ✅ Saved model weights: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670.h5
+2025-11-17 23:31:08,794 - INFO -   ✅ Saved LSBO sampler: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670_lsbo_sampler.pkl
+2025-11-17 23:31:08,794 - INFO -   ✅ Saved model config: lsbo_guided_training_results/checkpoints/best_model_epoch_096_acc_0.9670_config.json
+2025-11-17 23:31:08,794 - INFO - 
+================================================================================
+2025-11-17 23:31:08,794 - INFO - Epoch 97/100
+2025-11-17 23:31:08,794 - INFO - ================================================================================
+2025-11-17 23:34:16,334 - INFO - 
+Epoch 97 Summary:
+2025-11-17 23:34:16,334 - INFO -   Total Loss: 0.7981
+2025-11-17 23:34:16,334 - INFO -   🎯 Task Losses:
+2025-11-17 23:34:16,335 - INFO -      Classification Loss: 0.2125
+2025-11-17 23:34:16,335 - INFO -      Reconstruction Loss: 1.4498
+2025-11-17 23:34:16,335 - INFO -   🎯 Performance:
+2025-11-17 23:34:16,335 - INFO -      Train Accuracy: 0.9964
+2025-11-17 23:34:16,336 - INFO -      Val Accuracy: 0.9639
+2025-11-17 23:34:16,336 - INFO -      Val Loss: 1.0559
+2025-11-17 23:34:16,336 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:34:16,336 - INFO -      MMD Loss (LSBO-guided): 0.0010
+2025-11-17 23:34:16,337 - INFO -      Wasserstein Loss (Energy): 0.0216
+2025-11-17 23:34:16,337 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:34:16,337 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:34:16,337 - INFO -      Average Latent Score: 0.9032
+2025-11-17 23:34:16,337 - INFO -   ⏱️  Epoch Time: 187.54s
+2025-11-17 23:34:16,337 - INFO - 
+================================================================================
+2025-11-17 23:34:16,337 - INFO - Epoch 98/100
+2025-11-17 23:34:16,337 - INFO - ================================================================================
+2025-11-17 23:37:24,199 - INFO - 
+Epoch 98 Summary:
+2025-11-17 23:37:24,208 - INFO -   Total Loss: 0.7948
+2025-11-17 23:37:24,208 - INFO -   🎯 Task Losses:
+2025-11-17 23:37:24,208 - INFO -      Classification Loss: 0.2122
+2025-11-17 23:37:24,209 - INFO -      Reconstruction Loss: 1.4442
+2025-11-17 23:37:24,209 - INFO -   🎯 Performance:
+2025-11-17 23:37:24,209 - INFO -      Train Accuracy: 0.9967
+2025-11-17 23:37:24,209 - INFO -      Val Accuracy: 0.9604
+2025-11-17 23:37:24,210 - INFO -      Val Loss: 1.0636
+2025-11-17 23:37:24,210 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:37:24,210 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 23:37:24,210 - INFO -      Wasserstein Loss (Energy): 0.0185
+2025-11-17 23:37:24,210 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:37:24,211 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:37:24,211 - INFO -      Average Latent Score: 0.9033
+2025-11-17 23:37:24,211 - INFO -   ⏱️  Epoch Time: 187.86s
+2025-11-17 23:37:24,211 - INFO - 
+================================================================================
+2025-11-17 23:37:24,211 - INFO - Epoch 99/100
+2025-11-17 23:37:24,211 - INFO - ================================================================================
+2025-11-17 23:40:32,409 - INFO - 
+Epoch 99 Summary:
+2025-11-17 23:40:32,410 - INFO -   Total Loss: 0.7928
+2025-11-17 23:40:32,410 - INFO -   🎯 Task Losses:
+2025-11-17 23:40:32,410 - INFO -      Classification Loss: 0.2122
+2025-11-17 23:40:32,410 - INFO -      Reconstruction Loss: 1.4385
+2025-11-17 23:40:32,411 - INFO -   🎯 Performance:
+2025-11-17 23:40:32,411 - INFO -      Train Accuracy: 0.9966
+2025-11-17 23:40:32,411 - INFO -      Val Accuracy: 0.9635
+2025-11-17 23:40:32,411 - INFO -      Val Loss: 1.0530
+2025-11-17 23:40:32,411 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:40:32,412 - INFO -      MMD Loss (LSBO-guided): 0.0009
+2025-11-17 23:40:32,412 - INFO -      Wasserstein Loss (Energy): 0.0195
+2025-11-17 23:40:32,412 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:40:32,412 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:40:32,412 - INFO -      Average Latent Score: 0.9034
+2025-11-17 23:40:32,412 - INFO -   ⏱️  Epoch Time: 188.20s
+2025-11-17 23:40:32,412 - INFO - 
+================================================================================
+2025-11-17 23:40:32,412 - INFO - Epoch 100/100
+2025-11-17 23:40:32,412 - INFO - ================================================================================
+2025-11-17 23:43:40,505 - INFO - 
+Epoch 100 Summary:
+2025-11-17 23:43:40,505 - INFO -   Total Loss: 0.7904
+2025-11-17 23:43:40,505 - INFO -   🎯 Task Losses:
+2025-11-17 23:43:40,505 - INFO -      Classification Loss: 0.2124
+2025-11-17 23:43:40,506 - INFO -      Reconstruction Loss: 1.4336
+2025-11-17 23:43:40,506 - INFO -   🎯 Performance:
+2025-11-17 23:43:40,506 - INFO -      Train Accuracy: 0.9968
+2025-11-17 23:43:40,506 - INFO -      Val Accuracy: 0.9609
+2025-11-17 23:43:40,507 - INFO -      Val Loss: 1.0454
+2025-11-17 23:43:40,507 - INFO -   📊 Latent Space Regularization:
+2025-11-17 23:43:40,507 - INFO -      MMD Loss (LSBO-guided): 0.0008
+2025-11-17 23:43:40,507 - INFO -      Wasserstein Loss (Energy): 0.0173
+2025-11-17 23:43:40,507 - INFO -   🎯 LSBO Statistics:
+2025-11-17 23:43:40,507 - INFO -      High-Quality Regions: 1000
+2025-11-17 23:43:40,507 - INFO -      Average Latent Score: 0.9035
+2025-11-17 23:43:40,507 - INFO -   ⏱️  Epoch Time: 188.09s
+2025-11-17 23:43:40,508 - INFO -   📊 Creating visualizations...
+2025-11-17 23:43:42,188 - INFO -      ✅ Training dashboard: training_dashboard_epoch_100.png
+2025-11-17 23:43:42,188 - INFO -      🗺️  Visualizing latent space...
+2025-11-17 23:43:45,657 - INFO -      ✅ Latent space: latent_space_epoch_100.png
+2025-11-17 23:43:46,816 - INFO -      ✅ HQ regions: hq_regions_epoch_100.png
+2025-11-17 23:43:46,865 - INFO -   💾 Saved weights: lsbo_guided_training_results/checkpoints/checkpoint_epoch_100.h5
+2025-11-17 23:43:46,869 - INFO -   💾 Saved LSBO sampler: lsbo_guided_training_results/checkpoints/checkpoint_epoch_100_lsbo_sampler.pkl
+2025-11-17 23:43:46,869 - INFO -   💾 Saved config: lsbo_guided_training_results/checkpoints/checkpoint_epoch_100_config.json
+2025-11-17 23:43:46,871 - INFO - 
+================================================================================
+2025-11-17 23:43:46,871 - INFO - Training Complete!
+2025-11-17 23:43:46,871 - INFO - ================================================================================
+2025-11-17 23:43:46,871 - INFO - Best Val Accuracy: 0.9670 (Epoch 96)
+2025-11-17 23:43:46,871 - INFO - High-Quality Regions Discovered: 1000
+2025-11-17 23:43:46,871 - INFO - Average Latent Score: 0.9035
