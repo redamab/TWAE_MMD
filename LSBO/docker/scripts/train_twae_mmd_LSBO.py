@@ -7,7 +7,6 @@ LSBO-GUIDED TRAINING INNOVATION:
 ✅ Samples from discovered high-quality latent regions
 ✅ Targets membrane-reactive AMP space only
 ✅ 30-42% improvement in generation quality
-✅ Maintains 96%+ classification accuracy
 
 LSBO-GUIDED STRATEGY:
 1. Encode real AMPs → discover high-quality latent regions
@@ -15,13 +14,12 @@ LSBO-GUIDED STRATEGY:
 3. Sample from these regions (not random!) for MMD/Wasserstein losses
 4. Model learns to focus on biologically relevant space
 
-TARGET: 96%+ accuracy + 0.85+ average generation score (sAMPpred-GAT validated)
 GPU: Optimized for RTX 2060 (6GB VRAM)
 STATUS: PRODUCTION-READY WITH LSBO-GUIDED SAMPLING
 
-Author: Reda
-Date: 2024-11-17
-Version: 5.0.0 - LSBO-GUIDED TRAINING (0.80 THRESHOLD)
+Author: Reda Mabrouki
+Date: 2025-11-17
+Version: 5.0.0 - LSBO-GUIDED TRAINING 
 """
 
 import os
@@ -77,7 +75,7 @@ try:
     from twae_data_loader import create_complete_data_pipeline, get_config as get_data_config
     print("✅ All TWAE-MMD modules imported successfully")
 except ImportError as e:
-    print(f"❌ Import error: {e}")
+    print(f" Import error: {e}")
     print("Please ensure all modules are in the correct paths")
     sys.exit(1)
 
@@ -135,7 +133,7 @@ class LSBOGuidedTWAEMMDTrainer:
         self._setup_gpu(use_mixed_precision, gpu_memory_growth)
         
         # Initialize LSBO components
-        self.logger.info("🚀 Initializing LSBO-guided components...")
+        self.logger.info(" Initializing LSBO-guided components...")
         self.property_predictor = ImprovedAMPScorer()
         self.constraints = AMPConstraints(
             min_length=10,
@@ -194,8 +192,8 @@ class LSBOGuidedTWAEMMDTrainer:
         self.best_epoch = 0
         
         self.logger.info("✅ LSBO-Guided TWAE-MMD Trainer initialized successfully")
-        self.logger.info("🎯 KEY INNOVATION: No random Gaussian sampling!")
-        self.logger.info("🎯 All latent samples target high-quality AMP regions")
+        self.logger.info(" KEY INNOVATION: No random Gaussian sampling!")
+        self.logger.info(" All latent samples target high-quality AMP regions")
     
     def _setup_logging(self):
         """Setup logging."""
@@ -556,9 +554,9 @@ class LSBOGuidedTWAEMMDTrainer:
             num_epochs: Number of epochs
         """
         self.logger.info("="*80)
-        self.logger.info("🚀 Starting LSBO-Guided Training")
+        self.logger.info(" Starting LSBO-Guided Training")
         self.logger.info("="*80)
-        self.logger.info("✨ KEY INNOVATION: No random Gaussian sampling!")
+        self.logger.info(" KEY INNOVATION: No random Gaussian sampling!")
         self.logger.info("   All latent samples target high-quality AMP regions")
         self.logger.info("="*80)
         
@@ -603,20 +601,20 @@ class LSBOGuidedTWAEMMDTrainer:
             # Print epoch summary
             self.logger.info(f'\nEpoch {epoch+1} Summary:')
             self.logger.info(f'  Total Loss: {self.train_loss_metric.result():.4f}')
-            self.logger.info(f'  🎯 Task Losses:')
+            self.logger.info(f'   Task Losses:')
             self.logger.info(f'     Classification Loss: {self.train_classification_metric.result():.4f}')
             self.logger.info(f'     Reconstruction Loss: {self.train_reconstruction_metric.result():.4f}')
-            self.logger.info(f'  🎯 Performance:')
+            self.logger.info(f'   Performance:')
             self.logger.info(f'     Train Accuracy: {self.train_accuracy_metric.result():.4f}')
             self.logger.info(f'     Val Accuracy: {self.val_accuracy_metric.result():.4f}')
             self.logger.info(f'     Val Loss: {self.val_loss_metric.result():.4f}')
-            self.logger.info(f'  📊 Latent Space Regularization:')
+            self.logger.info(f'   Latent Space Regularization:')
             self.logger.info(f'     MMD Loss (LSBO-guided): {self.train_mmd_metric.result():.4f}')
             self.logger.info(f'     Wasserstein Loss (Energy): {self.train_wasserstein_metric.result():.4f}')
-            self.logger.info(f'  🎯 LSBO Statistics:')
+            self.logger.info(f'   LSBO Statistics:')
             self.logger.info(f'     High-Quality Regions: {hq_count}')
             self.logger.info(f'     Average Latent Score: {avg_score:.4f}')
-            self.logger.info(f'  ⏱️  Epoch Time: {epoch_time:.2f}s')
+            self.logger.info(f'    Epoch Time: {epoch_time:.2f}s')
             
             # Save best model
             val_acc = self.val_accuracy_metric.result()
@@ -624,7 +622,7 @@ class LSBOGuidedTWAEMMDTrainer:
                 self.best_val_accuracy = val_acc
                 self.best_epoch = epoch
                 
-                # 🔧 FIXED: Save in .h5 format + LSBO sampler + config (for Phase 2 generation)
+                # Save in .h5 format + LSBO sampler + config (for Phase 2 generation)
                 checkpoint_prefix = self.checkpoint_dir / f'best_model_epoch_{epoch+1:03d}_acc_{val_acc:.4f}'
                 
                 # Save model weights (.h5 format - easy to load!)
@@ -653,7 +651,7 @@ class LSBOGuidedTWAEMMDTrainer:
             
             # Create visualizations every 5 epochs
             if (epoch + 1) % 5 == 0 or (epoch + 1) == 1:
-                self.logger.info(f'  📊 Creating visualizations...')
+                self.logger.info(f'   Creating visualizations...')
                 
                 # 1. Training metrics dashboard
                 viz_path = create_training_visualizations(
@@ -662,7 +660,7 @@ class LSBOGuidedTWAEMMDTrainer:
                 self.logger.info(f'     ✅ Training dashboard: {viz_path.name}')
                 
                 # 2. Latent space visualization
-                self.logger.info(f'     🗺️  Visualizing latent space...')
+                self.logger.info(f'       Visualizing latent space...')
                 latent_viz_path = visualize_latent_space(
                     self.model, self.val_dataset, self.viz_dir, epoch + 1, 
                     num_samples=1000, lsbo_sampler=self.model.latent_manager.lsbo_sampler
@@ -684,13 +682,13 @@ class LSBOGuidedTWAEMMDTrainer:
                 # Save weights
                 weights_path = f'{checkpoint_prefix}.h5'
                 self.model.save_weights(weights_path)
-                self.logger.info(f'  💾 Saved weights: {weights_path}')
+                self.logger.info(f'   Saved weights: {weights_path}')
                 
                 # Save LSBO sampler
                 lsbo_path = f'{checkpoint_prefix}_lsbo_sampler.pkl'
                 with open(lsbo_path, 'wb') as f:
                     pickle.dump(self.model.latent_manager.lsbo_sampler, f)
-                self.logger.info(f'  💾 Saved LSBO sampler: {lsbo_path}')
+                self.logger.info(f'   Saved LSBO sampler: {lsbo_path}')
                 
                 # Save config
                 config_path = f'{checkpoint_prefix}_config.json'
@@ -703,7 +701,7 @@ class LSBOGuidedTWAEMMDTrainer:
                 }
                 with open(config_path, 'w') as f:
                     json.dump(config_dict, f, indent=2)
-                self.logger.info(f'  💾 Saved config: {config_path}')
+                self.logger.info(f'   Saved config: {config_path}')
                 
                 # Save history
                 history_df = pd.DataFrame(self.history)
@@ -720,9 +718,9 @@ class LSBOGuidedTWAEMMDTrainer:
 def main():
     """Main training function."""
     print("="*80)
-    print("🚀 LSBO-Guided Training for TWAE-MMD")
+    print(" LSBO-Guided Training for TWAE-MMD")
     print("="*80)
-    print("\n✨ KEY INNOVATION: No random Gaussian sampling!")
+    print("\n KEY INNOVATION: No random Gaussian sampling!")
     print("   All latent samples target high-quality, membrane-reactive AMP regions\n")
     
     # Paths (updated to match your actual data files)
@@ -741,10 +739,10 @@ def main():
     # Train
     trainer.train(num_epochs=100)
     
-    print("\n🎉 Training complete!")
+    print("\n Training complete!")
     print(f"   Best accuracy: {trainer.best_val_accuracy:.4f}")
     print(f"   High-quality regions: {len(trainer.model.latent_manager.lsbo_sampler.high_quality_regions)}")
-    print("\n💡 Your model is now trained to generate high-quality AMPs!")
+    print("\n Your model is now trained to generate high-quality AMPs!")
 
 
 if __name__ == "__main__":
