@@ -55,7 +55,7 @@ try:
     from real_twae_core.constraints import AMPConstraints
     print("✅ All modules imported successfully")
 except ImportError as e:
-    print(f"❌ Import error: {e}")
+    print(f" Import error: {e}")
     sys.exit(1)
 
 
@@ -409,7 +409,7 @@ class AMPGenerator:
                 except Exception as e:
                     rejection_reasons['exception'] += 1
                     if attempts <= 10:
-                        self.logger.error(f"\n❌ Error (attempt {attempts}): {str(e)[:100]}")
+                        self.logger.error(f"\n Error (attempt {attempts}): {str(e)[:100]}")
                     continue
         
         pbar.close()
@@ -418,7 +418,7 @@ class AMPGenerator:
         df = pd.DataFrame(generated_amps)
         
         if len(df) == 0:
-            self.logger.warning("\n❌ No AMPs generated! Check parameters.\n")
+            self.logger.warning("\n No AMPs generated! Check parameters.\n")
             return df
         
         # Sort by overall score
