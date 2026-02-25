@@ -1,18 +1,16 @@
 """
-🚀 PHASE 2: AMP GENERATION FROM TRAINED MODEL - NEURAL SCORER VERSION
+ PHASE 2: AMP GENERATION FROM TRAINED MODEL - NEURAL SCORER VERSION
 =====================================================================
 
-This script uses the NEURAL ImprovedAMPScorer (same as training) for consistency.
-
 Key Features:
-1. Uses ImprovedAMPScorer (neural network) instead of simple string scorer
+1. Uses ImprovedAMPScorer (neural network) 
 2. Threshold 0.80 (consistent with sAMPpred-GAT validation)
-3. Passes token IDs to scorer (not strings)
+3. Passes token IDs to scorer 
 4. Generates AMPs with same quality as LSBO training regions
 
-Author: Reda
-Date: 2024-11-17
-Version: 4.0.0 - NEURAL SCORER (Consistent with Training!)
+Author: Reda Mabrouki
+Date: 2025-11-17
+Version: 4.0.0 - NEURAL SCORER 
 """
 
 import os
@@ -126,7 +124,7 @@ class AMPGenerator:
     def _load_model_h5(self):
         """Load model from .h5 weights + LSBO sampler + config."""
         self.logger.info(f"\n{'='*80}")
-        self.logger.info("🔄 LOADING MODEL FROM H5 FORMAT")
+        self.logger.info(" LOADING MODEL FROM H5 FORMAT")
         self.logger.info(f"{'='*80}\n")
         
         # File paths
@@ -144,26 +142,26 @@ class AMPGenerator:
                 raise FileNotFoundError(f"Required file not found: {path}")
         
         # Step 1: Load config
-        self.logger.info("🔧 Step 1: Loading model config...")
+        self.logger.info(" Step 1: Loading model config...")
         with open(config_path, 'r') as f:
             config_dict = json.load(f)
         self.logger.info(f"✅ Config loaded: {config_dict['model_type']}\n")
         
         # Step 2: Create model architecture
-        self.logger.info("🔧 Step 2: Creating model architecture...")
+        self.logger.info(" Step 2: Creating model architecture...")
         model_config = get_model_config(config_dict['model_type'])
         model_config.use_lsbo_sampling = config_dict['use_lsbo_sampling']
         self.model = create_twae_mmd_model(model_config)
         self.logger.info("✅ Model architecture created\n")
         
         # Step 3: Build model
-        self.logger.info("🔧 Step 3: Building model graph...")
+        self.logger.info(" Step 3: Building model graph...")
         dummy_input = tf.zeros((1, model_config.max_length), dtype=tf.int32)
         _ = self.model(dummy_input, training=False)
         self.logger.info("✅ Model graph built\n")
         
         # Step 4: Load weights (with flexible loading)
-        self.logger.info("🔧 Step 4: Loading weights from .h5 file...")
+        self.logger.info(" Step 4: Loading weights from .h5 file...")
         try:
             # Try exact loading first
             self.model.load_weights(weights_path)
@@ -176,7 +174,7 @@ class AMPGenerator:
             self.logger.info("✅ Weights loaded successfully (flexible matching)!\n")
         
         # Step 5: Load LSBO sampler
-        self.logger.info("🔧 Step 5: Loading LSBO sampler with HQ regions...")
+        self.logger.info(" Step 5: Loading LSBO sampler with HQ regions...")
         with open(lsbo_path, 'rb') as f:
             lsbo_sampler = pickle.load(f)
         
@@ -285,13 +283,13 @@ class AMPGenerator:
             DataFrame with generated AMPs
         """
         self.logger.info(f"{'='*80}")
-        self.logger.info("🧬 GENERATING AMPs WITH NEURAL SCORER")
+        self.logger.info(" GENERATING AMPs WITH NEURAL SCORER")
         self.logger.info(f"{'='*80}\n")
         
-        self.logger.info(f"🎯 Target: {num_amps} AMPs")
-        self.logger.info(f"🌡  Temperature: {temperature}")
-        self.logger.info(f"📊 Min Overall Score: {min_score} (sAMPpred-GAT threshold)")
-        self.logger.info(f"📊 Min Membrane Score: {min_membrane_score}\n")
+        self.logger.info(f" Target: {num_amps} AMPs")
+        self.logger.info(f"  Temperature: {temperature}")
+        self.logger.info(f" Min Overall Score: {min_score} (sAMPpred-GAT threshold)")
+        self.logger.info(f" Min Membrane Score: {min_membrane_score}\n")
         
         generated_amps = []
         duplicates = set()
@@ -428,18 +426,18 @@ class AMPGenerator:
         
         # Statistics
         self.logger.info(f"\n{'='*80}")
-        self.logger.info("📊 GENERATION STATISTICS")
+        self.logger.info(" GENERATION STATISTICS")
         self.logger.info(f"{'='*80}\n")
         
         self.logger.info(f"✅ Generated: {len(df)} unique AMPs")
-        self.logger.info(f"📝 Total attempts: {attempts}")
-        self.logger.info(f"✨ Success rate: {len(df)/attempts*100:.1f}%\n")
+        self.logger.info(f" Total attempts: {attempts}")
+        self.logger.info(f" Success rate: {len(df)/attempts*100:.1f}%\n")
         
-        self.logger.info(f"🎯 Quality Scores (Neural Scorer):")
+        self.logger.info(f" Quality Scores (Neural Scorer):")
         self.logger.info(f"   Overall:    {df['overall_score'].mean():.4f} ± {df['overall_score'].std():.4f}")
         self.logger.info(f"   Membrane:   {df['membrane_reactivity'].mean():.4f} ± {df['membrane_reactivity'].std():.4f}\n")
         
-        self.logger.info(f"📏 Sequence Properties:")
+        self.logger.info(f" Sequence Properties:")
         self.logger.info(f"   Length:     {df['length'].mean():.1f} ± {df['length'].std():.1f}")
         self.logger.info(f"   Charge:     {df['charge'].mean():.1f} ± {df['charge'].std():.1f}")
         self.logger.info(f"   Hydrophob:  {df['hydrophobicity'].mean():.3f} ± {df['hydrophobicity'].std():.3f}\n")
@@ -456,7 +454,7 @@ class AMPGenerator:
         # CSV file
         csv_path = self.output_dir / f'generated_amps_{timestamp}.csv'
         df.to_csv(csv_path, index=False)
-        self.logger.info(f"💾 Saved CSV: {csv_path}")
+        self.logger.info(f" Saved CSV: {csv_path}")
         
         # FASTA file
         fasta_path = self.output_dir / f'generated_amps_{timestamp}.fasta'
@@ -464,7 +462,7 @@ class AMPGenerator:
             for idx, row in df.iterrows():
                 f.write(f">AMP_{idx+1}|score={row['overall_score']:.4f}|membrane={row['membrane_reactivity']:.4f}\n")
                 f.write(f"{row['sequence']}\n")
-        self.logger.info(f"💾 Saved FASTA: {fasta_path}")
+        self.logger.info(f" Saved FASTA: {fasta_path}")
         
         # Summary file
         summary_path = self.output_dir / f'generation_summary_{timestamp}.txt'
@@ -488,13 +486,13 @@ class AMPGenerator:
             for idx, row in df.head(10).iterrows():
                 f.write(f"  {idx+1}. {row['sequence']} (score={row['overall_score']:.4f})\n")
         
-        self.logger.info(f"💾 Saved Summary: {summary_path}\n")
+        self.logger.info(f" Saved Summary: {summary_path}\n")
 
 
 def main():
     """Main execution."""
     print("="*80)
-    print("🚀 PHASE 2: AMP GENERATION (NEURAL SCORER VERSION)")
+    print(" PHASE 2: AMP GENERATION (NEURAL SCORER VERSION)")
     print("="*80)
     
     # Configuration - USE BEST MODEL!
@@ -520,12 +518,12 @@ def main():
     print("="*80)
     
     if len(df) > 0:
-        print(f"\n🎉 Successfully generated {len(df)} high-quality AMPs!")
-        print(f"📁 Results saved to: {output_dir}/")
-        print(f"\n🔬 Quality: {df['overall_score'].mean():.4f} (Neural Scorer)")
-        print(f"🧬 Ready for sAMPpred-GAT validation (threshold 0.80)")
+        print(f"\n Successfully generated {len(df)} high-quality AMPs!")
+        print(f" Results saved to: {output_dir}/")
+        print(f"\n Quality: {df['overall_score'].mean():.4f} (Neural Scorer)")
+        print(f" Ready for sAMPpred-GAT validation (threshold 0.80)")
     else:
-        print("\n⚠️  No AMPs generated. Check parameters.")
+        print("\n  No AMPs generated. Check parameters.")
     
     print()
 
