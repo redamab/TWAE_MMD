@@ -229,7 +229,6 @@ def print_production_status():
 # Initialize production module
 if __name__ == "__main__":
     print(f"Production TWAE-MMD Framework v{__version__}")
-    print("100% REAL IMPLEMENTATION ")
     print()
     print_production_status()
 
