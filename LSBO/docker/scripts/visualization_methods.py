@@ -1,6 +1,6 @@
 """
 High-Quality Visualization Methods for LSBO-Guided TWAE-MMD Training
-IMPROVED VERSION: Shows AMP/non-AMP separation, Prior/Posterior matching, and Quality distribution
+This VERSION: Shows AMP/non-AMP separation, Prior/Posterior matching, and Quality distribution
 """
 
 import numpy as np
@@ -48,7 +48,7 @@ def create_training_visualizations(history, output_dir, epoch):
     ax1.plot(epochs, history['val_loss'], 'r-', linewidth=2, label='Val Loss', marker='s', markersize=4)
     ax1.set_xlabel('Epoch', fontweight='bold')
     ax1.set_ylabel('Loss', fontweight='bold')
-    ax1.set_title('📉 Training & Validation Loss', fontsize=14, fontweight='bold')
+    ax1.set_title(' Training & Validation Loss', fontsize=14, fontweight='bold')
     ax1.legend(loc='best', framealpha=0.9)
     ax1.grid(True, alpha=0.3)
     
@@ -58,7 +58,7 @@ def create_training_visualizations(history, output_dir, epoch):
     ax2.plot(epochs, history['val_accuracy'], 'orange', linewidth=2, label='Val Acc', marker='s', markersize=4)
     ax2.set_xlabel('Epoch', fontweight='bold')
     ax2.set_ylabel('Accuracy', fontweight='bold')
-    ax2.set_title('📈 Classification Accuracy', fontsize=14, fontweight='bold')
+    ax2.set_title(' Classification Accuracy', fontsize=14, fontweight='bold')
     ax2.legend(loc='best', framealpha=0.9)
     ax2.grid(True, alpha=0.3)
     ax2.set_ylim([0.5, 1.0])
@@ -68,7 +68,7 @@ def create_training_visualizations(history, output_dir, epoch):
     ax3.plot(epochs, history['reconstruction_loss'], 'purple', linewidth=2, label='Reconstruction Loss', marker='o', markersize=4)
     ax3.set_xlabel('Epoch', fontweight='bold')
     ax3.set_ylabel('Reconstruction Loss', fontweight='bold')
-    ax3.set_title('🔄 Reconstruction Loss (Decoder Quality)', fontsize=14, fontweight='bold')
+    ax3.set_title(' Reconstruction Loss (Decoder Quality)', fontsize=14, fontweight='bold')
     ax3.legend(loc='best', framealpha=0.9)
     ax3.grid(True, alpha=0.3)
     
@@ -77,7 +77,7 @@ def create_training_visualizations(history, output_dir, epoch):
     ax4.plot(epochs, history['mmd_loss'], 'teal', linewidth=2, label='MMD Loss', marker='o', markersize=4)
     ax4.set_xlabel('Epoch', fontweight='bold')
     ax4.set_ylabel('MMD Loss', fontweight='bold')
-    ax4.set_title('🎯 MMD Loss (LSBO-Guided Prior)', fontsize=14, fontweight='bold')
+    ax4.set_title(' MMD Loss (LSBO-Guided Prior)', fontsize=14, fontweight='bold')
     ax4.legend(loc='best', framealpha=0.9)
     ax4.grid(True, alpha=0.3)
     
@@ -87,7 +87,7 @@ def create_training_visualizations(history, output_dir, epoch):
     ax5.axhline(y=1000, color='red', linestyle='--', linewidth=1, alpha=0.5, label='Max Capacity')
     ax5.set_xlabel('Epoch', fontweight='bold')
     ax5.set_ylabel('Number of Regions', fontweight='bold')
-    ax5.set_title('🗺️ High-Quality Latent Regions Discovered', fontsize=14, fontweight='bold')
+    ax5.set_title(' High-Quality Latent Regions Discovered', fontsize=14, fontweight='bold')
     ax5.legend(loc='best', framealpha=0.9)
     ax5.grid(True, alpha=0.3)
     
@@ -97,7 +97,7 @@ def create_training_visualizations(history, output_dir, epoch):
     ax6.axhline(y=0.80, color='green', linestyle='--', linewidth=1, alpha=0.5, label='Target (0.80)')
     ax6.set_xlabel('Epoch', fontweight='bold')
     ax6.set_ylabel('Quality Score', fontweight='bold')
-    ax6.set_title('⭐ Average Latent Region Quality', fontsize=14, fontweight='bold')
+    ax6.set_title(' Average Latent Region Quality', fontsize=14, fontweight='bold')
     ax6.legend(loc='best', framealpha=0.9)
     ax6.grid(True, alpha=0.3)
     ax6.set_ylim([0.5, 1.0])
@@ -107,7 +107,7 @@ def create_training_visualizations(history, output_dir, epoch):
     ax7.plot(epochs, history['epoch_time'], 'brown', linewidth=2, label='Epoch Time', marker='o', markersize=4)
     ax7.set_xlabel('Epoch', fontweight='bold')
     ax7.set_ylabel('Time (seconds)', fontweight='bold')
-    ax7.set_title('⏱️ Training Speed', fontsize=14, fontweight='bold')
+    ax7.set_title(' Training Speed', fontsize=14, fontweight='bold')
     ax7.legend(loc='best', framealpha=0.9)
     ax7.grid(True, alpha=0.3)
     
@@ -124,7 +124,7 @@ def create_training_visualizations(history, output_dir, epoch):
         colors = ['#3498db', '#e74c3c', '#9b59b6', '#1abc9c']
         ax8.bar(components.keys(), components.values(), color=colors, alpha=0.8, edgecolor='black', linewidth=1.5)
         ax8.set_ylabel('Loss Value', fontweight='bold')
-        ax8.set_title(f'📊 Loss Components (Epoch {epoch})', fontsize=14, fontweight='bold')
+        ax8.set_title(f' Loss Components (Epoch {epoch})', fontsize=14, fontweight='bold')
         ax8.grid(True, alpha=0.3, axis='y')
         plt.setp(ax8.xaxis.get_majorticklabels(), rotation=45, ha='right')
     
@@ -134,33 +134,33 @@ def create_training_visualizations(history, output_dir, epoch):
     
     if len(epochs) > 0:
         summary_text = f"""
-        🎯 LSBO-Guided Training Summary
+         LSBO-Guided Training Summary
         ═══════════════════════════════
         
-        📈 Current Epoch: {epoch}
+         Current Epoch: {epoch}
         
-        🎓 Classification Performance:
+         Classification Performance:
            • Train Accuracy: {history['train_accuracy'][-1]:.4f}
            • Val Accuracy: {history['val_accuracy'][-1]:.4f}
         
-        🧬 Latent Space Quality:
+         Latent Space Quality:
            • MMD Loss: {history['mmd_loss'][-1]:.4f}
            • Wasserstein Loss: {history['wasserstein_loss'][-1]:.4f}
            • HQ Regions: {history['high_quality_regions'][-1]}
            • Avg Score: {history['average_latent_score'][-1]:.4f}
         
-        ⚡ Training Efficiency:
+         Training Efficiency:
            • Epoch Time: {history['epoch_time'][-1]:.2f}s
            • Total Time: {sum(history['epoch_time']):.2f}s
         
-        ✨ Innovation: LSBO-guided sampling
+         Innovation: LSBO-guided sampling
            (No random Gaussian sampling!)
         """
         ax9.text(0.1, 0.5, summary_text, fontsize=11, family='monospace',
                 verticalalignment='center', bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.3))
     
     # Add main title
-    fig.suptitle('🚀 LSBO-Guided TWAE-MMD Training Dashboard', 
+    fig.suptitle(' LSBO-Guided TWAE-MMD Training Dashboard', 
                  fontsize=18, fontweight='bold', y=0.98)
     
     # Save figure
@@ -186,14 +186,14 @@ def visualize_latent_space(model, dataset, output_dir, epoch, num_samples=2000, 
         num_samples: Number of samples to visualize
         lsbo_sampler: Optional LSBO sampler for prior visualization
     """
-    print(f"  📊 Creating improved latent space visualization...")
+    print(f"   Creating improved latent space visualization...")
     
-    # ===== 1. Collect POSTERIOR samples (encoded from real data) =====
+    # ===== 1. Collect POSTERIOR samples (encoded from data) =====
     print(f"    Collecting posterior samples...")
     latent_vectors_posterior = []
     labels_posterior = []
     
-    # 🔧 FIX: Shuffle dataset before sampling to ensure balanced AMP/Non-AMP representation
+    # Shuffle dataset before sampling to ensure balanced AMP/Non-AMP representation
     # Validation dataset has shuffle=False, so we need to shuffle here for visualization
     dataset_shuffled = dataset.shuffle(buffer_size=10000, reshuffle_each_iteration=False)
     
@@ -260,7 +260,7 @@ def visualize_latent_space(model, dataset, output_dir, epoch, num_samples=2000, 
     
     ax1.set_xlabel('t-SNE Dimension 1', fontweight='bold', fontsize=12)
     ax1.set_ylabel('t-SNE Dimension 2', fontweight='bold', fontsize=12)
-    ax1.set_title(f'✅ AMP vs Non-AMP Separation (Posterior)\nEpoch {epoch}', fontsize=14, fontweight='bold')
+    ax1.set_title(f' AMP vs Non-AMP Separation (Posterior)\nEpoch {epoch}', fontsize=14, fontweight='bold')
     ax1.legend(loc='best', framealpha=0.9, fontsize=11)
     ax1.grid(True, alpha=0.3)
     
@@ -285,7 +285,7 @@ def visualize_latent_space(model, dataset, output_dir, epoch, num_samples=2000, 
     
     ax2.set_xlabel('t-SNE Dimension 1', fontweight='bold', fontsize=12)
     ax2.set_ylabel('t-SNE Dimension 2', fontweight='bold', fontsize=12)
-    ax2.set_title(f'✅ Prior vs Posterior Matching\nEpoch {epoch}', fontsize=14, fontweight='bold')
+    ax2.set_title(f' Prior vs Posterior Matching\nEpoch {epoch}', fontsize=14, fontweight='bold')
     ax2.legend(loc='best', framealpha=0.9, fontsize=11)
     ax2.grid(True, alpha=0.3)
     
@@ -323,7 +323,7 @@ def visualize_latent_space(model, dataset, output_dir, epoch, num_samples=2000, 
     
     ax3.set_xlabel('t-SNE Dimension 1', fontweight='bold', fontsize=12)
     ax3.set_ylabel('t-SNE Dimension 2', fontweight='bold', fontsize=12)
-    ax3.set_title(f'✅ Quality Score Distribution\nEpoch {epoch}', fontsize=14, fontweight='bold')
+    ax3.set_title(f' Quality Score Distribution\nEpoch {epoch}', fontsize=14, fontweight='bold')
     
     cbar3 = plt.colorbar(scatter3, ax=ax3)
     cbar3.set_label('Quality Score (Proxy)', fontweight='bold')
@@ -336,7 +336,7 @@ def visualize_latent_space(model, dataset, output_dir, epoch, num_samples=2000, 
             bbox=dict(boxstyle='round', facecolor='yellow', alpha=0.5))
     
     # Add main title
-    fig.suptitle(f'🧬 LSBO-Guided Latent Space Analysis (t-SNE) - Epoch {epoch}', 
+    fig.suptitle(f' LSBO-Guided Latent Space Analysis (t-SNE) - Epoch {epoch}', 
                  fontsize=18, fontweight='bold', y=0.98)
     
     # Save figure
@@ -344,7 +344,7 @@ def visualize_latent_space(model, dataset, output_dir, epoch, num_samples=2000, 
     plt.savefig(output_path, dpi=300, bbox_inches='tight', facecolor='white')
     plt.close()
     
-    print(f"    ✅ Latent space visualization saved: {output_path}")
+    print(f"     Latent space visualization saved: {output_path}")
     
     return output_path
 
@@ -379,7 +379,7 @@ def visualize_high_quality_regions(lsbo_sampler, output_dir, epoch):
     ax1.axvline(np.median(scores), color='green', linestyle='--', linewidth=2, label=f'Median: {np.median(scores):.4f}')
     ax1.set_xlabel('Quality Score', fontweight='bold')
     ax1.set_ylabel('Frequency', fontweight='bold')
-    ax1.set_title('📊 Quality Score Distribution', fontsize=14, fontweight='bold')
+    ax1.set_title(' Quality Score Distribution', fontsize=14, fontweight='bold')
     ax1.legend()
     ax1.grid(True, alpha=0.3)
     
@@ -391,7 +391,7 @@ def visualize_high_quality_regions(lsbo_sampler, output_dir, epoch):
                          c=scores, cmap='viridis', alpha=0.6, s=30, edgecolors='black', linewidth=0.5)
     ax2.set_xlabel(f'PC1 ({pca.explained_variance_ratio_[0]*100:.1f}% var)', fontweight='bold')
     ax2.set_ylabel(f'PC2 ({pca.explained_variance_ratio_[1]*100:.1f}% var)', fontweight='bold')
-    ax2.set_title('🗺️ High-Quality Regions (PCA)', fontsize=14, fontweight='bold')
+    ax2.set_title(' High-Quality Regions (PCA)', fontsize=14, fontweight='bold')
     cbar = plt.colorbar(scatter, ax=ax2)
     cbar.set_label('Quality Score', fontweight='bold')
     ax2.grid(True, alpha=0.3)
@@ -402,7 +402,7 @@ def visualize_high_quality_regions(lsbo_sampler, output_dir, epoch):
     ax3.scatter(norms, scores, alpha=0.5, s=20, edgecolors='black', linewidth=0.5)
     ax3.set_xlabel('Latent Vector Norm', fontweight='bold')
     ax3.set_ylabel('Quality Score', fontweight='bold')
-    ax3.set_title('📈 Score vs Latent Magnitude', fontsize=14, fontweight='bold')
+    ax3.set_title(' Score vs Latent Magnitude', fontsize=14, fontweight='bold')
     ax3.grid(True, alpha=0.3)
     
     # 4. Statistics Summary
@@ -410,36 +410,36 @@ def visualize_high_quality_regions(lsbo_sampler, output_dir, epoch):
     ax4.axis('off')
     
     stats_text = f"""
-    🎯 High-Quality Regions Statistics
+     High-Quality Regions Statistics
     ═══════════════════════════════════
     
-    📊 Region Count: {len(scores)}
+     Region Count: {len(scores)}
     
-    ⭐ Quality Scores:
+     Quality Scores:
        • Mean: {np.mean(scores):.4f}
        • Median: {np.median(scores):.4f}
        • Std Dev: {np.std(scores):.4f}
        • Min: {np.min(scores):.4f}
        • Max: {np.max(scores):.4f}
     
-    📏 Latent Vector Norms:
+     Latent Vector Norms:
        • Mean: {np.mean(norms):.4f}
        • Median: {np.median(norms):.4f}
        • Std Dev: {np.std(norms):.4f}
     
-    🎓 Quality Breakdown:
+     Quality Breakdown:
        • Excellent (≥0.85): {np.sum(scores >= 0.85)}
        • Good (0.75-0.85): {np.sum((scores >= 0.75) & (scores < 0.85))}
        • Fair (0.70-0.75): {np.sum((scores >= 0.70) & (scores < 0.75))}
     
-    ✨ LSBO-guided sampling ensures all
+     LSBO-guided sampling ensures all
        regions are biologically relevant!
     """
     ax4.text(0.1, 0.5, stats_text, fontsize=11, family='monospace',
             verticalalignment='center', bbox=dict(boxstyle='round', facecolor='lightgreen', alpha=0.3))
     
     # Add main title
-    fig.suptitle(f'🎯 LSBO High-Quality Regions Analysis - Epoch {epoch}', 
+    fig.suptitle(f' LSBO High-Quality Regions Analysis - Epoch {epoch}', 
                  fontsize=16, fontweight='bold', y=0.98)
     
     # Save figure
